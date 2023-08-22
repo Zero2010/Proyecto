@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <h1>Ingreso Usuario</h1>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Ingreso Usuario" id="User" name="User" required="" />
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Ingreso Password" id="Pass" name="pass" required="" />
+                    </div>
+                    <div>
+                        <button class="btn btn-default submit" type="submit">Ingresar</button>
+                    </div>
+
+                    <div class="clearfix"></div>
+                }
+
+                @if (TempData["ErrorLogin"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible " role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <strong>@TempData["ErrorLogin"].ToString() </strong>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</div>

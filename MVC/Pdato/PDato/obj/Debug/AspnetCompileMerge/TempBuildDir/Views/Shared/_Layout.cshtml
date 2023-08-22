@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" media="screen">
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link href="~/Content/css/bootstrap-slider.css" rel="stylesheet" />
+    <link href="~/Content/css/slider.css" rel="stylesheet" />
+    <link href="~/Content/css/diseno.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/carousel.css" rel="stylesheet" />
+    <link href="~/Content/css/blog.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Letra/Letras.css" rel="stylesheet" />
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+    <link href="~/Content/css/pricing.css" rel="stylesheet" />
+    <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+    <link href="~/Content/css/zoom-imagen.css" rel="stylesheet" />
+    <link href="~/Content/css/estilos.css" rel="stylesheet" />
+    <link href="~/Content/css/disenohr.css" rel="stylesheet" />
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    @*<img src="~/Imagenes/Logo/colgador.png" style="width:30px;height:30px"/>*@
+                    <img src="~/Imagenes/Logo/Logo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        @*<li class="nav-item">
+            <a class="nav-link" href="/Home/Motel">Moteles</a>
+        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Listado">Listado Moteles</a>
+                        </li>
+                        @*<li class="nav-item">
+            <a class="nav-link" href="/Bar/ListadoBar">Bar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Pub/ListadoPub">Pub</a>
+        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Usuario/IniciarSesion">Acceso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @*<nav class="navbar navbar-expand-sm bg-danger navbar-dark justify-content-md-center">
+                <a class="navbar-brand" href="Home/Index"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../Home/Motel">Moteles <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/Listado">Listado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/Promociones">Promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/Novedades">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>*@
+    </header><br>
+
+    <!--<img class="logo" img src="../Imagenes/logo/logo_pdato.png">-->
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+
+    <br />
+    <footer class="footer">
+        <div class="text-center text-uppercase encabezado">
+            <span class="text-lowercase d-block" align="left"><p align="center" class="footer text-lowercase d-block">Copyright &copy; @DateTime.Now.Year - Info@pasaeldato.cl</p></span>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/jquery/bootstrap-slider.js"></script>
+    <script src="~/Scripts/jquery/popper.min.js"></script>
+    <script src="~/Scripts/jquery/jquery-3.2.1.slim.min.js"></script>
+    <script src="~/Scripts/jquery/holder.min.js"></script>
+    <script src="~/Scripts/jquery/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery/bootstrap.js"></script>
+    <script src="~/Scripts/jquery/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery/holder.js"></script>
+    <script src="~/Scripts/jquery/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/tether.min.js"></script>
+    <script src="~/Scripts/scripts.js"></script>
+    <script src="~/Scripts/jquery/jquery.rateyo.js"></script>
+    <script src="~/Scripts/puntaje/puntaje.js"></script>
+    <script src="~/Scripts/slider.js"></script>
+</body>
+</html>

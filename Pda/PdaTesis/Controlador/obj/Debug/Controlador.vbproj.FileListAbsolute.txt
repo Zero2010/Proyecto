@@ -1,0 +1,13 @@
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Controlador.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Controlador.pdb
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Controlador.xml
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Modelo.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Modelo.pdb
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\bin\Debug\Modelo.xml
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\Controlador.Resources.resources
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\Controlador.vbproj.GenerateResource.Cache
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\Controlador.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\Controlador.xml
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Controlador\obj\Debug\Controlador.pdb

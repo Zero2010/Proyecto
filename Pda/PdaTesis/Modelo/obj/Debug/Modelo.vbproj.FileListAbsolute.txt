@@ -1,0 +1,10 @@
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\bin\Debug\Modelo.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\bin\Debug\Modelo.pdb
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\bin\Debug\Modelo.xml
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\Modelo.Resources.resources
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\Modelo.vbproj.GenerateResource.Cache
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\Modelo.dll
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\Modelo.xml
+C:\Users\mfelipe\Documents\Visual Studio 2008\Projects\PdaTesis\Modelo\obj\Debug\Modelo.pdb

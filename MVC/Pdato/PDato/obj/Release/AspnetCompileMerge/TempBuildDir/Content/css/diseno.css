@@ -1,0 +1,205 @@
+﻿.FooterMotel {
+    background-color: #e6e6e6;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+img.pequena{
+    width: 50px; 
+    height: 50px;
+}
+
+img.mediana{
+    width: 358px; 
+    height: 300px;
+}
+
+img.grande{
+    width: 400px; 
+    height: 200px;
+}
+
+img.diseno{
+    width: 900px; 
+    height: 300px;
+}
+
+img.imagenicono {
+    width: 40px;
+    height: 40px;
+    /*border: 1px #E785C0;
+    border-radius: 150px*/
+    /*border-image-width: auto;*/
+}
+
+img.imagenportada {
+    width: 820px;
+    height: 400px;
+}
+
+img.imagenhabitacion {
+    width: 600px;
+    height: 350px;
+}
+
+img.portada {
+    width: 1200px;
+    height: 400px;
+    padding: 0px 0px 0px 0px;
+}
+
+img.portadaMotel {
+    width: 850px;
+    height: 400px;
+    padding: 0px 0px 0px 0px;
+}
+
+img.listado{
+    width: 540px; 
+    height: 300px;
+}
+
+img.logo{
+    width: 300px; 
+    height: 70px;
+
+}
+
+img.imagencard {
+    width: 250px;
+    height: 200px;
+    margin: 10px 10px 10px 10px;
+    padding: 4px 4px 4px 4px;
+}
+
+.listgroup {
+    padding: 0px 0px 0px 0px;
+    font-size: 13px;
+}
+
+.redondearimagen {
+    -moz-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 10px 42px 2px rgba(93,1,63,1);
+    -moz-box-shadow: 10px 10px 42px 2px rgba(93,1,63,1);
+    box-shadow: 10px 10px 42px 2px rgba(93,1,63,1);
+    -moz-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+.ListadoLetras {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.LetraEjemplo {
+    font-family: Maratre, Arial,sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+}
+
+.LetrasFooter {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ListadoLetrasPromo {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ListadoLetrasPrecio {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.hrvertical {
+    border: none;
+    border-right: 1px solid hsla(200, 10%, 50%,100);
+    height: 100vh;
+    width: 1px;
+}
+
+.LineaV {
+    border-right: 1px solid blue;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.titulo{
+  font-size: 20px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color:black;
+  left:200px;
+  top:200px;
+/*  text-align:center;*/
+}
+
+hr.type_4 {
+    border: 0;
+    height: 50px;
+    background-image: url(../../Imagenes/Logo/colgador.png);
+    background-repeat: no-repeat;
+}
+
+.Letras {
+    text-transform: capitalize;
+}
+
+.TituloLetra {
+    font-size:60px;
+}
+
+.zoom {
+    /* Aumentamos la anchura y altura durante 2 segundos */
+    transition: width 2s, height 2s, transform 2s;
+    -moz-transition: width 2s, height 2s, -moz-transform 2s;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    -o-transition: width 2s, height 2s,-o-transform 2s;
+}
+
+.zoom:hover {
+    /* tranformamos el elemento al pasar el mouse por encima al doble de
+        su tamaño con scale(2). */
+    transform: scale(2);
+    -moz-transform: scale(2); /* Firefox */
+    -webkit-transform: scale(2); /* Chrome - Safari */
+    -o-transform: scale(2); /* Opera */
+}
+
+/*footer {
+    text-align:center;
+    padding:5px;
+}*/
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #bd2130;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+}
+

@@ -1,0 +1,305 @@
+09:05:54.589,000,INF: IP:172.16.32.44, Puerto:5091
+09:08:51.177,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+09:08:51.230,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+09:08:51.314,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:09:08.279,000,INF: IP:172.16.32.44, Puerto:5091
+09:09:08.279,010,QRY: TS20TP000200302FC9C@
+09:09:08.283,010,RES: TS20TP0002499913007FBB7@
+09:27:02.239,000,INF: IP:172.16.32.44, Puerto:5091
+09:27:06.146,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+09:27:06.166,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+09:27:06.256,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:27:26.171,000,INF: IP:172.16.32.44, Puerto:5091
+09:27:26.171,010,QRY: TS20TP000330302|172.16.32.44F9C4@
+09:27:26.181,010,RES: TS20TP0002499911599FBA9@
+09:27:30.106,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>11599</CodigoRespuesta><GlosaRespuesta>Error Desconocido</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:35:24.488,000,INF: IP:172.16.32.44, Puerto:5091
+09:35:24.488,011,QRY: TS20TP000200302FC9C@
+09:35:24.504,011,RES: TS20TP0002499913007FBB7@
+09:35:27.132,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13007</CodigoRespuesta><GlosaRespuesta>Número de parámetros no válidos</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:35:47.600,000,INF: IP:172.16.32.44, Puerto:5091
+09:35:47.600,031,QRY: TS20TP000280312|1.0.0.0FACC@
+09:35:47.631,031,RES: TS20TP00019031FCC5@
+09:35:47.631,011,QRY: TS20TP000200112FC9D@
+09:35:47.631,011,RES: TS20TP0006501109:37:40|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECCC@
+09:35:47.631,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:35:56.185,000,INF: IP:172.16.32.44, Puerto:5091
+09:35:56.185,011,QRY: TS20TP000200302FC9C@
+09:35:56.201,011,RES: TS20TP0002499913007FBB7@
+09:35:57.617,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13007</CodigoRespuesta><GlosaRespuesta>Número de parámetros no válidos</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:37:39.241,000,INF: IP:172.16.32.44, Puerto:5091
+09:38:11.392,011,QRY: TS20TP000200302FC9C@
+09:39:27.439,011,RES: TS20TP0002499913007FBB7@
+09:42:30.926,000,ERR: System.ArgumentOutOfRangeException: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+   en System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   en System.Collections.Generic.List`1.get_Item(Int32 index)
+   en TPSejeLMSP.Communications.Communication.Parse(String content) en C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Communication\Communication.cs:línea 55
+   en TurnoChileExpress.Clases.TransactionManager.SetEdoSesion(String idEscritorio) en C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 359
+   en TurnoChileExpress.ws.WS_CExpress.SetEdoSesion(String idEscritorio) en C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 617
+09:42:46.354,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:43:11.368,000,INF: IP:172.16.32.44, Puerto:5091
+09:43:18.724,011,QRY: TS20TP000200302FC9C@
+09:43:19.132,011,RES: TS20TP0002499913007FBB7@
+09:43:20.864,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13007</CodigoRespuesta><GlosaRespuesta>Número de parámetros no válidos</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:44:11.138,000,INF: IP:172.16.32.44, Puerto:5091
+09:46:50.648,011,QRY: TS20TP000200302FC9C@
+09:46:50.664,011,RES: TS20TP0002499913007FBB7@
+09:48:08.749,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13007</CodigoRespuesta><GlosaRespuesta>Número de parámetros no válidos</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:48:14.592,000,INF: IP:172.16.32.44, Puerto:5091
+09:48:54.177,011,QRY: TS20TP000200302FC9C@
+09:49:28.560,011,RES: TS20TP0002499913007FBB7@
+09:51:20.262,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:54:16.446,000,INF: IP:172.16.32.44, Puerto:5091
+09:54:19.752,011,QRY: TS20TP0002103023FC68@
+09:54:19.768,011,RES: TS20TP0002499913022FBBA@
+09:54:20.621,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:54:33.849,000,INF: IP:172.16.32.44, Puerto:5091
+09:54:37.149,011,QRY: TS20TP000200302FC9C@
+09:54:37.164,011,RES: TS20TP0002499913007FBB7@
+09:54:38.351,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13007</CodigoRespuesta><GlosaRespuesta>Número de parámetros no válidos</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:03:19.039,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:20.418,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+10:03:20.450,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+10:03:20.512,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:03:48.552,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:51.225,011,QRY: TS20TP000200112FC9D@
+10:03:51.235,011,RES: TS20TP0006101110:05:44|PAUSA|0|0|0|0|0|0|11|||||||||||||EE00@
+10:03:58.016,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:07:59.753,000,INF: IP:172.16.32.44, Puerto:5091
+10:08:02.952,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+10:08:02.968,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+10:08:03.046,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:08:31.041,000,INF: IP:172.16.32.44, Puerto:5091
+10:08:31.041,022,QRY: TS20TP000200222FC9B@
+10:08:31.041,022,RES: TS20TP00019022FCC5@
+10:08:31.041,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:09:41.133,000,INF: IP:172.16.32.44, Puerto:5091
+10:09:41.133,022,QRY: TS20TP000200222FC9B@
+10:09:41.133,022,RES: TS20TP00019022FCC5@
+10:09:41.133,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:09:45.838,000,INF: IP:172.16.32.44, Puerto:5091
+10:09:45.838,022,QRY: TS20TP000200222FC9B@
+10:09:45.838,022,RES: TS20TP00019022FCC5@
+10:09:45.838,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:09:51.596,000,INF: IP:172.16.32.44, Puerto:5091
+10:09:51.596,022,QRY: TS20TP000200221FC9C@
+10:09:51.612,022,RES: TS20TP0002499913022FBBA@
+10:09:53.192,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:28:51.864,000,INF: IP:172.16.32.44, Puerto:5091
+10:28:51.864,020,QRY: TS20TP000200202FC9D@
+10:28:51.864,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+10:28:51.864,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:29:26.088,000,INF: IP:172.16.32.44, Puerto:5091
+10:29:26.088,020,QRY: TS20TP000200202FC9D@
+10:29:26.088,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+10:29:26.088,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:33:42.019,000,INF: IP:172.16.32.44, Puerto:5091
+10:34:15.037,020,QRY: TS20TP000200202FC9D@
+10:36:46.455,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+10:40:11.352,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:42:03.680,000,INF: IP:172.16.32.44, Puerto:5091
+10:42:03.683,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+10:42:03.698,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+10:42:03.698,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:42:38.436,000,INF: IP:172.16.32.44, Puerto:5091
+10:42:38.436,022,QRY: TS20TP000200222FC9B@
+10:42:38.436,022,RES: TS20TP00019022FCC5@
+10:43:35.557,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:43:52.232,000,INF: IP:172.16.32.44, Puerto:5091
+10:43:52.247,022,QRY: TS20TP000200222FC9B@
+10:43:52.263,022,RES: TS20TP00019022FCC5@
+10:44:30.235,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:44:55.781,000,INF: IP:172.16.32.44, Puerto:5091
+10:44:55.781,010,QRY: TS20TP000330102|172.16.32.44F9C6@
+10:44:55.781,010,RES: TS20TP000770102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA||E701@
+10:47:04.766,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:47:31.149,000,INF: IP:172.16.32.44, Puerto:5091
+10:47:46.445,011,QRY: TS20TP000200112FC9D@
+10:47:46.454,011,RES: TS20TP0006101110:49:39|PAUSA|0|0|0|0|0|0|11|||||||||||||EDF4@
+10:48:36.174,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:48:58.927,000,INF: IP:172.16.32.44, Puerto:5091
+10:48:58.927,022,QRY: TS20TP000200222FC9B@
+10:48:58.943,022,RES: TS20TP00019022FCC5@
+10:49:04.000,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:49:21.187,000,INF: IP:172.16.32.44, Puerto:5091
+10:49:21.203,020,QRY: TS20TP000200202FC9D@
+10:49:21.203,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+10:50:20.818,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:51:06.326,000,INF: IP:172.16.32.44, Puerto:5091
+10:51:06.326,033,QRY: TS20TP000200332FC99@
+10:51:06.326,033,RES: TS20TP0002499913025FBB7@
+10:51:10.541,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:57:42.378,000,INF: IP:172.16.32.44, Puerto:5091
+10:57:42.394,010,QRY: TS20TP000210102|FC21@
+10:57:42.394,010,RES: TS20TP000770102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA||E701@
+11:08:05.610,000,INF: IP:172.16.32.44, Puerto:5091
+11:08:05.626,010,QRY: TS20TP000210102|FC21@
+11:08:05.626,010,RES: TS20TP000800102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|LLAMANDO||E639@
+11:08:23.315,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:08:37.467,000,INF: IP:172.16.32.44, Puerto:5091
+11:08:37.467,020,QRY: TS20TP000200202FC9D@
+11:08:37.483,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+11:16:08.982,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:16:22.740,000,INF: IP:172.16.32.44, Puerto:5091
+11:16:22.740,011,QRY: TS20TP000200112FC9D@
+11:16:22.740,011,RES: TS20TP0006501111:18:15|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD2@
+11:17:59.275,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:18:15.528,000,INF: IP:172.16.32.44, Puerto:5091
+11:18:15.528,011,QRY: TS20TP000200112FC9D@
+11:18:15.544,011,RES: TS20TP0006501111:20:08|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD7@
+11:49:21.739,000,INF: IP:172.16.32.44, Puerto:5091
+11:49:21.739,010,QRY: TS20TP000210102|FC21@
+11:49:21.755,010,RES: TS20TP000810102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|ESPERANDO||E5DF@
+11:50:37.381,000,INF: IP:172.16.32.44, Puerto:5091
+11:50:37.397,011,QRY: TS20TP000200112FC9D@
+11:50:37.397,011,RES: TS20TP0006501111:52:30|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD7@
+11:51:07.546,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:51:50.139,000,INF: IP:172.16.32.44, Puerto:5091
+11:51:50.139,011,QRY: TS20TP000200112FC9D@
+11:51:50.154,011,RES: TS20TP0006501111:53:43|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD2@
+11:59:24.739,000,INF: IP:172.16.32.44, Puerto:5091
+11:59:24.754,031,QRY: TS20TP000280312|1.0.0.0FACC@
+11:59:24.770,031,RES: TS20TP00019031FCC5@
+11:59:24.770,011,QRY: TS20TP000200112FC9D@
+11:59:24.770,011,RES: TS20TP0006501112:01:18|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD6@
+11:59:24.833,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:00:01.001,000,INF: IP:172.16.32.44, Puerto:5091
+12:00:01.001,031,QRY: TS20TP000280312|1.0.0.0FACC@
+12:00:01.016,031,RES: TS20TP00019031FCC5@
+12:00:01.016,011,QRY: TS20TP000200112FC9D@
+12:00:01.016,011,RES: TS20TP0006501112:01:54|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD6@
+12:00:01.016,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:10:21.164,000,INF: IP:172.16.32.44, Puerto:5091
+12:10:34.187,031,QRY: TS20TP000280312|1.0.0.0FACC@
+12:10:34.592,031,RES: TS20TP00019031FCC5@
+12:10:35.014,011,QRY: TS20TP000200112FC9D@
+12:10:35.030,011,RES: TS20TP0006501112:12:28|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD3@
+12:11:27.821,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:24:07.315,000,INF: IP:172.16.32.44, Puerto:5091
+12:24:07.326,031,QRY: TS20TP000280312|1.0.0.0FACC@
+12:24:07.341,031,RES: TS20TP00019031FCC5@
+12:24:20.718,011,QRY: TS20TP000200112FC9D@
+12:24:20.726,011,RES: TS20TP0006501112:26:14|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD3@
+12:24:20.818,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:24:55.927,000,INF: IP:172.16.32.44, Puerto:5091
+12:24:55.929,010,QRY: TS20TP000210102|FC21@
+12:24:55.934,010,RES: TS20TP000810102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|ESPERANDO||E5DF@
+12:26:15.537,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:26:20.296,000,INF: IP:172.16.32.44, Puerto:5091
+12:26:20.300,010,QRY: TS20TP000210102|FC21@
+12:26:20.306,010,RES: TS20TP000810102|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|ESPERANDO||E5DF@
+12:36:22.925,000,INF: IP:172.16.32.44, Puerto:5091
+12:36:45.676,011,QRY: TS20TP000200112FC9D@
+12:36:48.793,011,RES: TS20TP0006501112:38:40|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD1@
+12:37:11.745,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow /><Estado /><QEspO /><TEspO /><TEspAO /><QEspE /><TEspE /><TEspAE /><QSer /><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+12:37:28.471,000,INF: IP:172.16.32.44, Puerto:5091
+12:37:45.620,011,QRY: TS20TP000200112FC9D@
+12:37:48.831,011,RES: TS20TP0006501112:39:41|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECCF@
+12:48:47.672,000,INF: IP:172.16.32.44, Puerto:5091
+12:49:34.232,011,QRY: TS20TP000200112FC9D@
+12:49:41.818,011,RES: TS20TP0006501112:51:29|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECCF@
+12:58:21.198,000,INF: IP:172.16.32.44, Puerto:5091
+12:58:24.291,011,QRY: TS20TP000200112FC9D@
+12:58:25.105,011,RES: TS20TP0006501113:00:18|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD6@
+13:00:59.827,011,QRY: TS20TP000200112FC9D@
+13:01:01.873,011,RES: TS20TP0006501113:02:54|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD4@
+14:23:07.309,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>TS20TP0006501113:02:54</HNow><Estado>ESPERANDO</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:23:15.491,000,INF: IP:172.16.32.44, Puerto:5091
+14:23:16.579,011,QRY: TS20TP000200112FC9D@
+14:23:16.596,011,RES: TS20TP0006501114:25:10|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD6@
+14:23:17.826,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>TS20TP0006501114:25:10</HNow><Estado>ESPERANDO</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:26:25.015,000,INF: IP:172.16.32.44, Puerto:5091
+14:26:28.036,011,QRY: TS20TP000200112FC9D@
+14:26:28.617,011,RES: TS20TP0006501114:28:22|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD0@
+14:28:01.699,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>14:28:22</HNow><Estado>ESPERANDO</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:45:33.224,000,INF: IP:172.16.32.44, Puerto:5091
+14:45:40.013,001,QRY: TS20TP000430012|eje1|1234|172.16.32.44F69E@
+14:45:40.786,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+14:45:48.672,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:46:11.058,000,INF: IP:172.16.32.44, Puerto:5091
+14:46:21.007,011,QRY: TS20TP000200112FC9D@
+14:46:21.656,011,RES: TS20TP0006101114:48:15|PAUSA|0|0|0|0|0|0|11|||||||||||||EDF7@
+14:46:32.485,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>14:48:15</HNow><Estado>PAUSA</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:46:39.909,000,INF: IP:172.16.32.44, Puerto:5091
+14:46:39.909,011,QRY: TS20TP000200111FC9E@
+14:46:39.910,011,RES: TS20TP0002499913022FBBA@
+14:46:39.950,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:47:15.924,000,INF: IP:172.16.32.44, Puerto:5091
+14:47:20.430,011,QRY: TS20TP000200111FC9E@
+14:47:20.440,011,RES: TS20TP0002499913022FBBA@
+14:48:08.622,000,INF: IP:172.16.32.44, Puerto:5091
+14:48:15.090,011,QRY: TS20TP000200111FC9E@
+14:48:15.120,011,RES: TS20TP0002499913022FBBA@
+14:48:15.261,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><HNow /><Estado /><QEspO /><TEspO /><TEspAO /><QEspE /><TEspE /><TEspAE /><QSer /><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:48:25.119,000,INF: IP:172.16.32.44, Puerto:5091
+14:48:26.953,011,QRY: TS20TP000200111FC9E@
+14:48:26.953,011,RES: TS20TP0002499913022FBBA@
+14:48:29.518,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><HNow /><Estado /><QEspO /><TEspO /><TEspAO /><QEspE /><TEspE /><TEspAE /><QSer /><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+14:53:44.656,000,INF: IP:172.16.32.44, Puerto:5091
+14:53:44.666,020,QRY: TS20TP000200202FC9D@
+14:53:44.676,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+15:18:43.132,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+15:18:47.539,000,INF: IP:172.16.32.44, Puerto:5091
+15:18:48.749,011,QRY: TS20TP000200112FC9D@
+15:18:48.756,011,RES: TS20TP0006101115:20:42|PAUSA|0|0|0|0|0|0|11|||||||||||||EE00@
+15:18:48.818,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>15:20:42</HNow><Estado>PAUSA</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+16:11:16.236,000,INF: IP:172.16.32.44, Puerto:5091
+16:11:19.904,020,QRY: TS20TP000200202FC9D@
+16:11:19.931,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+16:30:41.732,000,INF: IP:172.16.32.44, Puerto:5091
+16:30:51.613,020,QRY: TS20TP000200202FC9D@
+16:30:52.293,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+16:33:14.761,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+16:33:43.808,000,INF: IP:172.16.32.44, Puerto:5091
+16:33:44.728,020,QRY: TS20TP000200202FC9D@
+16:33:44.738,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+16:40:25.961,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+16:40:37.273,000,INF: IP:172.16.32.44, Puerto:5091
+16:40:37.277,020,QRY: TS20TP000200202FC9D@
+16:40:37.284,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+16:40:39.694,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:05:19.896,000,INF: IP:172.16.32.44, Puerto:5091
+17:05:19.905,020,QRY: TS20TP000200202FC9D@
+17:05:19.913,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:05:30.975,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:09:37.893,000,INF: IP:172.16.32.44, Puerto:5091
+17:09:37.896,020,QRY: TS20TP000200202FC9D@
+17:09:37.905,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:13:00.965,000,INF: IP:172.16.32.44, Puerto:5091
+17:13:00.976,020,QRY: TS20TP000200202FC9D@
+17:13:00.985,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:16:25.195,020,QRY: TS20TP000200202FC9D@
+17:16:32.617,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:19:59.666,020,QRY: TS20TP000200202FC9D@
+17:23:44.958,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:40:25.680,000,INF: IP:172.16.32.44, Puerto:5091
+17:40:27.114,030,QRY: TS20TP000210302|FC1F@
+17:40:27.130,030,RES: TS20TP0002499911599FBA9@
+17:40:28.868,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>11599</CodigoRespuesta><GlosaRespuesta>Error Desconocido</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:41:02.555,000,INF: IP:172.16.32.44, Puerto:5091
+17:41:10.797,020,QRY: TS20TP000200202FC9D@
+17:41:10.809,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+17:41:12.720,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:41:35.235,000,INF: IP:172.16.32.44, Puerto:5091
+17:41:36.955,011,QRY: TS20TP000200112FC9D@
+17:41:36.970,011,RES: TS20TP0006101117:43:30|PAUSA|0|0|0|0|0|0|11|||||||||||||EDFC@
+17:41:39.616,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoSesion><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><HNow>17:43:30</HNow><Estado>PAUSA</Estado><QEspO>0</QEspO><TEspO>0</TEspO><TEspAO>0</TEspAO><QEspE>0</QEspE><TEspE>0</TEspE><TEspAE>0</TEspAE><QSer>11</QSer><IdSer /><IdSerG /><Turno /><Letra /><Serie /><TEsp /><TEspA /><TEspC /><TAte /><TAteA /><RutFono /><Cliente /></RespuestaWSGetEdoSesion>
+17:47:28.639,000,INF: IP:172.16.32.44, Puerto:5091
+17:47:30.633,022,QRY: TS20TP000200222FC9B@
+17:47:30.643,022,RES: TS20TP00019022FCC5@
+17:47:31.784,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:48:09.940,000,INF: IP:172.16.32.44, Puerto:5091
+17:48:09.942,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:04:15.922,000,INF: IP:172.16.32.44, Puerto:5091
+18:04:23.328,020,QRY: TS20TP000200202FC9D@
+18:04:23.341,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+18:05:25.522,020,QRY: TS20TP000200202FC9D@
+18:05:56.370,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+18:06:19.470,000,INF: IP:172.16.32.44, Puerto:5091
+18:06:19.480,020,QRY: TS20TP000200202FC9D@
+18:06:19.490,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@
+18:08:49.080,000,INF: IP:172.16.32.44, Puerto:5091
+18:08:49.088,020,QRY: TS20TP000200202FC9D@
+18:08:49.099,020,RES: TS20TP000970201~Retroalimentación|2~Colación |3~Trabajo Back Office|4~Atención por ExcepciónDD13@

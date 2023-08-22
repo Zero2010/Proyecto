@@ -1,0 +1,91 @@
+.LetraMenu{
+    color: #fff;
+}
+
+.Logo{
+    width:60px;
+    height:60px;
+}
+
+.ImagenProyecto{
+    width:100%;
+    height:200px;
+    padding: 10px 10px 10px 10px;
+}
+
+.ImagenPortada{
+    border: 3px blue;
+    margin: 1px 1px;
+    padding: 1px 1px;
+    box-sizing:border-box;
+    display:block;
+    width:1350px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+    height:550px;       /*Alto de la imagen nueva, aunque en este caso son iguales.*/
+    padding-left:115px; /*Padding igual al ancho de la imagen nueva*/
+    background: url("../imagenes/Portada.jpeg");
+}
+
+.ImagenProyectoPortada{
+    box-sizing:border-box;
+    display:block;
+    width:840px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+    height:380px;       /*Alto de la imagen nueva, aunque en este caso son iguales.*/
+    padding-left:5px; /*Padding igual al ancho de la imagen nueva*/
+}
+
+.CentrarTexto{
+    text-align:center; 
+    padding:10%;
+    top: 50%;
+    color: #fff;
+}
+
+.parrafoTitulo{
+    padding:5%;
+    top: 50%;
+    color: #ffff00;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px rgb(55, 55, 56);
+}
+
+.TextoPrincipal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgb(55, 55, 56);
+}
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#343a40 ;
+    color: white;
+    text-align: center;
+ }
+
+ .TextoImagen{
+     font-size: 20px;
+     text-shadow: 2px 2px 2px rgb(55, 55, 56);
+ }
+
+ .TituloTextoImagen{
+    font-size: 28px;
+    text-shadow: 2px 2px 2px rgb(55, 55, 56);
+}
+
+.ContornoImagen{
+    margin: 10px 10px;
+    padding: 10px 30px;
+    max-width: 22%
+}
+
+.TextoDescripcionProyecto{
+    padding: 0px 0px;
+}
+

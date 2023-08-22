@@ -1,0 +1,5 @@
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.pdb
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Release\TurnoChileExpress.dll
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Release\TurnoChileExpress.pdb

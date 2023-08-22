@@ -1,0 +1,8 @@
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Release\Controlador.dll.config
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Release\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Release\Controlador.XmlSerializers.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Release\Controlador.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Release\ResolveAssemblyReference.cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Release\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Release\Controlador.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Release\Controlador.XmlSerializers.dll

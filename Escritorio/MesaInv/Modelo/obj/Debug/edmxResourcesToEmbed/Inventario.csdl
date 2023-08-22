@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InvProModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AvanceCaptura">
+    <Key>
+      <PropertyRef Name="IdACaptura" />
+    </Key>
+    <Property Name="IdACaptura" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadRegistros" Type="Int32" />
+    <Property Name="Ubicacion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Porcentaje" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeTotal" Type="Decimal" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="AvanceUbicacion">
+    <Key>
+      <PropertyRef Name="IdAUbicacion" />
+    </Key>
+    <Property Name="IdAUbicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ubicacion" Type="Int32" />
+    <Property Name="DescripcionUbicacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Motivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CapturaDatos">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+    </Key>
+    <Property Name="IdCaptura" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Local" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TipoInventario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ubicacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ean" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Unidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RutOperador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCaptura" Type="DateTime" Precision="3" />
+    <Property Name="LugarCaptura" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionCaptura" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MCaptura_x_CDatos" Relationship="Self.Relationship7" FromRole="CapturaDatos" ToRole="MCaptura_x_CDatos" />
+  </EntityType>
+  <EntityType Name="EstadoUbicacion">
+    <Key>
+      <PropertyRef Name="IdEUbicacion" />
+    </Key>
+    <Property Name="IdEUbicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionEstado" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ubicacion" Relationship="Self.Relationship4" FromRole="EstadoUbicacion" ToRole="Ubicacion" />
+  </EntityType>
+  <EntityType Name="Kardex">
+    <Key>
+      <PropertyRef Name="IdKardex" />
+    </Key>
+    <Property Name="IdKardex" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Locales" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TInventario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Marca" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnidadMedida" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Moneda" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SubClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionSubClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Clase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubDepartamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionSubDpto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionDpto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCarga" Type="DateTime" Precision="3" />
+    <Property Name="TipoCodBarra" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ean" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MaestraProductos">
+    <Key>
+      <PropertyRef Name="IdMProducto" />
+    </Key>
+    <Property Name="IdMProducto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sku" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Locales" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TInventario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Marca" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnidadMedida" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Moneda" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SubClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionSubClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Clase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionClase" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubDepartamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionSubDpto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionDpto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaCarga" Type="DateTime" Precision="3" />
+    <Property Name="TipoCodBarra" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Ean" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MCaptura_x_CDatos">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+      <PropertyRef Name="IdMCaptura" />
+    </Key>
+    <Property Name="IdCaptura" Type="Int64" Nullable="false" />
+    <Property Name="IdMCaptura" Type="Int64" Nullable="false" />
+    <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
+    <Property Name="IdUsuario" Type="Int64" />
+    <NavigationProperty Name="CapturaDatos" Relationship="Self.Relationship7" FromRole="MCaptura_x_CDatos" ToRole="CapturaDatos" />
+    <NavigationProperty Name="ModificacionCaptura" Relationship="Self.Relationship8" FromRole="MCaptura_x_CDatos" ToRole="ModificacionCaptura" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Relationship9" FromRole="MCaptura_x_CDatos" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="ModificacionCaptura">
+    <Key>
+      <PropertyRef Name="IdMCaptura" />
+    </Key>
+    <Property Name="IdMCaptura" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Conteo1" Type="Int32" />
+    <Property Name="Fecha1" Type="DateTime" Precision="3" />
+    <Property Name="Conteo2" Type="Int32" />
+    <Property Name="Fecha2" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MCaptura_x_CDatos" Relationship="Self.Relationship8" FromRole="ModificacionCaptura" ToRole="MCaptura_x_CDatos" />
+  </EntityType>
+  <EntityType Name="TipoUbicacion">
+    <Key>
+      <PropertyRef Name="IdTUbicacion" />
+    </Key>
+    <Property Name="IdTUbicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionUbicacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ubicacion" Relationship="Self.Relationship3" FromRole="TipoUbicacion" ToRole="Ubicacion" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="IdTUsuario" />
+    </Key>
+    <Property Name="IdTUsuario" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionUsuario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Usuario_x_TUsuario" FromRole="TipoUsuario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Ubicacion">
+    <Key>
+      <PropertyRef Name="IdUbicacion" />
+    </Key>
+    <Property Name="IdUbicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="RangoBajo" Type="Int32" />
+    <Property Name="RangoAlto" Type="Int32" />
+    <Property Name="TotalUbicacion" Type="Int32" />
+    <Property Name="PorcentajeCerrado" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeNulo" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeAbierto" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="IdTUbicacion" Type="Int64" />
+    <Property Name="IdEUbicacion" Type="Int64" />
+    <NavigationProperty Name="EstadoUbicacion" Relationship="Self.Relationship4" FromRole="Ubicacion" ToRole="EstadoUbicacion" />
+    <NavigationProperty Name="TipoUbicacion" Relationship="Self.Relationship3" FromRole="Ubicacion" ToRole="TipoUbicacion" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MCaptura_x_CDatos" Relationship="Self.Relationship9" FromRole="Usuario" ToRole="MCaptura_x_CDatos" />
+    <NavigationProperty Name="TipoUsuario" Relationship="Self.Usuario_x_TUsuario" FromRole="Usuario" ToRole="TipoUsuario" />
+  </EntityType>
+  <Association Name="Relationship7">
+    <End Role="CapturaDatos" Type="Self.CapturaDatos" Multiplicity="1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CapturaDatos">
+        <PropertyRef Name="IdCaptura" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship4">
+    <End Role="EstadoUbicacion" Type="Self.EstadoUbicacion" Multiplicity="0..1" />
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoUbicacion">
+        <PropertyRef Name="IdEUbicacion" />
+      </Principal>
+      <Dependent Role="Ubicacion">
+        <PropertyRef Name="IdEUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="ModificacionCaptura" Type="Self.ModificacionCaptura" Multiplicity="1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModificacionCaptura">
+        <PropertyRef Name="IdMCaptura" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdMCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="TipoUbicacion" Type="Self.TipoUbicacion" Multiplicity="0..1" />
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUbicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Principal>
+      <Dependent Role="Ubicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Usuario_x_TUsuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="InvProEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AvanceCaptura" EntityType="Self.AvanceCaptura" />
+    <EntitySet Name="AvanceUbicacion" EntityType="Self.AvanceUbicacion" />
+    <EntitySet Name="CapturaDatos" EntityType="Self.CapturaDatos" />
+    <EntitySet Name="EstadoUbicacion" EntityType="Self.EstadoUbicacion" />
+    <EntitySet Name="Kardex" EntityType="Self.Kardex" />
+    <EntitySet Name="MaestraProductos" EntityType="Self.MaestraProductos" />
+    <EntitySet Name="MCaptura_x_CDatos" EntityType="Self.MCaptura_x_CDatos" />
+    <EntitySet Name="ModificacionCaptura" EntityType="Self.ModificacionCaptura" />
+    <EntitySet Name="TipoUbicacion" EntityType="Self.TipoUbicacion" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" />
+    <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="Relationship7" Association="Self.Relationship7">
+      <End Role="CapturaDatos" EntitySet="CapturaDatos" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship4" Association="Self.Relationship4">
+      <End Role="EstadoUbicacion" EntitySet="EstadoUbicacion" />
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="ModificacionCaptura" EntitySet="ModificacionCaptura" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="TipoUbicacion" EntitySet="TipoUbicacion" />
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Usuario_x_TUsuario" Association="Self.Usuario_x_TUsuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

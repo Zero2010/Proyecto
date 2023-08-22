@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InvProModelStoreContainer" CdmEntityContainer="InvProEntities">
+    <EntitySetMapping Name="AvanceCaptura">
+      <EntityTypeMapping TypeName="InvProModel.AvanceCaptura">
+        <MappingFragment StoreEntitySet="AvanceCaptura">
+          <ScalarProperty Name="IdACaptura" ColumnName="IdACaptura" />
+          <ScalarProperty Name="CantidadRegistros" ColumnName="CantidadRegistros" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="PorcentajeTotal" ColumnName="PorcentajeTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AvanceUbicacion">
+      <EntityTypeMapping TypeName="InvProModel.AvanceUbicacion">
+        <MappingFragment StoreEntitySet="AvanceUbicacion">
+          <ScalarProperty Name="IdAUbicacion" ColumnName="IdAUbicacion" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="DescripcionUbicacion" ColumnName="DescripcionUbicacion" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapturaDatos">
+      <EntityTypeMapping TypeName="InvProModel.CapturaDatos">
+        <MappingFragment StoreEntitySet="CapturaDatos">
+          <ScalarProperty Name="IdCaptura" ColumnName="IdCaptura" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="TipoInventario" ColumnName="TipoInventario" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Ean" ColumnName="Ean" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+          <ScalarProperty Name="RutOperador" ColumnName="RutOperador" />
+          <ScalarProperty Name="FechaCaptura" ColumnName="FechaCaptura" />
+          <ScalarProperty Name="LugarCaptura" ColumnName="LugarCaptura" />
+          <ScalarProperty Name="DescripcionCaptura" ColumnName="DescripcionCaptura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoUbicacion">
+      <EntityTypeMapping TypeName="InvProModel.EstadoUbicacion">
+        <MappingFragment StoreEntitySet="EstadoUbicacion">
+          <ScalarProperty Name="IdEUbicacion" ColumnName="IdEUbicacion" />
+          <ScalarProperty Name="DescripcionEstado" ColumnName="DescripcionEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kardex">
+      <EntityTypeMapping TypeName="InvProModel.Kardex">
+        <MappingFragment StoreEntitySet="Kardex">
+          <ScalarProperty Name="IdKardex" ColumnName="IdKardex" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Locales" ColumnName="Locales" />
+          <ScalarProperty Name="TInventario" ColumnName="TInventario" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+          <ScalarProperty Name="SubClase" ColumnName="SubClase" />
+          <ScalarProperty Name="DescripcionSubClase" ColumnName="DescripcionSubClase" />
+          <ScalarProperty Name="Clase" ColumnName="Clase" />
+          <ScalarProperty Name="DescripcionClase" ColumnName="DescripcionClase" />
+          <ScalarProperty Name="SubDepartamento" ColumnName="SubDepartamento" />
+          <ScalarProperty Name="DescripcionSubDpto" ColumnName="DescripcionSubDpto" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="DescripcionDpto" ColumnName="DescripcionDpto" />
+          <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+          <ScalarProperty Name="TipoCodBarra" ColumnName="TipoCodBarra" />
+          <ScalarProperty Name="Ean" ColumnName="Ean" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaestraProductos">
+      <EntityTypeMapping TypeName="InvProModel.MaestraProductos">
+        <MappingFragment StoreEntitySet="MaestraProductos">
+          <ScalarProperty Name="IdMProducto" ColumnName="IdMProducto" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Locales" ColumnName="Locales" />
+          <ScalarProperty Name="TInventario" ColumnName="TInventario" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+          <ScalarProperty Name="SubClase" ColumnName="SubClase" />
+          <ScalarProperty Name="DescripcionSubClase" ColumnName="DescripcionSubClase" />
+          <ScalarProperty Name="Clase" ColumnName="Clase" />
+          <ScalarProperty Name="DescripcionClase" ColumnName="DescripcionClase" />
+          <ScalarProperty Name="SubDepartamento" ColumnName="SubDepartamento" />
+          <ScalarProperty Name="DescripcionSubDpto" ColumnName="DescripcionSubDpto" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="DescripcionDpto" ColumnName="DescripcionDpto" />
+          <ScalarProperty Name="FechaCarga" ColumnName="FechaCarga" />
+          <ScalarProperty Name="TipoCodBarra" ColumnName="TipoCodBarra" />
+          <ScalarProperty Name="Ean" ColumnName="Ean" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MCaptura_x_CDatos">
+      <EntityTypeMapping TypeName="InvProModel.MCaptura_x_CDatos">
+        <MappingFragment StoreEntitySet="MCaptura_x_CDatos">
+          <ScalarProperty Name="IdCaptura" ColumnName="IdCaptura" />
+          <ScalarProperty Name="IdMCaptura" ColumnName="IdMCaptura" />
+          <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModificacionCaptura">
+      <EntityTypeMapping TypeName="InvProModel.ModificacionCaptura">
+        <MappingFragment StoreEntitySet="ModificacionCaptura">
+          <ScalarProperty Name="IdMCaptura" ColumnName="IdMCaptura" />
+          <ScalarProperty Name="Conteo1" ColumnName="Conteo1" />
+          <ScalarProperty Name="Fecha1" ColumnName="Fecha1" />
+          <ScalarProperty Name="Conteo2" ColumnName="Conteo2" />
+          <ScalarProperty Name="Fecha2" ColumnName="Fecha2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUbicacion">
+      <EntityTypeMapping TypeName="InvProModel.TipoUbicacion">
+        <MappingFragment StoreEntitySet="TipoUbicacion">
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+          <ScalarProperty Name="DescripcionUbicacion" ColumnName="DescripcionUbicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="InvProModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="IdTUsuario" ColumnName="IdTUsuario" />
+          <ScalarProperty Name="DescripcionUsuario" ColumnName="DescripcionUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubicacion">
+      <EntityTypeMapping TypeName="InvProModel.Ubicacion">
+        <MappingFragment StoreEntitySet="Ubicacion">
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RangoBajo" ColumnName="RangoBajo" />
+          <ScalarProperty Name="RangoAlto" ColumnName="RangoAlto" />
+          <ScalarProperty Name="TotalUbicacion" ColumnName="TotalUbicacion" />
+          <ScalarProperty Name="PorcentajeCerrado" ColumnName="PorcentajeCerrado" />
+          <ScalarProperty Name="PorcentajeNulo" ColumnName="PorcentajeNulo" />
+          <ScalarProperty Name="PorcentajeAbierto" ColumnName="PorcentajeAbierto" />
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+          <ScalarProperty Name="IdEUbicacion" ColumnName="IdEUbicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="InvProModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Usuario_x_TUsuario" TypeName="InvProModel.Usuario_x_TUsuario" StoreEntitySet="Usuario_x_TUsuario">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+      </EndProperty>
+      <EndProperty Name="TipoUsuario">
+        <ScalarProperty Name="IdTUsuario" ColumnName="IdTUsuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

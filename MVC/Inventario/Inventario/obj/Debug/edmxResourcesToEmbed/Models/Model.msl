@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventarioModelStoreContainer" CdmEntityContainer="InventarioEntities">
+    <EntitySetMapping Name="AVANCE_INVENTARIO">
+      <EntityTypeMapping TypeName="InventarioModel.AVANCE_INVENTARIO">
+        <MappingFragment StoreEntitySet="AVANCE_INVENTARIO">
+          <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
+          <ScalarProperty Name="ID_TIPO_PAT" ColumnName="ID_TIPO_PAT" />
+          <ScalarProperty Name="ID_BODEGA" ColumnName="ID_BODEGA" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="TIPO_PATENTE" ColumnName="TIPO_PATENTE" />
+          <ScalarProperty Name="ID_PATENTE" ColumnName="ID_PATENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_MAESTRA">
+      <EntityTypeMapping TypeName="InventarioModel.ESTADO_MAESTRA">
+        <MappingFragment StoreEntitySet="ESTADO_MAESTRA">
+          <ScalarProperty Name="ID_EST" ColumnName="ID_EST" />
+          <ScalarProperty Name="DETALLE" ColumnName="DETALLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_PATENTE">
+      <EntityTypeMapping TypeName="InventarioModel.ESTADO_PATENTE">
+        <MappingFragment StoreEntitySet="ESTADO_PATENTE">
+          <ScalarProperty Name="ID_TIPO_PAT" ColumnName="ID_TIPO_PAT" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_USUARIO">
+      <EntityTypeMapping TypeName="InventarioModel.ESTADO_USUARIO">
+        <MappingFragment StoreEntitySet="ESTADO_USUARIO">
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="DETALLE" ColumnName="DETALLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAESTRA_INPUT">
+      <EntityTypeMapping TypeName="InventarioModel.MAESTRA_INPUT">
+        <MappingFragment StoreEntitySet="MAESTRA_INPUT">
+          <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+          <ScalarProperty Name="LOCAL" ColumnName="LOCAL" />
+          <ScalarProperty Name="TIPO_INVENTARIO" ColumnName="TIPO_INVENTARIO" />
+          <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
+          <ScalarProperty Name="EAN" ColumnName="EAN" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_EST" ColumnName="ID_EST" />
+          <ScalarProperty Name="ID_BODEGA" ColumnName="ID_BODEGA" />
+          <ScalarProperty Name="DESCRIPCION_PAT" ColumnName="DESCRIPCION_PAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODIFICAR_CAPTURA">
+      <EntityTypeMapping TypeName="InventarioModel.MODIFICAR_CAPTURA">
+        <MappingFragment StoreEntitySet="MODIFICAR_CAPTURA">
+          <ScalarProperty Name="ID_MOD" ColumnName="ID_MOD" />
+          <ScalarProperty Name="CONTEO1" ColumnName="CONTEO1" />
+          <ScalarProperty Name="CONTEO2" ColumnName="CONTEO2" />
+          <ScalarProperty Name="ID_EST" ColumnName="ID_EST" />
+          <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="InventarioModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_UBICACION">
+      <EntityTypeMapping TypeName="InventarioModel.TIPO_UBICACION">
+        <MappingFragment StoreEntitySet="TIPO_UBICACION">
+          <ScalarProperty Name="ID_BODEGA" ColumnName="ID_BODEGA" />
+          <ScalarProperty Name="BODEGA" ColumnName="BODEGA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_USUARIO">
+      <EntityTypeMapping TypeName="InventarioModel.TIPO_USUARIO">
+        <MappingFragment StoreEntitySet="TIPO_USUARIO">
+          <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBICACION">
+      <EntityTypeMapping TypeName="InventarioModel.UBICACION">
+        <MappingFragment StoreEntitySet="UBICACION">
+          <ScalarProperty Name="ID_PATENTE" ColumnName="ID_PATENTE" />
+          <ScalarProperty Name="ID_PATENTE_BODEGA" ColumnName="ID_PATENTE_BODEGA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="RANGO_BAJO" ColumnName="RANGO_BAJO" />
+          <ScalarProperty Name="RANGO_ALTO" ColumnName="RANGO_ALTO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="ID_BODEGA" ColumnName="ID_BODEGA" />
+          <ScalarProperty Name="AVANCE_CERRADO" ColumnName="AVANCE_CERRADO" />
+          <ScalarProperty Name="AVANCE_ABIERTO" ColumnName="AVANCE_ABIERTO" />
+          <ScalarProperty Name="AVANCE_NULO" ColumnName="AVANCE_NULO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="InventarioModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="USUARIO1" ColumnName="USUARIO" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="USUARIO_X_TIPO" TypeName="InventarioModel.USUARIO_X_TIPO" StoreEntitySet="USUARIO_X_TIPO">
+      <EndProperty Name="USUARIO">
+        <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+      </EndProperty>
+      <EndProperty Name="TIPO_USUARIO">
+        <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="ESTADO_INVENTARIO">
+      <EntityTypeMapping TypeName="InventarioModel.ESTADO_INVENTARIO">
+        <MappingFragment StoreEntitySet="ESTADO_INVENTARIO">
+          <ScalarProperty Name="ESTADO_INVENTARIO1" ColumnName="ESTADO_INVENTARIO" />
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PORCENTAJE_AVANCE">
+      <EntityTypeMapping TypeName="InventarioModel.PORCENTAJE_AVANCE">
+        <MappingFragment StoreEntitySet="PORCENTAJE_AVANCE">
+          <ScalarProperty Name="UBICACION" ColumnName="UBICACION" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="PORCENTAJE" ColumnName="PORCENTAJE" />
+          <ScalarProperty Name="EXTENDIDO" ColumnName="EXTENDIDO" />
+          <ScalarProperty Name="REGISTROS" ColumnName="REGISTROS" />
+          <ScalarProperty Name="ID_AVANCE" ColumnName="ID_AVANCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_BUSQUEDA">
+      <EntityTypeMapping TypeName="InventarioModel.TIPO_BUSQUEDA">
+        <MappingFragment StoreEntitySet="TIPO_BUSQUEDA">
+          <ScalarProperty Name="BUSQUEDA" ColumnName="BUSQUEDA" />
+          <ScalarProperty Name="ID_BUSQUEDA" ColumnName="ID_BUSQUEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAESTRA_CONGELADO">
+      <EntityTypeMapping TypeName="InventarioModel.MAESTRA_CONGELADO">
+        <MappingFragment StoreEntitySet="MAESTRA_CONGELADO">
+          <ScalarProperty Name="IDMCONG" ColumnName="IDMCONG" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="EAN" ColumnName="EAN" />
+          <ScalarProperty Name="TIPO_CODBARRA" ColumnName="TIPO_CODBARRA" />
+          <ScalarProperty Name="FECHA_CREACION_ARCHIVO" ColumnName="FECHA_CREACION_ARCHIVO" />
+          <ScalarProperty Name="DESCRIPCION_DPTO" ColumnName="DESCRIPCION_DPTO" />
+          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+          <ScalarProperty Name="DESCRIPCION_SUB_DPTO" ColumnName="DESCRIPCION_SUB_DPTO" />
+          <ScalarProperty Name="SUB_DEPARTAMENTO" ColumnName="SUB_DEPARTAMENTO" />
+          <ScalarProperty Name="DESCRIPCION_CLASE" ColumnName="DESCRIPCION_CLASE" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="DESCRIPCION_SUBCLASE" ColumnName="DESCRIPCION_SUBCLASE" />
+          <ScalarProperty Name="SUB_CLASE" ColumnName="SUB_CLASE" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="UNIDAD_MEDIDA" ColumnName="UNIDAD_MEDIDA" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="TIPO_INVENTARIO" ColumnName="TIPO_INVENTARIO" />
+          <ScalarProperty Name="LOCALES" ColumnName="LOCALES" />
+          <ScalarProperty Name="CODIGO_INTERNO" ColumnName="CODIGO_INTERNO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NUMCONTEO" ColumnName="NUMCONTEO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAESTRA_PROCESO">
+      <EntityTypeMapping TypeName="InventarioModel.MAESTRA_PROCESO">
+        <MappingFragment StoreEntitySet="MAESTRA_PROCESO">
+          <ScalarProperty Name="IDMPROC" ColumnName="IDMPROC" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="EAN" ColumnName="EAN" />
+          <ScalarProperty Name="TIPO_CODBARRA" ColumnName="TIPO_CODBARRA" />
+          <ScalarProperty Name="FECHA_CREACION_ARCHIVO" ColumnName="FECHA_CREACION_ARCHIVO" />
+          <ScalarProperty Name="DESCRIPCION_DPTO" ColumnName="DESCRIPCION_DPTO" />
+          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+          <ScalarProperty Name="DESCRIPCION_SUB_DPTO" ColumnName="DESCRIPCION_SUB_DPTO" />
+          <ScalarProperty Name="SUB_DEPARTAMENTO" ColumnName="SUB_DEPARTAMENTO" />
+          <ScalarProperty Name="DESCRIPCION_CLASE" ColumnName="DESCRIPCION_CLASE" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="DESCRIPCION_SUBCLASE" ColumnName="DESCRIPCION_SUBCLASE" />
+          <ScalarProperty Name="SUB_CLASE" ColumnName="SUB_CLASE" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="UNIDAD_MEDIDA" ColumnName="UNIDAD_MEDIDA" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="TIPO_INVENTARIO" ColumnName="TIPO_INVENTARIO" />
+          <ScalarProperty Name="LOCALES" ColumnName="LOCALES" />
+          <ScalarProperty Name="CODIGO_INTERNO" ColumnName="CODIGO_INTERNO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NUMCONTEO" ColumnName="NUMCONTEO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

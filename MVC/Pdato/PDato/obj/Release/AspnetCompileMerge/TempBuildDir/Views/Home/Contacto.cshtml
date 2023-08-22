@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Contacto";
+}
+
+<br>
+<!-- Page Content -->
+<div class="container">
+    <br />
+    <div class="jumbotron redondearimagen sombra">
+        <!-- /.row -->
+        <br /><br />
+        <div class="row">
+
+            <div class="col-sm-6">
+                <!-- -->
+                <h2>Formulario de Contacto :</h2><br>
+                <form action="/Home/Contacto" method="post" class="was-validated">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Nombre</label><!--col-xs-8 col-sm-6-->
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" name="nombre" required />
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">Por favor ingrese nombre.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Teléfono</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" name="telefono" required />
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">Por favor ingrese teléfono.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Email</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" name="email" required />
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">Por favor ingrese email.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Asunto</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" name="title" required />
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">Por favor ingrese asunto.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Contenido</label>
+                        <div class="col-xs-9">
+                            <textarea class="form-control" name="content" rows="5" required></textarea>
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">Por favor ingrese contenido.</div>
+                        </div>
+                    </div>
+                    <!-- #messages is where the messages are placed inside -->
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div id="messages"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="submit" name="Submit" class="btn btn-success btn-Medium" value="Enviar">
+                                <span class="glyphicon glyphicon-envelope"></span> Enviar
+                            </button>
+                            <button type="submit" class="btn btn-success btn-Medium">
+                                <span class="glyphicon glyphicon-trash"></span> Limpiar
+                            </button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
+
+
+                @if (ViewBag.Mensaje == "ok")
+                {
+                    <div id="modal_dialog" style="display: none">
+                        This is a Modal Background popup
+                    </div>
+                    <asp:Button ID="btnModalPopup" runat="server" Text="Ok" />
+                }
+                else
+                {
+                    <div id="modal_dialog" style="display: none">
+                        This is a Modal Background popup
+                    </div>
+                    <asp:Button ID="btnModalPopup" runat="server" Text="Error" />
+                }
+
+            </div>
+
+
+            <div class="col-sm-6">
+                <h3>Detalle Contacto</h3>
+                <p>
+                    Avda. Lib. Gral. Bernardo O'Higgins 351 of 1<br>Santiago, Chile<br>
+                </p>
+                <p>
+                    <i class="fa fa-phone"></i>
+                    <abbr title="Móvil">Móvil </abbr>: +569 544 89005
+                </p>
+                <p>
+                    <i class="fa fa-envelope-o"></i>
+                    <abbr title="Email">Email</abbr>: <a href="mailto:info@pasaeldato.cl">info@pasaeldato.cl</a>
+                </p>
+                <p>
+                    <i class="fa fa-clock-o"></i>
+                    <abbr title="Horario Atención">Horario</abbr>: Lunes - Viernes: 9:00 AM a 5:00 PM
+                </p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+

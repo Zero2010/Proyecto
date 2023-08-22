@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "DetalleHabitacion";
+}
+
+<div class="container">
+
+    <br /> <br />
+    <div class="row">
+
+
+        <div class="col-md-8">
+            @foreach (var item in ViewBag.ImagenHabitacion)
+            {
+                <img class="imagenhabitacion redondearimagen" src="/@item.HabitacionPath" alt="Card image cap">
+                <div class="card-body">
+                    <br />
+                    <h3 class="text-center text-uppercase encabezado">
+                        <span class="text-lowercase d-block" align="left"><p class="Letras">@item.DescripcionProducto</p></span>
+                    </h3>
+
+                    <h1 class="one centraricono"><span><img src="~/Imagenes/Logo/colgador.png" /></span></h1>
+
+                    <h2 class="text-center text-uppercase encabezado">
+                        <span class="text-lowercase d-block" align="center"><p class="Letras">Nuestra Habitación:</p></span>
+                    </h2>
+
+                    <h3 class="text-center text-uppercase encabezado">
+                        <span class="text-lowercase d-block" align="left"><p class="Letras">@item.DetalleProducto</p></span>
+                    </h3>
+
+                </div>
+            }
+
+        </div>
+
+        <div class="col-md-4">
+            <br>
+            <h3 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase d-block" align="left"><p class="Letras">Precios - Condiciones</p></span>
+            </h3>
+            <ul class="list-group list-group-flush listgroup">
+                @foreach (var item in ViewBag.PrecioHabitacion)
+                {
+                    <li class="list-group-item ListadoLetrasPromo"><strong>@item.DetalleRestriccion</strong></li>
+                    <li class="list-group-item ListadoLetrasPromo"><strong>Precio :</strong>@item.Precio</li>
+                    <li class="list-group-item ListadoLetrasPromo"><strong>Tiempo :</strong>@item.hrs</li>
+                }
+            </ul>
+        </div>
+
+    </div>
+  
+</div>
+
+<div class="container-fluid">
+
+    <hr class="col-md-12">
+    <div class="col-md-12 pt-4">
+        <h1 class="text-center text-uppercase encabezado">
+            <span class="text-lowercase"><p class="Letras TituloLetra">Servicios de Nuestra Habitación</p></span>
+        </h1>
+    </div>
+    <hr class="col-md-12">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            @foreach (var item in ViewBag.ServicioHabitacion)
+            {
+                <div class="col-md-3">
+                    <div class="mg-feature">
+                        <div class="mg-feature-icon-title">
+                            <img align="center" class="imagenicono" src="/@item.IhabitacionMediano" alt="Card image cap">
+                        </div>
+                        <br />
+                        @*<p align="left">@item.DescripcionSHabitacion</p>*@
+                        <h3 class="text-center text-uppercase encabezado">
+                            <span class="text-lowercase d-block" align="left"><p class="Letras">@item.DescripcionSHabitacion</p></span>
+                        </h3>
+                        <p>@item.DetalleServicio</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+
+</div>
+
+
+

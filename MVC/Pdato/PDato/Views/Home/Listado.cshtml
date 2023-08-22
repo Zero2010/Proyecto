@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Listado Moteles";
+}
+
+<br>
+<br>
+<br>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <ul class="list-group list-group-flush listgroup">
+                @foreach (var item in ViewBag.menu)
+                {
+                    <li class="list-group-item listgroup"><a href="@item.LinkH">@item.DescripcionTHabitacion<span class="float-right badge badge-danger round">@item.id</span></a></li>
+                }
+            </ul>
+        </div>
+
+        <div class="col-sm-8">
+
+            @foreach (var item in ViewBag.imagen)
+            {
+                <br>
+                <div class="row featurette">
+                    <div class="col-sm-8">
+                        <h3 class="text-center text-uppercase encabezado">
+                            <span class="text-lowercase d-block" align="left"><p class="Letras">Motel : @item.NombreSucursal</p></span>
+                        </h3>
+                        <hr class="col-sm-10" />
+
+                        <li class="list-inline-item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <strong>Dirección   :</strong>@item.direccion  @item.Numero, @item.Comuna
+                        </li>
+
+                        <p class="ListadoLetras"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <strong>Descripción :</strong>@item.DescripcionSucursal</p>
+                        <li class="list-inline-item">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <span><strong>Servicios:</strong></span>
+                            @foreach (var servicio in ViewBag.servicio_x_sucursal)
+                            {
+                                if (@item.IdSucursal == @servicio.IdSucursal)
+                                {
+                                    <span class="badge badge-pill badge-danger">@servicio.DescripcionSSucursal</span>
+                                }
+                            }
+                        </li>
+                        <br />  <br />
+                        <a class="btn btn-outline-danger" href="/Motel/DetalleMotel/@item.IdSucursal" role="button">Ver más</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="imagenHabitacionlista sombra" p src="data:image/jpeg;base64,@item.ImagenBase64" alt="@item.NombreSucursal">
+                    </div>
+                </div>
+
+                <br>
+
+                <h1 class="one centraricono"><span><img src="~/Imagenes/Logo/colgador.png" alt="Logo moteles pasa el dato" /></span></h1>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+

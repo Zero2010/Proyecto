@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<emails>
+  <email>
+    <Mail_Smtp>servio</Mail_Smtp>
+    <Mail_Puerto>25</Mail_Puerto>
+    <Mail_Envio>Email envio</Mail_Envio>
+    <Mail_Envio_Nombre>Nombre Usuario</Mail_Envio_Nombre>
+    <Mail_Contrasena>contrasena</Mail_Contrasena>
+    <Mail_Destinatario>email destinatario</Mail_Destinatario>
+    <Mail_Destinatario_Nombre>sorry</Mail_Destinatario_Nombre>
+    <Mail_Asunto>Se han Enviado los Registros de forma correcta al Web Service de xxxx</Mail_Asunto>
+  </email>
+</emails>

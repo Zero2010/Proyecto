@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Home/Index" title="Home Page"  description="Pagina de Inicio">
+    <siteMapNode url="Home/Motel" title="Motel"  description="Pagina de Descripcion Motel" />
+    <siteMapNode url="Home/Listado" title="Listado Motel"  description="Pagina de Listado de Moteles" />
+    <siteMapNode url="Home/Contacto" title="Pagina Contacto"  description="Pagina de Contacto" />
+
+    <siteMapNode url="Motel/DetalleMotel" title="Detalle Motel"  description="Pagina de Descripcion Motel" />
+    <siteMapNode url="Home/DetalleHabitacion" title="Detalle habitacion"  description="Pagina de Listado de Moteles" />
+    <siteMapNode url="Home/Vip" title="Habitacion Vip"  description="habitaciones Vip" />
+    <siteMapNode url="Home/Jacuzzi" title="Habitacion Jacuzzi"  description="habitaciones con Jacuzzi" />
+    <siteMapNode url="Home/Ambientacion" title="Habitacion Ambientacion"  description="habitaciones con Ambientacion" />
+    <siteMapNode url="Home/SexShop" title="Habitacion Sexshop"  description="habitaciones con Sexshop" />
+    <siteMapNode url="Home/Promociones" title="Habitacion Promociones"  description="habitaciones Promociones" />
+    <siteMapNode url="Home/Nuevos" title="Habitacion Nuevos"  description="habitaciones Nuevos" />
+    <siteMapNode url="Home/SilladelAmor" title="Habitacion SilladelAmor"  description="habitaciones SilladelAmor" />
+    <siteMapNode url="Home/Suite" title="Habitacion Suite"  description="habitaciones de Suite" />
+    <siteMapNode url="Home/Habitacion" title="Habitacion Habitacion"  description="habitaciones de Habitacion" />
+    <siteMapNode url="Home/TopTen" title="Habitacion TopTen"  description="habitaciones de TopTen" />
+    <siteMapNode url="Home/PoloDance" title="Habitacion PoloDance"  description="habitaciones PoloDanceo" />
+    <siteMapNode url="Home/Golden" title="Habitacion Golden"  description="habitaciones Golden" />
+
+  </siteMapNode>
+</siteMap>

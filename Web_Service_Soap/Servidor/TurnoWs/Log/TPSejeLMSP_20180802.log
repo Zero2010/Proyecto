@@ -1,0 +1,107 @@
+09:41:15.658,000,INF: IP:localhost, Puerto:5091
+09:41:15.680,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+09:41:15.719,000,ERR: System.FormatException: Se ha especificado una dirección IP no válida.
+   en System.Net.IPAddress.InternalParse(String ipString, Boolean tryParse)
+   en System.Net.IPAddress.Parse(String ipString)
+   en TPSejeLMSP.Communications.SocketWrapper.Send(String data) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Communication\SocketWrapper.cs:línea 35
+   en TurnoChileExpress.Clases.TransactionManager.IngresarLogIn(String escritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 293
+   en TurnoChileExpress.ws.WS_CExpress.LogIn(String idEscritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 48
+09:41:15.752,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaInicarSession><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>Se ha especificado una dirección IP no válida.</GlosaRespuesta><IdOfi /><Ofi /><Esc /><IdEje /><Eje /><Edo /><Encuesta /></RespuestaInicarSession>
+09:42:05.811,000,INF: IP:localhost, Puerto:5091
+09:42:05.811,001,QRY: TS20TP000460011|eje1|1234|192.016.032.044F60A@
+09:42:05.826,000,ERR: System.FormatException: Se ha especificado una dirección IP no válida.
+   en System.Net.IPAddress.InternalParse(String ipString, Boolean tryParse)
+   en System.Net.IPAddress.Parse(String ipString)
+   en TPSejeLMSP.Communications.SocketWrapper.Send(String data) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Communication\SocketWrapper.cs:línea 35
+   en TurnoChileExpress.Clases.TransactionManager.IngresarLogIn(String escritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 293
+   en TurnoChileExpress.ws.WS_CExpress.LogIn(String idEscritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 48
+09:42:05.827,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaInicarSession><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>Se ha especificado una dirección IP no válida.</GlosaRespuesta><IdOfi /><Ofi /><Esc /><IdEje /><Eje /><Edo /><Encuesta /></RespuestaInicarSession>
+09:44:00.837,000,INF: IP:172.016.032.044, Puerto:5091
+09:44:00.848,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+09:44:21.888,000,ERR: System.Net.Sockets.SocketException (0x80004005): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder 172.14.26.36:5091
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   en TPSejeLMSP.Communications.SocketWrapper.Send(String data) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Communication\SocketWrapper.cs:línea 40
+   en TurnoChileExpress.Clases.TransactionManager.IngresarLogIn(String escritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 293
+   en TurnoChileExpress.ws.WS_CExpress.LogIn(String idEscritorio, String user, String pass, String ip) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 48
+09:44:21.919,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaInicarSession><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder 172.14.26.36:5091</GlosaRespuesta><IdOfi /><Ofi /><Esc /><IdEje /><Eje /><Edo /><Encuesta /></RespuestaInicarSession>
+09:45:12.724,000,INF: IP:172.16.32.44, Puerto:5091
+09:45:12.734,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+09:45:12.785,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+09:45:12.831,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:45:29.311,000,INF: IP:172.16.32.44, Puerto:5091
+09:45:29.314,037,QRY: TS20TP000230371|9|FB62@
+09:45:29.357,037,RES: TS20TP00019037FCBF@
+09:45:29.359,011,QRY: TS20TP000200111FC9E@
+09:45:29.367,011,RES: TS20TP0011301109:48:45|ATENDIENDO|0|0|0|0|0|0|11|6|9|-1|A|MercadoLibre y/o Pre Etiquetado|0|600|120|0|600|||DE08@
+09:45:29.370,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>-1</NumeroTurno><Rut /></RespuestaWS>
+10:36:59.896,000,INF: IP:172.16.32.44, Puerto:5091
+10:36:59.904,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:36:59.926,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:36:59.967,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:37:13.952,000,INF: IP:172.16.32.44, Puerto:5091
+10:37:13.954,021,QRY: TS20TP000200211FC9D@
+10:37:13.959,021,RES: TS20TP001420211~0~A~Confirmar reserva de hora~0|9~0~A~Priorización (LETRA A)~0|10~0~B~Priorización (LETRA B)~0|12~0~I~Congelar atención~0CF9F@
+10:37:18.470,011,QRY: TS20TP000200111FC9E@
+10:37:18.481,011,RES: TS20TP0006101110:40:35|PAUSA|0|0|0|0|0|0|11|||||||||||||EE01@
+12:17:42.272,000,INF: IP:172.16.32.44, Puerto:5091
+12:17:42.281,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+12:17:42.308,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+12:17:42.351,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:17:54.258,000,INF: IP:172.16.32.44, Puerto:5091
+12:17:54.261,022,QRY: TS20TP000200221FC9C@
+12:17:54.267,022,RES: TS20TP00019022FCC5@
+12:17:54.287,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 206
+   en TurnoChileExpress.ws.WS_CExpress.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 309
+12:17:54.290,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:18:04.250,000,INF: IP:172.16.32.44, Puerto:5091
+12:18:04.253,022,QRY: TS20TP000200221FC9C@
+12:18:04.260,022,RES: TS20TP00019022FCC5@
+12:18:04.267,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 206
+   en TurnoChileExpress.ws.WS_CExpress.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 309
+12:18:04.268,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:18:18.248,000,INF: IP:172.16.32.44, Puerto:5091
+12:18:18.252,002,QRY: TS20TP000200021FC9E@
+12:18:18.269,002,RES: TS20TP00019002FCC7@
+12:18:18.270,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:18:40.979,000,INF: IP:172.16.32.44, Puerto:5091
+12:18:40.984,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+12:18:41.003,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+12:18:41.004,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:19:00.622,000,INF: IP:172.16.32.44, Puerto:5091
+12:19:04.125,022,QRY: TS20TP000200221FC9C@
+12:19:05.248,022,RES: TS20TP00019022FCC5@
+12:19:52.099,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 206
+   en TurnoChileExpress.ws.WS_CExpress.GetSeries(String idEscritorio) en D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 309
+12:19:53.781,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+12:20:22.793,000,INF: IP:172.16.32.44, Puerto:5091
+12:20:45.087,022,QRY: TS20TP000200221FC9C@
+12:21:02.234,022,RES: TS20TP00019022FCC5@
+12:22:06.721,000,INF: IP:172.16.32.44, Puerto:5091
+12:22:13.004,021,QRY: TS20TP000200211FC9D@
+12:22:14.260,021,RES: TS20TP001420211~0~A~Confirmar reserva de hora~0|9~0~A~Priorización (LETRA A)~0|10~0~B~Priorización (LETRA B)~0|12~0~I~Congelar atención~0CF9F@
+12:32:08.672,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+16:46:47.489,000,INF: IP:172.16.32.44, Puerto:5091
+16:46:47.537,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+16:46:47.567,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+16:46:47.625,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+16:48:49.734,000,INF: IP:172.16.32.44, Puerto:5091
+16:48:52.266,021,QRY: TS20TP000200211FC9D@
+16:48:52.277,021,RES: TS20TP001420211~0~A~Confirmar reserva de hora~0|9~0~A~Priorización (LETRA A)~0|10~0~B~Priorización (LETRA B)~0|12~0~I~Congelar atención~0CF9F@
+16:48:54.308,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+16:59:16.001,000,INF: IP:172.16.32.44, Puerto:5091
+16:59:16.006,021,QRY: TS20TP000200211FC9D@
+16:59:16.019,021,RES: TS20TP001420211~0~A~Confirmar reserva de hora~0|9~0~A~Priorización (LETRA A)~0|10~0~B~Priorización (LETRA B)~0|12~0~I~Congelar atención~0CF9F@
+16:59:16.054,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>

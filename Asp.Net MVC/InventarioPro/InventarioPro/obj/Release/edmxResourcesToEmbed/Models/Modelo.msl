@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventarioProModelStoreContainer" CdmEntityContainer="InventarioProEntities">
+    <EntitySetMapping Name="Avance">
+      <EntityTypeMapping TypeName="InventarioProModel.Avance">
+        <MappingFragment StoreEntitySet="Avance">
+          <ScalarProperty Name="IdAvance" ColumnName="IdAvance" />
+          <ScalarProperty Name="CantidadRegistro" ColumnName="CantidadRegistro" />
+          <ScalarProperty Name="DescripcionPasillo" ColumnName="DescripcionPasillo" />
+          <ScalarProperty Name="MontoTipoUbicacion" ColumnName="MontoTipoUbicacion" />
+          <ScalarProperty Name="PorcentajeAvance" ColumnName="PorcentajeAvance" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="TipoUbicacion" ColumnName="TipoUbicacion" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AvanceCaptura">
+      <EntityTypeMapping TypeName="InventarioProModel.AvanceCaptura">
+        <MappingFragment StoreEntitySet="AvanceCaptura">
+          <ScalarProperty Name="IdAPatente" ColumnName="IdAPatente" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Captura">
+      <EntityTypeMapping TypeName="InventarioProModel.Captura">
+        <MappingFragment StoreEntitySet="Captura">
+          <ScalarProperty Name="IdCaptura" ColumnName="IdCaptura" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="FechaCaptura" ColumnName="FechaCaptura" />
+          <ScalarProperty Name="CantidadCaptura" ColumnName="CantidadCaptura" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="FechaLote" ColumnName="FechaLote" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Captura_Local_Producto">
+      <EntityTypeMapping TypeName="InventarioProModel.Captura_Local_Producto">
+        <MappingFragment StoreEntitySet="Captura_Local_Producto">
+          <ScalarProperty Name="IdCaptura" ColumnName="IdCaptura" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="InventarioProModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Empresa1" ColumnName="Empresa1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kardex">
+      <EntityTypeMapping TypeName="InventarioProModel.Kardex">
+        <MappingFragment StoreEntitySet="Kardex">
+          <ScalarProperty Name="IdKardex" ColumnName="IdKardex" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="FechaKardex" ColumnName="FechaKardex" />
+          <ScalarProperty Name="CantidadKardex" ColumnName="CantidadKardex" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locales">
+      <EntityTypeMapping TypeName="InventarioProModel.Locales">
+        <MappingFragment StoreEntitySet="Locales">
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="NombreLocal" ColumnName="NombreLocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locales_Ubicacion">
+      <EntityTypeMapping TypeName="InventarioProModel.Locales_Ubicacion">
+        <MappingFragment StoreEntitySet="Locales_Ubicacion">
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModificacionCaptura">
+      <EntityTypeMapping TypeName="InventarioProModel.ModificacionCaptura">
+        <MappingFragment StoreEntitySet="ModificacionCaptura">
+          <ScalarProperty Name="IdModificacion" ColumnName="IdModificacion" />
+          <ScalarProperty Name="Conteo1" ColumnName="Conteo1" />
+          <ScalarProperty Name="Conteo2" ColumnName="Conteo2" />
+          <ScalarProperty Name="IdCaptura" ColumnName="IdCaptura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="InventarioProModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+          <ScalarProperty Name="Ean" ColumnName="Ean" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+          <ScalarProperty Name="Clase" ColumnName="Clase" />
+          <ScalarProperty Name="DescripcionClase" ColumnName="DescripcionClase" />
+          <ScalarProperty Name="SubClase" ColumnName="SubClase" />
+          <ScalarProperty Name="DescripcionSubClase" ColumnName="DescripcionSubClase" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUbicacion">
+      <EntityTypeMapping TypeName="InventarioProModel.TipoUbicacion">
+        <MappingFragment StoreEntitySet="TipoUbicacion">
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+          <ScalarProperty Name="TipoUbicacion1" ColumnName="TipoUbicacion1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="InventarioProModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="IdTUsuario" ColumnName="IdTUsuario" />
+          <ScalarProperty Name="TipoUsuario1" ColumnName="TipoUsuario1" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubicacion">
+      <EntityTypeMapping TypeName="InventarioProModel.Ubicacion">
+        <MappingFragment StoreEntitySet="Ubicacion">
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RangoBajo" ColumnName="RangoBajo" />
+          <ScalarProperty Name="RangoAlto" ColumnName="RangoAlto" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="InventarioProModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario1" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="FCreacion" ColumnName="FCreacion" />
+          <ScalarProperty Name="FModificacion" ColumnName="FModificacion" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CantDiferenciaNegativa">
+      <EntityTypeMapping TypeName="InventarioProModel.View_CantDiferenciaNegativa">
+        <MappingFragment StoreEntitySet="View_CantDiferenciaNegativa">
+          <ScalarProperty Name="IdCountSku" ColumnName="IdCountSku" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CantDiferenciaPositiva">
+      <EntityTypeMapping TypeName="InventarioProModel.View_CantDiferenciaPositiva">
+        <MappingFragment StoreEntitySet="View_CantDiferenciaPositiva">
+          <ScalarProperty Name="IdCountSku" ColumnName="IdCountSku" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Locales">
+      <EntityTypeMapping TypeName="InventarioProModel.View_Locales">
+        <MappingFragment StoreEntitySet="View_Locales">
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="NombreLocal" ColumnName="NombreLocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_SkuCapturados">
+      <EntityTypeMapping TypeName="InventarioProModel.View_SkuCapturados">
+        <MappingFragment StoreEntitySet="View_SkuCapturados">
+          <ScalarProperty Name="IdCountSku" ColumnName="IdCountSku" />
+          <ScalarProperty Name="CountSku" ColumnName="CountSku" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_TipoUbicacion">
+      <EntityTypeMapping TypeName="InventarioProModel.View_TipoUbicacion">
+        <MappingFragment StoreEntitySet="View_TipoUbicacion">
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+          <ScalarProperty Name="TipoUbicacion1" ColumnName="TipoUbicacion1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Ubicacion">
+      <EntityTypeMapping TypeName="InventarioProModel.View_Ubicacion">
+        <MappingFragment StoreEntitySet="View_Ubicacion">
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RangoBajo" ColumnName="RangoBajo" />
+          <ScalarProperty Name="RangoAlto" ColumnName="RangoAlto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Empresa_X_Local" TypeName="InventarioProModel.Empresa_X_Local" StoreEntitySet="Empresa_X_Local">
+      <EndProperty Name="Empresa">
+        <ScalarProperty Name="IdEmpresa" ColumnName="Empresa_IdEmpresa" />
+      </EndProperty>
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="IdLocal" ColumnName="Locales_IdLocal" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Usuario_X_Tipo" TypeName="InventarioProModel.Usuario_X_Tipo" StoreEntitySet="Usuario_X_Tipo">
+      <EndProperty Name="TipoUsuario">
+        <ScalarProperty Name="IdTUsuario" ColumnName="TipoUsuario_IdTUsuario" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="IdUsuario" ColumnName="Usuario_IdUsuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="SP_ListadoDiferenciaNegativa" FunctionName="InventarioProModel.Store.SP_ListadoDiferenciaNegativa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoDiferenciaNegativa_Result">
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CantidadKardex" ColumnName="CantidadKardex" />
+          <ScalarProperty Name="CantidadCaptura" ColumnName="CantidadCaptura" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ListadoDiferenciaPositiva" FunctionName="InventarioProModel.Store.SP_ListadoDiferenciaPositiva">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoDiferenciaPositiva_Result">
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CantidadKardex" ColumnName="CantidadKardex" />
+          <ScalarProperty Name="CantidadCaptura" ColumnName="CantidadCaptura" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ListadoProductos" FunctionName="InventarioProModel.Store.SP_ListadoProductos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoProductos_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+          <ScalarProperty Name="Ean" ColumnName="Ean" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+          <ScalarProperty Name="Clase" ColumnName="Clase" />
+          <ScalarProperty Name="DescripcionClase" ColumnName="DescripcionClase" />
+          <ScalarProperty Name="SubClase" ColumnName="SubClase" />
+          <ScalarProperty Name="DescripcionSubClase" ColumnName="DescripcionSubClase" />
+          <ScalarProperty Name="IdLocal" ColumnName="IdLocal" />
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="IdTUbicacion" ColumnName="IdTUbicacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ListadoUbicaciones" FunctionName="InventarioProModel.Store.SP_ListadoUbicaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoUbicaciones_Result">
+          <ScalarProperty Name="IdUbicacion" ColumnName="IdUbicacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RangoBajo" ColumnName="RangoBajo" />
+          <ScalarProperty Name="RangoAlto" ColumnName="RangoAlto" />
+          <ScalarProperty Name="Rango" ColumnName="Rango" />
+          <ScalarProperty Name="TipoUbicacion1" ColumnName="TipoUbicacion1" />
+          <ScalarProperty Name="NombreLocal" ColumnName="NombreLocal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

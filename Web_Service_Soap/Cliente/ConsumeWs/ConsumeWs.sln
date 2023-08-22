@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{53BF2115-6D39-4A44-AFEC-C81A69475F14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40EE17A6-222B-4C7E-98CE-22F69DE024C7} = {40EE17A6-222B-4C7E-98CE-22F69DE024C7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controlador", "Controlador\Controlador.csproj", "{40EE17A6-222B-4C7E-98CE-22F69DE024C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53BF2115-6D39-4A44-AFEC-C81A69475F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BF2115-6D39-4A44-AFEC-C81A69475F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BF2115-6D39-4A44-AFEC-C81A69475F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BF2115-6D39-4A44-AFEC-C81A69475F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EE17A6-222B-4C7E-98CE-22F69DE024C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EE17A6-222B-4C7E-98CE-22F69DE024C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EE17A6-222B-4C7E-98CE-22F69DE024C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EE17A6-222B-4C7E-98CE-22F69DE024C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {633C5F50-DE2F-4834-AE7A-AD06C0D8E1CE}
+	EndGlobalSection
+EndGlobal

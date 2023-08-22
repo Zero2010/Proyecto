@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrudFIslaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" />
+    <Property Name="Apaterno" Type="varchar" MaxLength="30" />
+    <Property Name="Amaterno" Type="varchar" MaxLength="30" />
+    <Property Name="Rut" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreEmpresa" Type="varchar" MaxLength="100" />
+    <Property Name="RutEmpresa" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Empresa_x_TCargo_x_Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdEmpleado" />
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="bigint" Nullable="false" />
+    <Property Name="IdEmpleado" Type="bigint" Nullable="false" />
+    <Property Name="IdCargo" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_x_Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionCargo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="Relationship1">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship2">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="Tipo_x_Cargo" Type="Self.Tipo_x_Cargo" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_x_Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrudFIslaModelStoreContainer">
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa_x_TCargo_x_Empleado" EntityType="Self.Empresa_x_TCargo_x_Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_x_Cargo" EntityType="Self.Tipo_x_Cargo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="Tipo_x_Cargo" EntitySet="Tipo_x_Cargo" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

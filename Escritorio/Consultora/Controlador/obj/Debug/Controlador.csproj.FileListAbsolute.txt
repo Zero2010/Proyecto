@@ -1,0 +1,14 @@
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\bin\Debug\Controlador.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\bin\Debug\Controlador.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\bin\Debug\Modelo.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\bin\Debug\Modelo.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\bin\Debug\Controlador.dll
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\bin\Debug\Modelo.dll
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.dll
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Controlador\obj\Debug\Controlador.pdb

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrudFIslaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apaterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Amaterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Rut" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa_x_TCargo_x_Empleado" Relationship="Self.Relationship2" FromRole="Empleado" ToRole="Empresa_x_TCargo_x_Empleado" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreEmpresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RutEmpresa" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa_x_TCargo_x_Empleado" Relationship="Self.Relationship1" FromRole="Empresa" ToRole="Empresa_x_TCargo_x_Empleado" />
+  </EntityType>
+  <EntityType Name="Empresa_x_TCargo_x_Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdEmpleado" />
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int64" Nullable="false" />
+    <Property Name="IdEmpleado" Type="Int64" Nullable="false" />
+    <Property Name="IdCargo" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Empleado" Relationship="Self.Relationship2" FromRole="Empresa_x_TCargo_x_Empleado" ToRole="Empleado" />
+    <NavigationProperty Name="Empresa" Relationship="Self.Relationship1" FromRole="Empresa_x_TCargo_x_Empleado" ToRole="Empresa" />
+    <NavigationProperty Name="Tipo_x_Cargo" Relationship="Self.Relationship3" FromRole="Empresa_x_TCargo_x_Empleado" ToRole="Tipo_x_Cargo" />
+  </EntityType>
+  <EntityType Name="Tipo_x_Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionCargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa_x_TCargo_x_Empleado" Relationship="Self.Relationship3" FromRole="Tipo_x_Cargo" ToRole="Empresa_x_TCargo_x_Empleado" />
+  </EntityType>
+  <Association Name="Relationship2">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship1">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="Tipo_x_Cargo" Type="Self.Tipo_x_Cargo" Multiplicity="1" />
+    <End Role="Empresa_x_TCargo_x_Empleado" Type="Self.Empresa_x_TCargo_x_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_x_Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Empresa_x_TCargo_x_Empleado">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrudFIslaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" />
+    <EntitySet Name="Empresa_x_TCargo_x_Empleado" EntityType="Self.Empresa_x_TCargo_x_Empleado" />
+    <EntitySet Name="Tipo_x_Cargo" EntityType="Self.Tipo_x_Cargo" />
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="Tipo_x_Cargo" EntitySet="Tipo_x_Cargo" />
+      <End Role="Empresa_x_TCargo_x_Empleado" EntitySet="Empresa_x_TCargo_x_Empleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

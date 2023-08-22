@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pasaelda_PasaelDatoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cargo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Comentario">
+    <Key>
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdComentario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" />
+    <Property Name="Comentario" Type="varchar" MaxLength="1000" />
+    <Property Name="Fecha" Type="varchar" MaxLength="20" />
+    <Property Name="IdHabitacion" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Comuna">
+    <Key>
+      <PropertyRef Name="IdComuna" />
+    </Key>
+    <Property Name="IdComuna" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comuna" Type="varchar" MaxLength="100" />
+    <Property Name="IdRegion" Type="bigint" />
+  </EntityType>
+  <EntityType Name="DatosPersonales">
+    <Key>
+      <PropertyRef Name="IdDPersonales" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdDPersonales" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="RPreguntaSecreta" Type="varchar" MaxLength="100" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Direccion">
+    <Key>
+      <PropertyRef Name="IdDireccion" />
+    </Key>
+    <Property Name="IdDireccion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Numero" Type="varchar" MaxLength="5" />
+    <Property Name="Piso" Type="varchar" MaxLength="5" />
+    <Property Name="Dpto" Type="varchar" MaxLength="5" />
+    <Property Name="IdComuna" Type="bigint" />
+    <Property Name="IdSucursal" Type="bigint" />
+  </EntityType>
+  <EntityType Name="DPersonales_x_PSecreta">
+    <Key>
+      <PropertyRef Name="IdPSecreta" />
+      <PropertyRef Name="IdDPersonales" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdPSecreta" Type="bigint" Nullable="false" />
+    <Property Name="IdDPersonales" Type="bigint" Nullable="false" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="IdEmail" />
+    </Key>
+    <Property Name="IdEmail" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="200" />
+    <Property Name="Rut" Type="varchar" MaxLength="12" />
+    <Property Name="Dv" Type="varbinary" MaxLength="1" />
+    <Property Name="Historia" Type="varchar" MaxLength="250" />
+    <Property Name="Nosotros" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Empresa_x_Sucursal">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdEmpresa" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoReserva">
+    <Key>
+      <PropertyRef Name="IdEReserva" />
+    </Key>
+    <Property Name="IdEReserva" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EstadoReserva" Type="varchar" MaxLength="200" />
+    <Property Name="IdProducto" Type="bigint" />
+  </EntityType>
+  <EntityType Name="MedioPago">
+    <Key>
+      <PropertyRef Name="IdMPago" />
+    </Key>
+    <Property Name="IdMPago" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mediopago" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MPago_x_Sucursal">
+    <Key>
+      <PropertyRef Name="IdMPago" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdMPago" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PathImagenhabitacion">
+    <Key>
+      <PropertyRef Name="IdImagenH" />
+    </Key>
+    <Property Name="IdImagenH" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HabitacionPath" Type="varchar" MaxLength="200" />
+    <Property Name="ImagenBase64" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="PathImagenPortada">
+    <Key>
+      <PropertyRef Name="IdPImagenP" />
+    </Key>
+    <Property Name="IdPImagenP" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PortadaPath" Type="varchar" MaxLength="200" />
+    <Property Name="ImagenBase64" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Precio">
+    <Key>
+      <PropertyRef Name="IdPrecio" />
+    </Key>
+    <Property Name="IdPrecio" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Precio1" Type="int" />
+    <Property Name="Precio2" Type="int" />
+    <Property Name="Descuento" Type="int" />
+    <Property Name="IdProducto" Type="bigint" />
+    <Property Name="Horas" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PreguntaSecreta">
+    <Key>
+      <PropertyRef Name="IdPSecreta" />
+    </Key>
+    <Property Name="IdPSecreta" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PreguntaSecreta" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionProducto" Type="varchar" MaxLength="200" />
+    <Property Name="DetalleProducto" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Producto_x_PIHabitacion">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+      <PropertyRef Name="IdImagenH" />
+    </Key>
+    <Property Name="IdProducto" Type="bigint" Nullable="false" />
+    <Property Name="IdImagenH" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto_x_TCondicion">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+      <PropertyRef Name="IdTCondicion" />
+    </Key>
+    <Property Name="IdProducto" Type="bigint" Nullable="false" />
+    <Property Name="IdTCondicion" Type="bigint" Nullable="false" />
+    <Property Name="IdPrecio" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Puntaje">
+    <Key>
+      <PropertyRef Name="IdPuntaje" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdPuntaje" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemPuntaje" Type="varchar" MaxLength="30" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Puntaje_x_Comentario">
+    <Key>
+      <PropertyRef Name="IdPuntaje" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdPuntaje" Type="bigint" Nullable="false" />
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+    <Property Name="IdComentario" Type="bigint" Nullable="false" />
+    <Property Name="Valor" Type="int" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="IdRegion" />
+    </Key>
+    <Property Name="IdRegion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="IdReserva" />
+    </Key>
+    <Property Name="IdReserva" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FReserva" Type="varchar" MaxLength="20" />
+    <Property Name="HReserva" Type="varchar" MaxLength="20" />
+    <Property Name="NombreReserva" Type="varchar" MaxLength="200" />
+    <Property Name="IdEReserva" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ServicioHabitacion">
+    <Key>
+      <PropertyRef Name="IdSHabitacion" />
+    </Key>
+    <Property Name="IdSHabitacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionSHabitacion" Type="varchar" MaxLength="200" />
+    <Property Name="IhabitacionMediano" Type="varchar" MaxLength="50" />
+    <Property Name="IhabitacionPequeno" Type="varchar" MaxLength="50" />
+    <Property Name="DetalleServicio" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServicioSucursal">
+    <Key>
+      <PropertyRef Name="IdSSucursal" />
+    </Key>
+    <Property Name="IdSSucursal" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionSSucursal" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Sucursal">
+    <Key>
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdSucursal" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreSucursal" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionSucursal" Type="varchar" MaxLength="200" />
+    <Property Name="Nosotros" Type="varchar" MaxLength="200" />
+    <Property Name="Historia" Type="varchar" MaxLength="200" />
+    <Property Name="Facebook" Type="varchar" MaxLength="100" />
+    <Property Name="Twitter" Type="varchar" MaxLength="100" />
+    <Property Name="Instagram" Type="varchar" MaxLength="100" />
+    <Property Name="Contactanos" Type="varchar" MaxLength="250" />
+    <Property Name="Web" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Sucursal_x_Email">
+    <Key>
+      <PropertyRef Name="IdEmail" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdEmail" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal_x_PIPortada">
+    <Key>
+      <PropertyRef Name="IdPImagenP" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdPImagenP" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal_x_Producto">
+    <Key>
+      <PropertyRef Name="IdSucursal" />
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+    <Property Name="IdProducto" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal_x_Servicio">
+    <Key>
+      <PropertyRef Name="IdSSucursal" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdSSucursal" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal_x_Telefono">
+    <Key>
+      <PropertyRef Name="IdTel" />
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdTel" Type="bigint" Nullable="false" />
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Telefono">
+    <Key>
+      <PropertyRef Name="IdTel" />
+    </Key>
+    <Property Name="IdTel" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TerminoCondiciones">
+    <Key>
+      <PropertyRef Name="IdTCondicion" />
+    </Key>
+    <Property Name="IdTCondicion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIni" Type="varchar" MaxLength="20" />
+    <Property Name="FTer" Type="varchar" MaxLength="20" />
+    <Property Name="RestriccionHorario" Type="varchar" MaxLength="200" />
+    <Property Name="DetalleRestriccion" Type="varchar" MaxLength="100" />
+    <Property Name="Hrs" Type="varchar" MaxLength="50" />
+    <Property Name="NoIncluye" Type="varchar" MaxLength="250" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="THabitacion_x_SHabitacion">
+    <Key>
+      <PropertyRef Name="IdSHabitacion" />
+      <PropertyRef Name="IdTHabitacion" />
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdSHabitacion" Type="bigint" Nullable="false" />
+    <Property Name="IdTHabitacion" Type="bigint" Nullable="false" />
+    <Property Name="IdProducto" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoCuenta">
+    <Key>
+      <PropertyRef Name="IdTipoCuenta" />
+    </Key>
+    <Property Name="IdTipoCuenta" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionCuenta" Type="varchar" MaxLength="100" />
+    <Property Name="IdEmpresa" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TipoHabitacion">
+    <Key>
+      <PropertyRef Name="IdTHabitacion" />
+    </Key>
+    <Property Name="IdTHabitacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionTHabitacion" Type="varchar" MaxLength="200" />
+    <Property Name="LinkH" Type="varchar" MaxLength="50" />
+    <Property Name="TipoServicio" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="30" />
+    <Property Name="Pass" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Usuario_x_Cargo_x_TCuenta">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdCargo" />
+      <PropertyRef Name="IdTipoCuenta" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+    <Property Name="IdCargo" Type="bigint" Nullable="false" />
+    <Property Name="IdTipoCuenta" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TipoCuenta_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="TipoCuenta" Type="Self.TipoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoCuenta">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship1">
+    <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="IdRegion" />
+      </Principal>
+      <Dependent Role="Comuna">
+        <PropertyRef Name="IdRegion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship10">
+    <End Role="ServicioSucursal" Type="Self.ServicioSucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_Servicio" Type="Self.Sucursal_x_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicioSucursal">
+        <PropertyRef Name="IdSSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Servicio">
+        <PropertyRef Name="IdSSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship100">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship101">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship103">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DatosPersonales">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship104">
+    <End Role="TipoCuenta" Type="Self.TipoCuenta" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuenta">
+        <PropertyRef Name="IdTipoCuenta" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdTipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship105">
+    <End Role="PreguntaSecreta" Type="Self.PreguntaSecreta" Multiplicity="1" />
+    <End Role="DPersonales_x_PSecreta" Type="Self.DPersonales_x_PSecreta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PreguntaSecreta">
+        <PropertyRef Name="IdPSecreta" />
+      </Principal>
+      <Dependent Role="DPersonales_x_PSecreta">
+        <PropertyRef Name="IdPSecreta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship106">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="1" />
+    <End Role="DPersonales_x_PSecreta" Type="Self.DPersonales_x_PSecreta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="IdDPersonales" />
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DPersonales_x_PSecreta">
+        <PropertyRef Name="IdDPersonales" />
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship107">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Puntaje" Type="Self.Puntaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Puntaje">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship108">
+    <End Role="Puntaje" Type="Self.Puntaje" Multiplicity="1" />
+    <End Role="Puntaje_x_Comentario" Type="Self.Puntaje_x_Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Puntaje">
+        <PropertyRef Name="IdPuntaje" />
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Puntaje_x_Comentario">
+        <PropertyRef Name="IdPuntaje" />
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship109">
+    <End Role="Comentario" Type="Self.Comentario" Multiplicity="1" />
+    <End Role="Puntaje_x_Comentario" Type="Self.Puntaje_x_Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comentario">
+        <PropertyRef Name="IdComentario" />
+      </Principal>
+      <Dependent Role="Puntaje_x_Comentario">
+        <PropertyRef Name="IdComentario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship11">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_Servicio" Type="Self.Sucursal_x_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Servicio">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship12">
+    <End Role="Telefono" Type="Self.Telefono" Multiplicity="1" />
+    <End Role="Sucursal_x_Telefono" Type="Self.Sucursal_x_Telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Telefono">
+        <PropertyRef Name="IdTel" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Telefono">
+        <PropertyRef Name="IdTel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship13">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_Telefono" Type="Self.Sucursal_x_Telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Telefono">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship14">
+    <End Role="Email" Type="Self.Email" Multiplicity="1" />
+    <End Role="Sucursal_x_Email" Type="Self.Sucursal_x_Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Email">
+        <PropertyRef Name="IdEmail" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Email">
+        <PropertyRef Name="IdEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship15">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_Email" Type="Self.Sucursal_x_Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Email">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship16">
+    <End Role="ServicioHabitacion" Type="Self.ServicioHabitacion" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicioHabitacion">
+        <PropertyRef Name="IdSHabitacion" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdSHabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship17">
+    <End Role="TipoHabitacion" Type="Self.TipoHabitacion" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoHabitacion">
+        <PropertyRef Name="IdTHabitacion" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdTHabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship19">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_Producto" Type="Self.Sucursal_x_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Producto">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship2">
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comuna">
+        <PropertyRef Name="IdComuna" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdComuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship20">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Sucursal_x_Producto" Type="Self.Sucursal_x_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Sucursal_x_Producto">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship21">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="EstadoReserva" Type="Self.EstadoReserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="EstadoReserva">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship22">
+    <End Role="EstadoReserva" Type="Self.EstadoReserva" Multiplicity="0..1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoReserva">
+        <PropertyRef Name="IdEReserva" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="IdEReserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship23">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="Precio" Type="Self.Precio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Precio">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship24">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Producto_x_TCondicion" Type="Self.Producto_x_TCondicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Producto_x_TCondicion">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship25">
+    <End Role="TerminoCondiciones" Type="Self.TerminoCondiciones" Multiplicity="1" />
+    <End Role="Producto_x_TCondicion" Type="Self.Producto_x_TCondicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TerminoCondiciones">
+        <PropertyRef Name="IdTCondicion" />
+      </Principal>
+      <Dependent Role="Producto_x_TCondicion">
+        <PropertyRef Name="IdTCondicion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship26">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Producto_x_PIHabitacion" Type="Self.Producto_x_PIHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Producto_x_PIHabitacion">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship27">
+    <End Role="PathImagenhabitacion" Type="Self.PathImagenhabitacion" Multiplicity="1" />
+    <End Role="Producto_x_PIHabitacion" Type="Self.Producto_x_PIHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PathImagenhabitacion">
+        <PropertyRef Name="IdImagenH" />
+      </Principal>
+      <Dependent Role="Producto_x_PIHabitacion">
+        <PropertyRef Name="IdImagenH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship29">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship4">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Empresa_x_Sucursal" Type="Self.Empresa_x_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa_x_Sucursal">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship5">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Empresa_x_Sucursal" Type="Self.Empresa_x_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Empresa_x_Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship6">
+    <End Role="MedioPago" Type="Self.MedioPago" Multiplicity="1" />
+    <End Role="MPago_x_Sucursal" Type="Self.MPago_x_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioPago">
+        <PropertyRef Name="IdMPago" />
+      </Principal>
+      <Dependent Role="MPago_x_Sucursal">
+        <PropertyRef Name="IdMPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship7">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="MPago_x_Sucursal" Type="Self.MPago_x_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="MPago_x_Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="PathImagenPortada" Type="Self.PathImagenPortada" Multiplicity="1" />
+    <End Role="Sucursal_x_PIPortada" Type="Self.Sucursal_x_PIPortada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PathImagenPortada">
+        <PropertyRef Name="IdPImagenP" />
+      </Principal>
+      <Dependent Role="Sucursal_x_PIPortada">
+        <PropertyRef Name="IdPImagenP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="1" />
+    <End Role="Sucursal_x_PIPortada" Type="Self.Sucursal_x_PIPortada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Sucursal_x_PIPortada">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ActualizarPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usu" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CrearUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usu" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Detalle_x_SHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="FPagoSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Habitacion_x_Motel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdTHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Habitacion_x_Motel_x_Detalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="HorarioHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Imagen_x_Habitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Listado_x_Motel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ListadoMoteles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MenuIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Pagecounts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Portada_x_Carrusel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Portada_x_Motel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idmotel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Precio_x_Habitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Precio_x_Producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Precio_x_Producto_x_Max" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Precio_x_Producto_x_Min" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Servicio_x_Habitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Servicio_x_Sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Sucursal_x_Telefonos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Detalle_Sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="pasaelda_admin" />
+  <Function Name="MenuIndex1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="pasaelda_admin" StoreFunctionName="MenuIndex" />
+  <Function Name="ValidarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="pasaelda_mfelipe">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="pasaelda_PasaelDatoModelStoreContainer">
+    <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comentario" EntityType="Self.Comentario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comuna" EntityType="Self.Comuna" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Direccion" EntityType="Self.Direccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DPersonales_x_PSecreta" EntityType="Self.DPersonales_x_PSecreta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa_x_Sucursal" EntityType="Self.Empresa_x_Sucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoReserva" EntityType="Self.EstadoReserva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedioPago" EntityType="Self.MedioPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MPago_x_Sucursal" EntityType="Self.MPago_x_Sucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PathImagenhabitacion" EntityType="Self.PathImagenhabitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PathImagenPortada" EntityType="Self.PathImagenPortada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Precio" EntityType="Self.Precio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreguntaSecreta" EntityType="Self.PreguntaSecreta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto_x_PIHabitacion" EntityType="Self.Producto_x_PIHabitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto_x_TCondicion" EntityType="Self.Producto_x_TCondicion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Puntaje" EntityType="Self.Puntaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Puntaje_x_Comentario" EntityType="Self.Puntaje_x_Comentario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reserva" EntityType="Self.Reserva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicioHabitacion" EntityType="Self.ServicioHabitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicioSucursal" EntityType="Self.ServicioSucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal" EntityType="Self.Sucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal_x_Email" EntityType="Self.Sucursal_x_Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal_x_PIPortada" EntityType="Self.Sucursal_x_PIPortada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal_x_Producto" EntityType="Self.Sucursal_x_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal_x_Servicio" EntityType="Self.Sucursal_x_Servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sucursal_x_Telefono" EntityType="Self.Sucursal_x_Telefono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Telefono" EntityType="Self.Telefono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TerminoCondiciones" EntityType="Self.TerminoCondiciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THabitacion_x_SHabitacion" EntityType="Self.THabitacion_x_SHabitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoCuenta" EntityType="Self.TipoCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_x_Cargo_x_TCuenta" EntityType="Self.Usuario_x_Cargo_x_TCuenta" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TipoCuenta_Empresa" Association="Self.FK_TipoCuenta_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Comuna" EntitySet="Comuna" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship10" Association="Self.Relationship10">
+      <End Role="ServicioSucursal" EntitySet="ServicioSucursal" />
+      <End Role="Sucursal_x_Servicio" EntitySet="Sucursal_x_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship100" Association="Self.Relationship100">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship101" Association="Self.Relationship101">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship103" Association="Self.Relationship103">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship104" Association="Self.Relationship104">
+      <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship105" Association="Self.Relationship105">
+      <End Role="PreguntaSecreta" EntitySet="PreguntaSecreta" />
+      <End Role="DPersonales_x_PSecreta" EntitySet="DPersonales_x_PSecreta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship106" Association="Self.Relationship106">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="DPersonales_x_PSecreta" EntitySet="DPersonales_x_PSecreta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship107" Association="Self.Relationship107">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Puntaje" EntitySet="Puntaje" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship108" Association="Self.Relationship108">
+      <End Role="Puntaje" EntitySet="Puntaje" />
+      <End Role="Puntaje_x_Comentario" EntitySet="Puntaje_x_Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship109" Association="Self.Relationship109">
+      <End Role="Comentario" EntitySet="Comentario" />
+      <End Role="Puntaje_x_Comentario" EntitySet="Puntaje_x_Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship11" Association="Self.Relationship11">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Sucursal_x_Servicio" EntitySet="Sucursal_x_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship12" Association="Self.Relationship12">
+      <End Role="Telefono" EntitySet="Telefono" />
+      <End Role="Sucursal_x_Telefono" EntitySet="Sucursal_x_Telefono" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship13" Association="Self.Relationship13">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Sucursal_x_Telefono" EntitySet="Sucursal_x_Telefono" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship14" Association="Self.Relationship14">
+      <End Role="Email" EntitySet="Email" />
+      <End Role="Sucursal_x_Email" EntitySet="Sucursal_x_Email" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship15" Association="Self.Relationship15">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Sucursal_x_Email" EntitySet="Sucursal_x_Email" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship16" Association="Self.Relationship16">
+      <End Role="ServicioHabitacion" EntitySet="ServicioHabitacion" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship17" Association="Self.Relationship17">
+      <End Role="TipoHabitacion" EntitySet="TipoHabitacion" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship19" Association="Self.Relationship19">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Sucursal_x_Producto" EntitySet="Sucursal_x_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="Comuna" EntitySet="Comuna" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship20" Association="Self.Relationship20">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Sucursal_x_Producto" EntitySet="Sucursal_x_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship21" Association="Self.Relationship21">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="EstadoReserva" EntitySet="EstadoReserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship22" Association="Self.Relationship22">
+      <End Role="EstadoReserva" EntitySet="EstadoReserva" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship23" Association="Self.Relationship23">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Precio" EntitySet="Precio" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship24" Association="Self.Relationship24">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Producto_x_TCondicion" EntitySet="Producto_x_TCondicion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship25" Association="Self.Relationship25">
+      <End Role="TerminoCondiciones" EntitySet="TerminoCondiciones" />
+      <End Role="Producto_x_TCondicion" EntitySet="Producto_x_TCondicion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship26" Association="Self.Relationship26">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Producto_x_PIHabitacion" EntitySet="Producto_x_PIHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship27" Association="Self.Relationship27">
+      <End Role="PathImagenhabitacion" EntitySet="PathImagenhabitacion" />
+      <End Role="Producto_x_PIHabitacion" EntitySet="Producto_x_PIHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship29" Association="Self.Relationship29">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship4" Association="Self.Relationship4">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa_x_Sucursal" EntitySet="Empresa_x_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship5" Association="Self.Relationship5">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Empresa_x_Sucursal" EntitySet="Empresa_x_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship6" Association="Self.Relationship6">
+      <End Role="MedioPago" EntitySet="MedioPago" />
+      <End Role="MPago_x_Sucursal" EntitySet="MPago_x_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship7" Association="Self.Relationship7">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="MPago_x_Sucursal" EntitySet="MPago_x_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="PathImagenPortada" EntitySet="PathImagenPortada" />
+      <End Role="Sucursal_x_PIPortada" EntitySet="Sucursal_x_PIPortada" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Sucursal_x_PIPortada" EntitySet="Sucursal_x_PIPortada" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

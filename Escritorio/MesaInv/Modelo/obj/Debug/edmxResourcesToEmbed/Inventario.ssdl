@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InvProModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AvanceCaptura">
+    <Key>
+      <PropertyRef Name="IdACaptura" />
+    </Key>
+    <Property Name="IdACaptura" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CantidadRegistros" Type="int" />
+    <Property Name="Ubicacion" Type="varchar" MaxLength="300" />
+    <Property Name="Porcentaje" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeTotal" Type="decimal" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="AvanceUbicacion">
+    <Key>
+      <PropertyRef Name="IdAUbicacion" />
+    </Key>
+    <Property Name="IdAUbicacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ubicacion" Type="int" />
+    <Property Name="DescripcionUbicacion" Type="varchar" MaxLength="100" />
+    <Property Name="Motivo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CapturaDatos">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+    </Key>
+    <Property Name="IdCaptura" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Local" Type="varchar" MaxLength="100" />
+    <Property Name="TipoInventario" Type="varchar" MaxLength="100" />
+    <Property Name="Ubicacion" Type="varchar" MaxLength="100" />
+    <Property Name="Ean" Type="varchar" MaxLength="100" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="Cantidad" Type="varchar" MaxLength="100" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Unidad" Type="varchar" MaxLength="30" />
+    <Property Name="RutOperador" Type="varchar" MaxLength="50" />
+    <Property Name="FechaCaptura" Type="datetime" />
+    <Property Name="LugarCaptura" Type="varchar" MaxLength="50" />
+    <Property Name="DescripcionCaptura" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EstadoUbicacion">
+    <Key>
+      <PropertyRef Name="IdEUbicacion" />
+    </Key>
+    <Property Name="IdEUbicacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionEstado" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Kardex">
+    <Key>
+      <PropertyRef Name="IdKardex" />
+    </Key>
+    <Property Name="IdKardex" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="varchar" MaxLength="50" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="Locales" Type="varchar" MaxLength="30" />
+    <Property Name="TInventario" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="Marca" Type="varchar" MaxLength="100" />
+    <Property Name="UnidadMedida" Type="varchar" MaxLength="20" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Moneda" Type="varchar" MaxLength="20" />
+    <Property Name="SubClase" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionSubClase" Type="varchar" MaxLength="100" />
+    <Property Name="Clase" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionClase" Type="varchar" MaxLength="100" />
+    <Property Name="SubDepartamento" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionSubDpto" Type="varchar" MaxLength="100" />
+    <Property Name="Departamento" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionDpto" Type="varchar" MaxLength="100" />
+    <Property Name="FechaCarga" Type="datetime" />
+    <Property Name="TipoCodBarra" Type="varchar" MaxLength="100" />
+    <Property Name="Ean" Type="varchar" MaxLength="100" />
+    <Property Name="Cantidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MaestraProductos">
+    <Key>
+      <PropertyRef Name="IdMProducto" />
+    </Key>
+    <Property Name="IdMProducto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="varchar" MaxLength="50" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="Locales" Type="varchar" MaxLength="30" />
+    <Property Name="TInventario" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="Marca" Type="varchar" MaxLength="100" />
+    <Property Name="UnidadMedida" Type="varchar" MaxLength="20" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Moneda" Type="varchar" MaxLength="20" />
+    <Property Name="SubClase" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionSubClase" Type="varchar" MaxLength="100" />
+    <Property Name="Clase" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionClase" Type="varchar" MaxLength="100" />
+    <Property Name="SubDepartamento" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionSubDpto" Type="varchar" MaxLength="100" />
+    <Property Name="Departamento" Type="varchar" MaxLength="100" />
+    <Property Name="DescripcionDpto" Type="varchar" MaxLength="100" />
+    <Property Name="FechaCarga" Type="datetime" />
+    <Property Name="TipoCodBarra" Type="varchar" MaxLength="100" />
+    <Property Name="Ean" Type="varchar" MaxLength="100" />
+    <Property Name="Cantidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MCaptura_x_CDatos">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+      <PropertyRef Name="IdMCaptura" />
+    </Key>
+    <Property Name="IdCaptura" Type="bigint" Nullable="false" />
+    <Property Name="IdMCaptura" Type="bigint" Nullable="false" />
+    <Property Name="FechaActualizacion" Type="datetime" />
+    <Property Name="IdUsuario" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ModificacionCaptura">
+    <Key>
+      <PropertyRef Name="IdMCaptura" />
+    </Key>
+    <Property Name="IdMCaptura" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Conteo1" Type="int" />
+    <Property Name="Fecha1" Type="datetime" />
+    <Property Name="Conteo2" Type="int" />
+    <Property Name="Fecha2" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoUbicacion">
+    <Key>
+      <PropertyRef Name="IdTUbicacion" />
+    </Key>
+    <Property Name="IdTUbicacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionUbicacion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="IdTUsuario" />
+    </Key>
+    <Property Name="IdTUsuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionUsuario" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Ubicacion">
+    <Key>
+      <PropertyRef Name="IdUbicacion" />
+    </Key>
+    <Property Name="IdUbicacion" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+    <Property Name="RangoBajo" Type="int" />
+    <Property Name="RangoAlto" Type="int" />
+    <Property Name="TotalUbicacion" Type="int" />
+    <Property Name="PorcentajeCerrado" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeNulo" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="PorcentajeAbierto" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="IdTUbicacion" Type="bigint" />
+    <Property Name="IdEUbicacion" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+    <Property Name="FechaIngreso" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Usuario_x_TUsuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdTUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="bigint" Nullable="false" />
+    <Property Name="IdTUsuario" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="Relationship1">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_x_TUsuario" Type="Self.Usuario_x_TUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_x_TUsuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship2">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Usuario_x_TUsuario" Type="Self.Usuario_x_TUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="IdTUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_x_TUsuario">
+        <PropertyRef Name="IdTUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="TipoUbicacion" Type="Self.TipoUbicacion" Multiplicity="0..1" />
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUbicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Principal>
+      <Dependent Role="Ubicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship4">
+    <End Role="EstadoUbicacion" Type="Self.EstadoUbicacion" Multiplicity="0..1" />
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoUbicacion">
+        <PropertyRef Name="IdEUbicacion" />
+      </Principal>
+      <Dependent Role="Ubicacion">
+        <PropertyRef Name="IdEUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship7">
+    <End Role="CapturaDatos" Type="Self.CapturaDatos" Multiplicity="1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CapturaDatos">
+        <PropertyRef Name="IdCaptura" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="ModificacionCaptura" Type="Self.ModificacionCaptura" Multiplicity="1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModificacionCaptura">
+        <PropertyRef Name="IdMCaptura" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdMCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="MCaptura_x_CDatos" Type="Self.MCaptura_x_CDatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="MCaptura_x_CDatos">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InvProModelStoreContainer">
+    <EntitySet Name="AvanceCaptura" EntityType="Self.AvanceCaptura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AvanceUbicacion" EntityType="Self.AvanceUbicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CapturaDatos" EntityType="Self.CapturaDatos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoUbicacion" EntityType="Self.EstadoUbicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kardex" EntityType="Self.Kardex" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaestraProductos" EntityType="Self.MaestraProductos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MCaptura_x_CDatos" EntityType="Self.MCaptura_x_CDatos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModificacionCaptura" EntityType="Self.ModificacionCaptura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUbicacion" EntityType="Self.TipoUbicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_x_TUsuario" EntityType="Self.Usuario_x_TUsuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_x_TUsuario" EntitySet="Usuario_x_TUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Usuario_x_TUsuario" EntitySet="Usuario_x_TUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="TipoUbicacion" EntitySet="TipoUbicacion" />
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship4" Association="Self.Relationship4">
+      <End Role="EstadoUbicacion" EntitySet="EstadoUbicacion" />
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship7" Association="Self.Relationship7">
+      <End Role="CapturaDatos" EntitySet="CapturaDatos" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="ModificacionCaptura" EntitySet="ModificacionCaptura" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="MCaptura_x_CDatos" EntitySet="MCaptura_x_CDatos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

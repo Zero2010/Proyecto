@@ -1,0 +1,74 @@
+15:45:48.185,000,REQ: 03:45:45
+15:48:14.093,000,REQ: 03:48:14
+15:49:07.636,000,REQ: 03:48:52
+15:58:58.644,000,REQ: Accion:1, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:1, Motivo:
+17:36:04.125,000,REQ: Accion:1, IdPos:12, IdOperador:1, LetraTurno:a, NumeroTurno:1, Motivo:
+17:36:04.128,000,INF: IP:172.16.32.44, Puerto:5091
+17:36:04.211,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:37:25.813,000,REQ: Accion:1, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:1, Motivo:
+17:37:25.816,000,INF: IP:172.16.32.44, Puerto:5091
+17:37:48.615,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:37:58.794,000,REQ: Accion:3, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:1, Motivo:
+17:37:58.797,000,INF: IP:172.16.32.44, Puerto:5091
+17:37:58.808,034,QRY: TS20TP000200341FC99@
+17:37:58.824,034,RES: TS20TP0002499913022FBBA@
+17:38:08.051,000,REQ: Accion:3, IdPos:3, IdOperador:3, LetraTurno:3, NumeroTurno:3, Motivo:
+17:38:08.051,000,INF: IP:172.16.32.44, Puerto:5091
+17:38:08.052,034,QRY: TS20TP000200343FC97@
+17:38:08.061,034,RES: TS20TP0002499913022FBBA@
+17:45:55.899,000,REQ: Accion:17:45:00, IdPos:174.487.87.3, IdOperador:003, LetraTurno:R, NumeroTurno:0000, Motivo:
+17:45:55.900,000,INF: IP:172.16.32.44, Puerto:5091
+17:46:06.687,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no tiene un valor conocido (17:45:00)</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:47:06.469,000,REQ: Accion:3, IdPos:174.487.87.3, IdOperador:003, LetraTurno:R, NumeroTurno:0000, Motivo:
+17:47:06.475,000,INF: IP:172.16.32.44, Puerto:5091
+17:47:06.480,034,QRY: TS20TP00031034174.487.87.3FA5D@
+17:47:06.488,034,RES: TS20TP0002499913023FBB9@
+17:49:46.374,000,REQ: Accion:1, IdPos:2, IdOperador:003, LetraTurno:R, NumeroTurno:R, Motivo:
+17:49:46.375,000,INF: IP:172.16.32.44, Puerto:5091
+17:49:47.763,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:51:07.797,000,REQ: Accion:, IdPos:, IdOperador:, LetraTurno:, NumeroTurno:R, Motivo:
+17:51:07.803,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no puede ir vacío</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:51:53.388,000,REQ: Accion:, IdPos:Descargando Cfg desde Centra, IdOperador:, LetraTurno:, NumeroTurno:R, Motivo:
+17:51:53.389,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no puede ir vacío</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:53:03.261,000,REQ: Accion:, IdPos:, IdOperador:30, LetraTurno:, NumeroTurno:R, Motivo:
+17:53:03.261,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no puede ir vacío</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:53:11.280,000,REQ: Accion:, IdPos:3, IdOperador:30, LetraTurno:, NumeroTurno:R, Motivo:
+17:53:11.281,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no puede ir vacío</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+17:53:17.827,000,REQ: Accion:3, IdPos:3, IdOperador:30, LetraTurno:, NumeroTurno:R, Motivo:
+17:53:17.830,000,INF: IP:172.16.32.44, Puerto:5091
+17:53:17.832,034,QRY: TS20TP000200343FC97@
+17:53:17.839,034,RES: TS20TP0002499913022FBBA@
+18:01:39.833,000,REQ: Accion:, IdPos:ninguno, IdOperador:30, LetraTurno:, NumeroTurno:R, Motivo:
+18:01:39.834,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no puede ir vacío</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:01:50.163,000,REQ: Accion:3, IdPos:, IdOperador:30, LetraTurno:, NumeroTurno:R, Motivo:
+18:01:50.163,000,INF: IP:172.16.32.44, Puerto:5091
+18:01:50.164,034,QRY: TS20TP00019034FCC2@
+18:01:50.178,034,RES: TS20TP0002499913023FBB9@
+18:09:17.193,000,REQ: Accion:INI:V=V1, IdPos:0, IdOperador:0, LetraTurno:1, NumeroTurno:OFI=1, Motivo:
+18:09:17.194,000,INF: IP:172.16.32.44, Puerto:5091
+18:09:18.644,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no tiene un valor conocido (INI:V=V1)</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:10:04.456,000,REQ: Accion:V=V1, IdPos:0, IdOperador:0, LetraTurno:1, NumeroTurno:OFI=1, Motivo:
+18:10:04.459,000,INF: IP:172.16.32.44, Puerto:5091
+18:10:06.622,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no tiene un valor conocido (V=V1)</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:10:50.923,000,REQ: Accion:0, IdPos:0, IdOperador:1, LetraTurno:OFI=1, NumeroTurno:Equ=1, Motivo:
+18:10:50.927,000,INF: IP:172.16.32.44, Puerto:5091
+18:10:52.374,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>El campo 'accion' no tiene un valor conocido (0)</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:11:21.002,000,REQ: Accion:1, IdPos:0, IdOperador:1, LetraTurno:1, NumeroTurno:1, Motivo:
+18:11:21.006,000,INF: IP:172.16.32.44, Puerto:5091
+18:11:22.277,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:31:46.212,000,REQ: Accion:1, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:R, Motivo:
+18:31:46.216,000,INF: IP:172.16.32.44, Puerto:5091
+18:31:53.404,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:33:01.624,000,REQ: Accion:1, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:R, Motivo:
+18:33:01.628,000,INF: IP:172.16.32.44, Puerto:5091
+18:33:01.633,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:33:17.349,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /><Filler /></RespuestaWS>
+18:33:25.563,000,REQ: Accion:6, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:R, Motivo:
+18:33:25.567,000,INF: IP:172.16.32.44, Puerto:5091
+18:33:25.576,035,QRY: TS20TP000240351|1,1FB8A@
+18:33:44.512,000,REQ: Accion:6, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:R, Motivo:
+18:33:44.521,000,INF: IP:172.16.32.44, Puerto:5091
+18:35:17.659,035,QRY: TS20TP000240351|1,1FB8A@
+18:35:24.697,000,REQ: Accion:6, IdPos:1, IdOperador:1, LetraTurno:1, NumeroTurno:R, Motivo:
+18:35:24.700,000,INF: IP:172.16.32.44, Puerto:5091
+18:36:43.051,031,QRY: TS20TP000280311|1.0.0.0FACD@

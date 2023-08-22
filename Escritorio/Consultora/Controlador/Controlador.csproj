@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81D11998-F2BD-4211-8018-31F399BF505B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Controlador</RootNamespace>
+    <AssemblyName>Controlador</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtencionesTxt.cs" />
+    <Compile Include="Configuracion.cs" />
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="EstadosTxt.cs" />
+    <Compile Include="Estados\Ejecutivo.cs" />
+    <Compile Include="Estados\Motivo.cs" />
+    <Compile Include="Estados\NumeroUrgencia.cs" />
+    <Compile Include="Estados\Sucursal.cs" />
+    <Compile Include="Estados\Transmicion.cs" />
+    <Compile Include="Estados\Urgencia.cs" />
+    <Compile Include="FPrincipal.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="MotivosTxt.cs" />
+    <Compile Include="Estados\Pausa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respuesta.cs" />
+    <Compile Include="Servicio\Cliente\Servicios.cs" />
+    <Compile Include="Servicio\Communication\Commands.cs" />
+    <Compile Include="Servicio\Communication\Communication.cs" />
+    <Compile Include="Servicio\Communication\CommunicationConverter.cs" />
+    <Compile Include="Servicio\Communication\CommunicationException.cs" />
+    <Compile Include="Servicio\Communication\FormatErrorType.cs" />
+    <Compile Include="Servicio\Communication\InternalError.cs" />
+    <Compile Include="Servicio\Communication\SocketWrapper.cs" />
+    <Compile Include="Servicio\Communication\StructureLength.cs" />
+    <Compile Include="Servicio\Metodos\Metodos.cs" />
+    <Compile Include="Servicio\Respaldo\Respaldo.cs" />
+    <Compile Include="Servicio\Servidor\Servidor.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="ValidacionRut.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{d77069fa-9f31-4809-a601-ce0320237437}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

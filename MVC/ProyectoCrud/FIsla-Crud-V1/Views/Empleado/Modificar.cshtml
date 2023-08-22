@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Modificar";
+}
+
+<h2>Modificar</h2>
+
+<form action="/Empleado/Edit" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Filtro.IdEmpleado" />
+    <label>Nombre</label><br />
+    <input type="text" name="Nombre" value="@ViewBag.Filtro.Nombre" /><br />
+    <label>APaterno</label><br />
+    <input type="text" name="Apaterno" value="@ViewBag.Filtro.Apaterno" /><br />
+    <label>AMaterno</label><br />
+    <input type="text" name="Amaterno" value="@ViewBag.Filtro.Amaterno" /><br />
+    <label>Rut</label><br />
+    <input type="text" name="Rut" value="@ViewBag.Filtro.Rut" /><br />
+    <button type="submit">Guardar</button>
+</form>

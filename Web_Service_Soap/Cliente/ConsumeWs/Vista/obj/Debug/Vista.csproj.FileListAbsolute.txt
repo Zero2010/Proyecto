@@ -1,0 +1,25 @@
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Debug\Vista.exe
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Debug\Vista.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Debug\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Debug\Controlador.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\Vista.frmConsume.resources
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\Vista.exe
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Debug\Vista.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Debug\Vista.exe.config
+E:\PTODOY\ConsumeWs\Vista\bin\Debug\Vista.exe.config
+E:\PTODOY\ConsumeWs\Vista\obj\Debug\Vista.exe
+E:\PTODOY\ConsumeWs\Vista\obj\Debug\Vista.pdb
+E:\proyecto-toyota\ConsumeWs\Vista\bin\Debug\Vista.exe.config
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.exe
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.pdb
+E:\proyecto-toyota\ConsumeWs\Vista\bin\Debug\Vista.exe
+E:\proyecto-toyota\ConsumeWs\Vista\bin\Debug\Vista.pdb
+E:\proyecto-toyota\ConsumeWs\Vista\bin\Debug\Controlador.dll
+E:\proyecto-toyota\ConsumeWs\Vista\bin\Debug\Controlador.pdb
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.frmConsume.resources
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.Properties.Resources.resources
+E:\proyecto-toyota\ConsumeWs\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache

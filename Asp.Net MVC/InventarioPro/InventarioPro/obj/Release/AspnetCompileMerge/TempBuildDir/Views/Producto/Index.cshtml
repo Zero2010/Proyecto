@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CargaMasiva.cshtml";
+}
+
+<div class="clearfix"></div>
+
+<div class="row">
+
+    @using (Html.BeginForm("CargaMasiva", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <article class="my-3" id="overview">
+            <div>
+                <div class="bd-example">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label" for="customFile">Carga Masiva</label>
+                            <input type="file" class="form-control" id="file" name="file">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Carga Archivo</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    }
+
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>porcentaje y estado de carga</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <!-- start project list -->
+            <table class="table table-striped projects">
+                <thead>
+                    <tr>
+                        <th style="width: 1%">#</th>
+                        <th style="width: 20%">Registros </th>
+                        <th>Porcentaje de carga</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#</td>
+                        <td>
+                            <a>Registros cargados de forma exitosa </a>
+                            <br>
+                            <small>Registros : @TempData["CountProducto"]</small>
+
+                        </td>
+                        <td class="project_progress">
+                            <div class="progress progress_sm">
+                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="@ViewBag.porcentajeOK" aria-valuenow="56" style="width: @ViewBag.porcentajeOK%;"></div>
+                            </div>
+                            <small>@ViewBag.porcentajeOK % Complete</small>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-xs">Registros cargados</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#</td>
+                        <td>
+                            <a>registros no cargados por estar repetidos</a>
+                            <br>
+                            <small>Registros : @TempData["CountProductoRpt"]</small>
+                        </td>
+                        <td class="project_progress">
+                            <div class="progress progress_sm">
+                                <div class="progress-bar bg-red" role="progressbar" data-transitiongoal="@ViewBag.porcentajeError" aria-valuenow="56" style="width: @ViewBag.porcentajeError%;"></div>
+                            </div>
+                            <small>@ViewBag.porcentajeError % Complete</small>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-xs">Registros duplicados</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- end project list -->
+
+        </div>
+    </div>
+
+</div>
+
+    
+
+
+

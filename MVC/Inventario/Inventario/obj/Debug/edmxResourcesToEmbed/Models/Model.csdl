@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AVANCE_INVENTARIO">
+    <Key>
+      <PropertyRef Name="PATENTE" />
+    </Key>
+    <Property Name="PATENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_TIPO_PAT" Type="Int32" />
+    <Property Name="ID_BODEGA" Type="Int32" />
+    <Property Name="MOTIVO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_PATENTE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ID_PATENTE" Type="Int32" />
+    <NavigationProperty Name="ESTADO_PATENTE" Relationship="Self.Relationship11" FromRole="AVANCE_INVENTARIO" ToRole="ESTADO_PATENTE" />
+    <NavigationProperty Name="TIPO_UBICACION" Relationship="Self.Relationship12" FromRole="AVANCE_INVENTARIO" ToRole="TIPO_UBICACION" />
+    <NavigationProperty Name="UBICACION" Relationship="Self.Relationship14" FromRole="AVANCE_INVENTARIO" ToRole="UBICACION" />
+  </EntityType>
+  <EntityType Name="ESTADO_MAESTRA">
+    <Key>
+      <PropertyRef Name="ID_EST" />
+    </Key>
+    <Property Name="ID_EST" Type="Int32" Nullable="false" />
+    <Property Name="DETALLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MAESTRA_INPUT" Relationship="Self.Relationship5" FromRole="ESTADO_MAESTRA" ToRole="MAESTRA_INPUT" />
+    <NavigationProperty Name="MODIFICAR_CAPTURA" Relationship="Self.Relationship6" FromRole="ESTADO_MAESTRA" ToRole="MODIFICAR_CAPTURA" />
+  </EntityType>
+  <EntityType Name="ESTADO_PATENTE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_PAT" />
+    </Key>
+    <Property Name="ID_TIPO_PAT" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AVANCE_INVENTARIO" Relationship="Self.Relationship11" FromRole="ESTADO_PATENTE" ToRole="AVANCE_INVENTARIO" />
+  </EntityType>
+  <EntityType Name="ESTADO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="Int32" Nullable="false" />
+    <Property Name="DETALLE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.Relationship3" FromRole="ESTADO_USUARIO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="MAESTRA_INPUT">
+    <Key>
+      <PropertyRef Name="ID_INPUT" />
+    </Key>
+    <Property Name="ID_INPUT" Type="Int32" Nullable="false" />
+    <Property Name="LOCAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_INVENTARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PATENTE" Type="Int32" />
+    <Property Name="EAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SKU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRECIO" Type="Decimal" Precision="38" Scale="3" />
+    <Property Name="UNIDAD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RUT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HORA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="ID_EST" Type="Int32" />
+    <Property Name="ID_BODEGA" Type="Int32" />
+    <Property Name="DESCRIPCION_PAT" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ESTADO_MAESTRA" Relationship="Self.Relationship5" FromRole="MAESTRA_INPUT" ToRole="ESTADO_MAESTRA" />
+    <NavigationProperty Name="TIPO_UBICACION" Relationship="Self.Relationship8" FromRole="MAESTRA_INPUT" ToRole="TIPO_UBICACION" />
+    <NavigationProperty Name="MODIFICAR_CAPTURA" Relationship="Self.Relationship9" FromRole="MAESTRA_INPUT" ToRole="MODIFICAR_CAPTURA" />
+  </EntityType>
+  <EntityType Name="MODIFICAR_CAPTURA">
+    <Key>
+      <PropertyRef Name="ID_MOD" />
+    </Key>
+    <Property Name="ID_MOD" Type="Int32" Nullable="false" />
+    <Property Name="CONTEO1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTEO2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ID_EST" Type="Int32" />
+    <Property Name="ID_INPUT" Type="Int32" />
+    <NavigationProperty Name="ESTADO_MAESTRA" Relationship="Self.Relationship6" FromRole="MODIFICAR_CAPTURA" ToRole="ESTADO_MAESTRA" />
+    <NavigationProperty Name="MAESTRA_INPUT" Relationship="Self.Relationship9" FromRole="MODIFICAR_CAPTURA" ToRole="MAESTRA_INPUT" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TIPO_UBICACION">
+    <Key>
+      <PropertyRef Name="ID_BODEGA" />
+    </Key>
+    <Property Name="ID_BODEGA" Type="Int32" Nullable="false" />
+    <Property Name="BODEGA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AVANCE_INVENTARIO" Relationship="Self.Relationship12" FromRole="TIPO_UBICACION" ToRole="AVANCE_INVENTARIO" />
+    <NavigationProperty Name="MAESTRA_INPUT" Relationship="Self.Relationship8" FromRole="TIPO_UBICACION" ToRole="MAESTRA_INPUT" />
+    <NavigationProperty Name="UBICACION" Relationship="Self.Relationship4" FromRole="TIPO_UBICACION" ToRole="UBICACION" />
+  </EntityType>
+  <EntityType Name="TIPO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_TIPO" />
+    </Key>
+    <Property Name="ID_TIPO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.USUARIO_X_TIPO" FromRole="TIPO_USUARIO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="ID_PATENTE" />
+    </Key>
+    <Property Name="ID_PATENTE" Type="Int32" Nullable="false" />
+    <Property Name="ID_PATENTE_BODEGA" Type="Int32" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RANGO_BAJO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RANGO_ALTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID_BODEGA" Type="Int32" />
+    <Property Name="AVANCE_CERRADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AVANCE_ABIERTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AVANCE_NULO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AVANCE_INVENTARIO" Relationship="Self.Relationship14" FromRole="UBICACION" ToRole="AVANCE_INVENTARIO" />
+    <NavigationProperty Name="TIPO_UBICACION" Relationship="Self.Relationship4" FromRole="UBICACION" ToRole="TIPO_UBICACION" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="USUARIO1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID_ESTADO" Type="Int32" />
+    <NavigationProperty Name="ESTADO_USUARIO" Relationship="Self.Relationship3" FromRole="USUARIO" ToRole="ESTADO_USUARIO" />
+    <NavigationProperty Name="TIPO_USUARIO" Relationship="Self.USUARIO_X_TIPO" FromRole="USUARIO" ToRole="TIPO_USUARIO" />
+  </EntityType>
+  <Association Name="Relationship11">
+    <End Role="ESTADO_PATENTE" Type="Self.ESTADO_PATENTE" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_PATENTE">
+        <PropertyRef Name="ID_TIPO_PAT" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_TIPO_PAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship12">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship14">
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBICACION">
+        <PropertyRef Name="ID_PATENTE" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_PATENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship5">
+    <End Role="ESTADO_MAESTRA" Type="Self.ESTADO_MAESTRA" Multiplicity="0..1" />
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_MAESTRA">
+        <PropertyRef Name="ID_EST" />
+      </Principal>
+      <Dependent Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_EST" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship6">
+    <End Role="ESTADO_MAESTRA" Type="Self.ESTADO_MAESTRA" Multiplicity="0..1" />
+    <End Role="MODIFICAR_CAPTURA" Type="Self.MODIFICAR_CAPTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_MAESTRA">
+        <PropertyRef Name="ID_EST" />
+      </Principal>
+      <Dependent Role="MODIFICAR_CAPTURA">
+        <PropertyRef Name="ID_EST" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="ESTADO_USUARIO" Type="Self.ESTADO_USUARIO" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_USUARIO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="0..1" />
+    <End Role="MODIFICAR_CAPTURA" Type="Self.MODIFICAR_CAPTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_INPUT" />
+      </Principal>
+      <Dependent Role="MODIFICAR_CAPTURA">
+        <PropertyRef Name="ID_INPUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship4">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="USUARIO_X_TIPO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="InventarioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AVANCE_INVENTARIO" EntityType="Self.AVANCE_INVENTARIO" />
+    <EntitySet Name="ESTADO_MAESTRA" EntityType="Self.ESTADO_MAESTRA" />
+    <EntitySet Name="ESTADO_PATENTE" EntityType="Self.ESTADO_PATENTE" />
+    <EntitySet Name="ESTADO_USUARIO" EntityType="Self.ESTADO_USUARIO" />
+    <EntitySet Name="MAESTRA_INPUT" EntityType="Self.MAESTRA_INPUT" />
+    <EntitySet Name="MODIFICAR_CAPTURA" EntityType="Self.MODIFICAR_CAPTURA" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TIPO_UBICACION" EntityType="Self.TIPO_UBICACION" />
+    <EntitySet Name="TIPO_USUARIO" EntityType="Self.TIPO_USUARIO" />
+    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="Relationship11" Association="Self.Relationship11">
+      <End Role="ESTADO_PATENTE" EntitySet="ESTADO_PATENTE" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship12" Association="Self.Relationship12">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship14" Association="Self.Relationship14">
+      <End Role="UBICACION" EntitySet="UBICACION" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship5" Association="Self.Relationship5">
+      <End Role="ESTADO_MAESTRA" EntitySet="ESTADO_MAESTRA" />
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship6" Association="Self.Relationship6">
+      <End Role="ESTADO_MAESTRA" EntitySet="ESTADO_MAESTRA" />
+      <End Role="MODIFICAR_CAPTURA" EntitySet="MODIFICAR_CAPTURA" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="ESTADO_USUARIO" EntitySet="ESTADO_USUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+      <End Role="MODIFICAR_CAPTURA" EntitySet="MODIFICAR_CAPTURA" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship4" Association="Self.Relationship4">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="UBICACION" EntitySet="UBICACION" />
+    </AssociationSet>
+    <AssociationSet Name="USUARIO_X_TIPO" Association="Self.USUARIO_X_TIPO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />
+    </AssociationSet>
+    <EntitySet Name="ESTADO_INVENTARIO" EntityType="InventarioModel.ESTADO_INVENTARIO" />
+    <EntitySet Name="PORCENTAJE_AVANCE" EntityType="InventarioModel.PORCENTAJE_AVANCE" />
+    <EntitySet Name="TIPO_BUSQUEDA" EntityType="InventarioModel.TIPO_BUSQUEDA" />
+    <EntitySet Name="MAESTRA_CONGELADO" EntityType="InventarioModel.MAESTRA_CONGELADO" />
+    <EntitySet Name="MAESTRA_PROCESO" EntityType="InventarioModel.MAESTRA_PROCESO" />
+  </EntityContainer>
+  <EntityType Name="ESTADO_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="Int32" Nullable="false" />
+    <Property Name="ESTADO_INVENTARIO1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PORCENTAJE_AVANCE">
+    <Key>
+      <PropertyRef Name="ID_AVANCE" />
+    </Key>
+    <Property Name="ID_AVANCE" Type="Int32" Nullable="false" />
+    <Property Name="REGISTROS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EXTENDIDO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PORCENTAJE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UBICACION" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TIPO_BUSQUEDA">
+    <Key>
+      <PropertyRef Name="ID_BUSQUEDA" />
+    </Key>
+    <Property Name="ID_BUSQUEDA" Type="Int32" Nullable="false" />
+    <Property Name="BUSQUEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MAESTRA_CONGELADO">
+    <Key>
+      <PropertyRef Name="IDMCONG" />
+    </Key>
+    <Property Name="NUMCONTEO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_INTERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOCALES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_INVENTARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MARCA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UNIDAD_MEDIDA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PRECIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MONEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_SUBCLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_DEPARTAMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_SUB_DPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTAMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_DPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_CREACION_ARCHIVO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_CODBARRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDMCONG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="MAESTRA_PROCESO">
+    <Key>
+      <PropertyRef Name="IDMPROC" />
+    </Key>
+    <Property Name="NUMCONTEO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO_INTERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOCALES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_INVENTARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MARCA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UNIDAD_MEDIDA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PRECIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MONEDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_SUBCLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_CLASE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_DEPARTAMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_SUB_DPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTAMENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_DPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_CREACION_ARCHIVO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_CODBARRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CANTIDAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDMPROC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

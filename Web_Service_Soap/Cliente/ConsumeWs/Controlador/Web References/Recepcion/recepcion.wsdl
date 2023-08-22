@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="localhost" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="localhost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="localhost">
+      <s:element name="Recepcion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_dealer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_sucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_recepcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelo_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="medio_showroom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="marca_competencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelo_competencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecepcionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecepcionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recepcion" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="recepcionSoap">
+    <wsdl:operation name="Recepcion">
+      <wsdl:input message="tns:RecepcionSoapIn" />
+      <wsdl:output message="tns:RecepcionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="recepcionSoap" type="tns:recepcionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Recepcion">
+      <soap:operation soapAction="localhost/Recepcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="recepcionSoap12" type="tns:recepcionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Recepcion">
+      <soap12:operation soapAction="localhost/Recepcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="recepcion">
+    <wsdl:port name="recepcionSoap" binding="tns:recepcionSoap">
+      <soap:address location="http://10.10.10.102/ws/recepcion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="recepcionSoap12" binding="tns:recepcionSoap12">
+      <soap12:address location="http://10.10.10.102/ws/recepcion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

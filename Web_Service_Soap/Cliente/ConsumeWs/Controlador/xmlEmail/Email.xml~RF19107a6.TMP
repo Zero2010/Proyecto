@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<emails>
+  <email>
+    <Mail_Smtp>mailgw.ifxcloud.com</Mail_Smtp>
+    <Mail_Puerto>25</Mail_Puerto>
+    <Mail_Envio>ade_fisla@toyota.cl</Mail_Envio>
+    <Mail_Envio_Nombre>Felipe Isla</Mail_Envio_Nombre>
+    <Mail_Contrasena>10.jul.1982</Mail_Contrasena>
+    <Mail_Destinatario>rpinto@toyota.cl</Mail_Destinatario>
+    <Mail_Destinatario_Nombre>Raúl Pinto</Mail_Destinatario_Nombre>
+    <Mail_Asunto>Se han Enviado los Registros de forma correcta al Web Service de Toyota</Mail_Asunto>
+  </email>
+</emails>

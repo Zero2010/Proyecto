@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <!-- jquery validation -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Captura de Producto</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Ingreso Ubicación</label>
+                                        <input type="text" name="ubicacion" class="form-control" id="ubicacion" placeholder="Ubicación">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Ingreso Código</label>
+                                        @using (Html.BeginForm("index", "Captura", FormMethod.Post))
+                                        {
+                                            <input type="text" id="codigo" name="codigo" placeholder="Ingreso Código" class="form-control">
+                                            <br>
+                                            <input type="submit" value="Buscar" class="btn btn-primary" />
+                                        }
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        @using (Html.BeginForm("IngresoCaptura", "Captura", FormMethod.Post))
+                                        {
+
+                                            <label for="exampleInputPassword1">Descripcion Producto</label>
+                                            <input type="text" name="descripcion" class="form-control" id="descipcion" maxlength="500" value="@(ViewBag.Descripcion ?? String.Empty)" placeholder="Descripción Producto">
+
+                                            <label for="exampleInputEmail1">Ingreso Cantidad</label>
+                                            <input type="text" name="cantidad" class="form-control" id="cantidad" placeholder="Cantidad">
+                                            <br>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        }
+
+                                        @if (TempData["IsCaptura"] != null)
+                                        {
+                                            if (TempData["IsCaptura"].Equals(1))
+                                            {
+                                                <label id="lblrespuesta" name="lblrespuesta">Registro Capturado</label>
+                                            }
+                                            else if (TempData["IsCaptura"].Equals(0))
+                                            {
+                                                <label id="lblrespuesta" name="lblrespuesta">Debe Ingresar Cantiad mayor a cero</label>
+                                            }
+
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(document).on("keypress", function(e){
+                if(e.which == 13){
+                    alert("Enter");
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("Captura/getProducto")',
+                        data: '{std: ' + JSON.stringify(std) + '}',
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function () {
+                           // alert("Data has been added successfully.");
+                            LoadData();
+                        },
+                        error: function () {
+                            alert("Error while inserting data");
+                        }
+                    });
+
+
+                }
+            });
+        });
+    </script>
+}
+

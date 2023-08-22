@@ -1,0 +1,481 @@
+09:51:45.641,000,INF: IP:172.16.32.44, Puerto:5091
+09:51:45.652,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+09:51:45.715,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+09:51:45.762,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:51:59.343,000,INF: IP:172.16.32.44, Puerto:5091
+09:51:59.344,031,QRY: TS20TP000280311|1.0.0.0FACD@
+09:51:59.406,031,RES: TS20TP00019031FCC5@
+09:51:59.409,011,QRY: TS20TP000200111FC9E@
+09:51:59.412,011,RES: TS20TP0013701109:54:32|LLAMANDO|4|34|600|4|34|600|11|6|9|1|A|MercadoLibre y/o Pre Etiquetado|30|600|120|0|600|15086002-4|9999999999|D923@
+09:51:59.414,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>4</CantidadEnEspera><TiempoDeEspera>34</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>1</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+09:52:38.378,000,INF: IP:172.16.32.44, Puerto:5091
+09:52:38.378,031,QRY: TS20TP000280311|1.0.0.0FACD@
+09:52:38.390,031,RES: TS20TP0002499913025FBB7@
+09:52:38.403,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:52:55.515,000,INF: IP:172.16.32.44, Puerto:5091
+09:52:55.518,031,QRY: TS20TP000280311|1.0.0.0FACD@
+09:52:55.523,031,RES: TS20TP0002499913025FBB7@
+09:52:55.536,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:56:19.670,000,INF: IP:172.16.32.44, Puerto:5091
+09:56:19.670,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+09:56:19.687,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+09:56:19.688,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+09:56:41.684,000,INF: IP:172.16.32.44, Puerto:5091
+09:56:41.685,031,QRY: TS20TP000280311|1.0.0.0FACD@
+09:56:41.708,031,RES: TS20TP00019031FCC5@
+09:56:41.708,011,QRY: TS20TP000200111FC9E@
+09:56:41.712,011,RES: TS20TP0014001109:59:15|LLAMANDO|3|307|600|3|307|600|11|6|9|2|A|MercadoLibre y/o Pre Etiquetado|312|600|120|0|600|15086002-4|9999999999|D88B@
+09:56:41.713,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>307</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>2</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+09:56:52.172,000,INF: IP:172.16.32.44, Puerto:5091
+09:56:52.173,034,QRY: TS20TP000200341FC99@
+09:56:52.189,034,RES: TS20TP00019034FCC2@
+09:56:52.190,011,QRY: TS20TP000200111FC9E@
+09:56:52.193,011,RES: TS20TP0014201109:59:25|ATENDIENDO|2|328|600|2|328|600|11|6|9|2|A|MercadoLibre y/o Pre Etiquetado|323|600|120|0|600|15086002-4|9999999999|D7EF@
+09:56:52.194,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>328</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>2</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+09:57:04.061,000,INF: IP:172.16.32.44, Puerto:5091
+09:57:04.062,022,QRY: TS20TP000200221FC9C@
+09:57:04.066,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+09:57:20.353,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:01:26.121,000,INF: IP:172.16.32.44, Puerto:5091
+10:01:26.121,002,QRY: TS20TP000200021FC9E@
+10:01:26.125,002,RES: TS20TP0002499913022FBBA@
+10:01:26.151,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaInicarSession><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><IdOfi /><Ofi /><Esc /><IdEje /><Eje /><Edo /><Encuesta /></RespuestaInicarSession>
+10:01:40.519,000,INF: IP:172.16.32.44, Puerto:5091
+10:01:40.521,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:01:40.537,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:01:40.538,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:02:33.379,000,INF: IP:172.16.32.44, Puerto:5091
+10:02:33.380,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:02:33.394,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:02:33.395,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:03:15.890,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:15.891,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:03:15.915,031,RES: TS20TP00019031FCC5@
+10:03:15.915,011,QRY: TS20TP000200111FC9E@
+10:03:15.919,011,RES: TS20TP0014001110:05:49|LLAMANDO|1|125|600|1|125|600|11|6|9|3|A|MercadoLibre y/o Pre Etiquetado|134|600|120|0|600|15086002-4|9999999999|D89A@
+10:03:15.919,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>125</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>3</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:03:23.219,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:23.221,034,QRY: TS20TP000200341FC99@
+10:03:23.230,034,RES: TS20TP00019034FCC2@
+10:03:23.231,011,QRY: TS20TP000200111FC9E@
+10:03:23.235,011,RES: TS20TP0013401110:05:56|ATENDIENDO|0|0|0|0|0|0|11|6|9|3|A|MercadoLibre y/o Pre Etiquetado|141|600|120|0|600|15086002-4|9999999999|D9A6@
+10:03:23.235,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>3</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:03:32.215,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:32.216,022,QRY: TS20TP000200221FC9C@
+10:03:32.222,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:03:53.848,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:03:58.721,000,INF: IP:172.16.32.44, Puerto:5091
+10:03:58.722,022,QRY: TS20TP000200221FC9C@
+10:03:58.731,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:04:09.733,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:04:37.824,000,INF: IP:172.16.32.44, Puerto:5091
+10:04:37.825,010,QRY: TS20TP000210101|FC22@
+10:04:37.828,010,RES: TS20TP000820102|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|ATENDIENDO||E5A5@
+10:04:37.845,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoBase><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><Oficina>2</Oficina><Escritorio>Chilexpress Demo1</Escritorio><IdEje>1</IdEje><Ejecutivo>1</Ejecutivo><Estado>Ejecutivo Prueba Totalpack</Estado><ClienteInterno>ATENDIENDO</ClienteInterno><Encuesta /></RespuestaWSGetEdoBase>
+10:04:49.837,000,INF: IP:172.16.32.44, Puerto:5091
+10:04:49.840,034,QRY: TS20TP000200341FC99@
+10:04:49.844,034,RES: TS20TP0002499913025FBB7@
+10:04:49.860,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:04:58.606,000,INF: IP:172.16.32.44, Puerto:5091
+10:04:58.606,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:04:58.612,031,RES: TS20TP0002499913025FBB7@
+10:04:58.626,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:05:22.477,000,INF: IP:172.16.32.44, Puerto:5091
+10:05:22.478,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:05:22.493,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:05:22.494,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:05:36.609,000,INF: IP:172.16.32.44, Puerto:5091
+10:05:36.611,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:05:36.625,031,RES: TS20TP00019031FCC5@
+10:05:36.626,011,QRY: TS20TP000200111FC9E@
+10:05:36.630,011,RES: TS20TP0013701110:08:10|LLAMANDO|5|19|600|5|19|600|11|6|9|4|A|MercadoLibre y/o Pre Etiquetado|26|600|120|0|600|15086002-4|9999999999|D920@
+10:05:36.631,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>5</CantidadEnEspera><TiempoDeEspera>19</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>4</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:05:58.864,000,INF: IP:172.16.32.44, Puerto:5091
+10:05:58.867,034,QRY: TS20TP000200341FC99@
+10:05:58.876,034,RES: TS20TP00019034FCC2@
+10:05:58.877,011,QRY: TS20TP000200111FC9E@
+10:05:58.881,011,RES: TS20TP0013901110:08:32|ATENDIENDO|4|39|600|4|39|600|11|6|9|4|A|MercadoLibre y/o Pre Etiquetado|49|600|120|0|600|15086002-4|9999999999|D880@
+10:05:58.882,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>4</CantidadEnEspera><TiempoDeEspera>39</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>4</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:06:09.101,000,INF: IP:172.16.32.44, Puerto:5091
+10:06:09.102,022,QRY: TS20TP000200221FC9C@
+10:06:09.106,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:06:33.948,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:07:31.680,000,INF: IP:172.16.32.44, Puerto:5091
+10:07:31.682,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:07:31.687,031,RES: TS20TP0002499913022FBBA@
+10:07:31.700,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13022</CodigoRespuesta><GlosaRespuesta>Error en Login</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:07:42.241,000,INF: IP:172.16.32.44, Puerto:5091
+10:07:42.242,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:07:42.259,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:07:42.260,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:08:00.857,000,INF: IP:172.16.32.44, Puerto:5091
+10:08:00.860,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:08:00.903,031,RES: TS20TP00019031FCC5@
+10:08:00.904,011,QRY: TS20TP000200111FC9E@
+10:08:00.910,011,RES: TS20TP0014001110:10:34|LLAMANDO|3|160|600|3|160|600|11|6|9|6|A|MercadoLibre y/o Pre Etiquetado|170|600|120|0|600|15086002-4|9999999999|D89F@
+10:08:00.911,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>160</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>6</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:08:11.662,000,INF: IP:172.16.32.44, Puerto:5091
+10:08:11.667,022,QRY: TS20TP000200221FC9C@
+10:08:11.671,022,RES: TS20TP00019022FCC5@
+10:08:35.846,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:08:52.472,000,INF: IP:172.16.32.44, Puerto:5091
+10:08:52.473,034,QRY: TS20TP000200341FC99@
+10:08:52.482,034,RES: TS20TP00019034FCC2@
+10:08:52.483,011,QRY: TS20TP000200111FC9E@
+10:08:52.488,011,RES: TS20TP0014201110:11:26|ATENDIENDO|2|221|600|2|221|600|11|6|9|6|A|MercadoLibre y/o Pre Etiquetado|222|600|120|0|600|15086002-4|9999999999|D810@
+10:08:52.489,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>221</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>6</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:09:04.705,000,INF: IP:172.16.32.44, Puerto:5091
+10:09:04.706,022,QRY: TS20TP000200221FC9C@
+10:09:04.711,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:09:04.712,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:09:29.433,000,INF: IP:172.16.32.44, Puerto:5091
+10:09:29.433,022,QRY: TS20TP000200221FC9C@
+10:09:29.438,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:13:17.977,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:23:34.121,000,INF: IP:172.16.32.44, Puerto:5091
+10:23:34.122,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:23:34.137,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:23:34.138,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:23:44.133,000,INF: IP:172.16.32.44, Puerto:5091
+10:23:44.136,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:23:44.161,031,RES: TS20TP00019031FCC5@
+10:23:44.162,011,QRY: TS20TP000200111FC9E@
+10:23:44.167,011,RES: TS20TP0013101110:26:17|LLAMANDO|1|12|600|1|12|600|11|1|0|3|A|Confirmar reserva de hora|22|600|120|0|600|15086002-4|9999999999|DB38@
+10:23:44.167,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>12</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>3</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:23:58.834,000,INF: IP:172.16.32.44, Puerto:5091
+10:23:58.835,034,QRY: TS20TP000200341FC99@
+10:23:58.844,034,RES: TS20TP00019034FCC2@
+10:23:58.845,011,QRY: TS20TP000200111FC9E@
+10:23:58.849,011,RES: TS20TP0012701110:26:32|ATENDIENDO|0|0|0|0|0|0|11|1|0|3|A|Confirmar reserva de hora|36|600|120|0|600|15086002-4|9999999999|DBD2@
+10:23:58.851,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>3</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:24:09.236,000,INF: IP:172.16.32.44, Puerto:5091
+10:24:09.238,022,QRY: TS20TP000200221FC9C@
+10:24:09.247,022,RES: TS20TP00019022FCC5@
+10:24:09.272,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetMotivos(String idEscritorio)
+   en TurnoChileExpress.ws.WS_CExpress.GetMotivos(String idEscritorio)
+10:24:09.294,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSMotivo><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>La cadena de entrada no tiene el formato correcto.</GlosaRespuesta></RespuestaWSMotivo>
+10:24:32.205,000,INF: IP:172.16.32.44, Puerto:5091
+10:24:32.206,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:24:32.214,031,RES: TS20TP0002499913025FBB7@
+10:24:32.225,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:24:45.691,000,INF: IP:172.16.32.44, Puerto:5091
+10:24:45.692,001,QRY: TS20TP000460011|eje1|1234|192.016.032.044F60A@
+10:24:45.705,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:24:45.706,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:24:52.976,000,INF: IP:172.16.32.44, Puerto:5091
+10:24:52.978,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:24:52.989,031,RES: TS20TP00019031FCC5@
+10:24:52.989,011,QRY: TS20TP000200111FC9E@
+10:24:52.993,011,RES: TS20TP0006501110:27:26|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD1@
+10:24:52.994,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13098</CodigoRespuesta><GlosaRespuesta>No hay turnos en espera</GlosaRespuesta><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:25:15.558,000,INF: IP:172.16.32.44, Puerto:5091
+10:25:15.559,034,QRY: TS20TP000200341FC99@
+10:25:15.567,034,RES: TS20TP0002499913025FBB7@
+10:25:15.580,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:25:23.401,000,INF: IP:172.16.32.44, Puerto:5091
+10:25:23.403,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:25:23.426,031,RES: TS20TP00019031FCC5@
+10:25:23.427,011,QRY: TS20TP000200111FC9E@
+10:25:23.432,011,RES: TS20TP0013101110:27:57|LLAMANDO|2|12|600|2|12|600|11|1|0|4|A|Confirmar reserva de hora|20|600|120|0|600|15086002-4|9999999999|DB32@
+10:25:23.432,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>12</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>4</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:25:30.995,000,INF: IP:172.16.32.44, Puerto:5091
+10:25:30.995,034,QRY: TS20TP000200341FC99@
+10:25:31.004,034,RES: TS20TP00019034FCC2@
+10:25:31.005,011,QRY: TS20TP000200111FC9E@
+10:25:31.010,011,RES: TS20TP0013301110:28:04|ATENDIENDO|1|22|600|1|22|600|11|1|0|4|A|Confirmar reserva de hora|28|600|120|0|600|15086002-4|9999999999|DA9C@
+10:25:31.011,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>22</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>4</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:25:40.259,000,INF: IP:172.16.32.44, Puerto:5091
+10:25:40.260,022,QRY: TS20TP000200221FC9C@
+10:25:40.267,022,RES: TS20TP00019022FCC5@
+10:25:40.281,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetMotivos(String idEscritorio)
+   en TurnoChileExpress.ws.WS_CExpress.GetMotivos(String idEscritorio)
+10:25:40.281,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSMotivo><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>La cadena de entrada no tiene el formato correcto.</GlosaRespuesta></RespuestaWSMotivo>
+10:29:33.150,000,INF: IP:172.16.32.44, Puerto:5091
+10:29:33.161,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:29:33.187,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:29:33.228,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:29:42.243,000,INF: IP:172.16.32.44, Puerto:5091
+10:29:42.245,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:29:42.301,031,RES: TS20TP00019031FCC5@
+10:29:42.303,011,QRY: TS20TP000200111FC9E@
+10:29:42.308,011,RES: TS20TP0013101110:32:16|LLAMANDO|4|38|600|4|38|600|11|1|0|7|A|Confirmar reserva de hora|41|600|120|0|600|15086002-4|9999999999|DB21@
+10:29:42.310,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>4</CantidadEnEspera><TiempoDeEspera>38</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>7</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:29:49.598,000,INF: IP:172.16.32.44, Puerto:5091
+10:29:49.600,034,QRY: TS20TP000200341FC99@
+10:29:49.610,034,RES: TS20TP00019034FCC2@
+10:29:49.611,011,QRY: TS20TP000200111FC9E@
+10:29:49.614,011,RES: TS20TP0013301110:32:23|ATENDIENDO|3|45|600|3|45|600|11|1|0|7|A|Confirmar reserva de hora|49|600|120|0|600|15086002-4|9999999999|DA8C@
+10:29:49.615,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>45</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>7</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:29:59.233,000,INF: IP:172.16.32.44, Puerto:5091
+10:29:59.236,022,QRY: TS20TP000200221FC9C@
+10:29:59.242,022,RES: TS20TP00019022FCC5@
+10:29:59.270,000,ERR: System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TurnoChileExpress.Clases.TransactionManager.GetMotivos(String idEscritorio) en C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\Clases\TransactionManager.cs:línea 513
+   en TurnoChileExpress.ws.WS_CExpress.GetMotivos(String idEscritorio) en C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\ws\WS-CExpress.asmx.cs:línea 576
+10:29:59.293,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSMotivo><CodigoRespuesta>1</CodigoRespuesta><GlosaRespuesta>La cadena de entrada no tiene el formato correcto.</GlosaRespuesta></RespuestaWSMotivo>
+10:30:18.755,000,INF: IP:172.16.32.44, Puerto:5091
+10:30:18.756,022,QRY: TS20TP000200221FC9C@
+10:30:18.761,022,RES: TS20TP00019022FCC5@
+10:31:34.667,000,INF: IP:172.16.32.44, Puerto:5091
+10:31:34.672,022,QRY: TS20TP000200221FC9C@
+10:31:34.681,022,RES: TS20TP00019022FCC5@
+10:33:38.880,000,INF: IP:172.16.32.44, Puerto:5091
+10:33:38.882,022,QRY: TS20TP000200221FC9C@
+10:33:38.888,022,RES: TS20TP00019022FCC5@
+10:34:33.989,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:55:41.971,000,INF: IP:172.16.32.44, Puerto:5091
+10:55:41.981,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:55:42.009,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:55:42.059,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:55:52.189,000,INF: IP:172.16.32.44, Puerto:5091
+10:55:52.192,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:55:52.225,031,RES: TS20TP00019031FCC5@
+10:55:52.232,011,QRY: TS20TP000200111FC9E@
+10:55:52.236,011,RES: TS20TP0013701110:58:26|LLAMANDO|3|1607|600|3|1607|600|11|1|0|8|A|Confirmar reserva de hora|1608|600|120|0|600|15086002-4|9999999999|D9E3@
+10:55:52.237,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>1607</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>8</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:56:07.635,000,INF: IP:172.16.32.44, Puerto:5091
+10:56:07.637,022,QRY: TS20TP000200221FC9C@
+10:56:07.644,022,RES: TS20TP00019022FCC5@
+10:56:43.030,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:57:25.267,000,INF: IP:172.16.32.44, Puerto:5091
+10:57:25.273,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+10:57:25.294,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+10:57:25.295,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+10:57:48.598,000,INF: IP:172.16.32.44, Puerto:5091
+10:57:48.605,031,QRY: TS20TP000280311|1.0.0.0FACD@
+10:57:48.633,031,RES: TS20TP00019031FCC5@
+10:57:48.634,011,QRY: TS20TP000200111FC9E@
+10:57:48.638,011,RES: TS20TP0013701111:00:22|LLAMANDO|2|30|600|2|30|600|11|6|9|9|A|MercadoLibre y/o Pre Etiquetado|36|600|120|0|600|15086002-4|9999999999|D932@
+10:57:48.639,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>30</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>9</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:58:11.255,000,INF: IP:172.16.32.44, Puerto:5091
+10:58:11.257,034,QRY: TS20TP000200341FC99@
+10:58:11.269,034,RES: TS20TP00019034FCC2@
+10:58:11.269,011,QRY: TS20TP000200111FC9E@
+10:58:11.273,011,RES: TS20TP0013901111:00:45|ATENDIENDO|1|50|600|1|50|600|11|6|9|9|A|MercadoLibre y/o Pre Etiquetado|59|600|120|0|600|15086002-4|9999999999|D891@
+10:58:11.274,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>50</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>9</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+10:58:18.797,000,INF: IP:172.16.32.44, Puerto:5091
+10:58:18.804,022,QRY: TS20TP000200221FC9C@
+10:58:18.815,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+10:58:29.062,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:09:06.347,000,INF: IP:172.16.32.44, Puerto:5091
+11:09:06.351,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+11:09:06.395,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+11:09:06.435,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:09:49.402,000,INF: IP:172.16.32.44, Puerto:5091
+11:09:49.405,031,QRY: TS20TP000280311|1.0.0.0FACD@
+11:09:49.467,031,RES: TS20TP00019031FCC5@
+11:09:49.469,011,QRY: TS20TP000200111FC9E@
+11:09:49.474,011,RES: TS20TP0014101111:12:23|LLAMANDO|2|100|600|2|100|600|11|6|9|11|A|MercadoLibre y/o Pre Etiquetado|104|600|120|0|600|15086002-4|9999999999|D882@
+11:09:49.475,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>100</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>11</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:10:58.781,000,INF: IP:172.16.32.44, Puerto:5091
+11:10:58.785,034,QRY: TS20TP000200341FC99@
+11:10:58.805,034,RES: TS20TP00019034FCC2@
+11:10:58.806,011,QRY: TS20TP000200111FC9E@
+11:10:58.809,011,RES: TS20TP0014301111:13:32|ATENDIENDO|1|171|600|1|171|600|11|6|9|11|A|MercadoLibre y/o Pre Etiquetado|173|600|120|0|600|15086002-4|9999999999|D7D8@
+11:10:58.810,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>171</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>11</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:11:13.532,000,INF: IP:172.16.32.44, Puerto:5091
+11:11:13.534,022,QRY: TS20TP000200221FC9C@
+11:11:13.540,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+11:11:13.541,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:13:08.655,000,INF: IP:172.16.32.44, Puerto:5091
+11:13:08.657,035,QRY: TS20TP000250351|18,1FB51@
+11:13:08.675,035,RES: TS20TP00019035FCC1@
+11:13:08.676,011,QRY: TS20TP000200111FC9E@
+11:13:08.679,011,RES: TS20TP0007301111:15:42|ESPERANDO|1|303|600|1|303|600|11|||||||||||||EB3C@
+11:13:08.680,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>303</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:13:25.975,000,INF: IP:172.16.32.44, Puerto:5091
+11:13:25.978,036,QRY: TS20TP000230361|18FBAF@
+11:13:26.017,036,RES: TS20TP0002499911599FBA9@
+11:13:26.030,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>11599</CodigoRespuesta><GlosaRespuesta>Error Desconocido</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:13:49.939,000,INF: IP:172.16.32.44, Puerto:5091
+11:13:49.944,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+11:13:49.962,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+11:13:49.965,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:14:20.085,000,INF: IP:172.16.32.44, Puerto:5091
+11:14:20.090,031,QRY: TS20TP000280311|1.0.0.0FACD@
+11:14:20.105,031,RES: TS20TP00019031FCC5@
+11:14:20.109,011,QRY: TS20TP000200111FC9E@
+11:14:20.113,011,RES: TS20TP0013501111:16:53|LLAMANDO|1|374|600|1|374|600|11|1|0|11|A|Confirmar reserva de hora|378|600|120|0|600|15086002-4|9999999999|DA51@
+11:14:20.113,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>374</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>11</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:17:51.322,000,INF: IP:172.16.32.44, Puerto:5091
+11:17:51.330,034,QRY: TS20TP000200341FC99@
+11:17:51.345,034,RES: TS20TP00019034FCC2@
+11:17:51.349,011,QRY: TS20TP000200111FC9E@
+11:17:51.353,011,RES: TS20TP0012901111:20:25|ATENDIENDO|0|0|0|0|0|0|11|1|0|11|A|Confirmar reserva de hora|589|600|120|0|600|15086002-4|9999999999|DB67@
+11:17:51.353,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>11</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:17:59.067,000,INF: IP:172.16.32.44, Puerto:5091
+11:17:59.070,022,QRY: TS20TP000200221FC9C@
+11:17:59.075,022,RES: TS20TP00019022FCC5@
+11:17:59.076,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:18:21.120,000,INF: IP:172.16.32.44, Puerto:5091
+11:18:21.122,036,QRY: TS20TP000220361|0FBE9@
+11:18:21.129,036,RES: TS20TP0002499913025FBB7@
+11:18:21.137,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:18:27.151,000,INF: IP:172.16.32.44, Puerto:5091
+11:18:27.152,036,QRY: TS20TP000220361|2FBE7@
+11:18:27.157,036,RES: TS20TP0002499913025FBB7@
+11:18:27.171,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:21:46.186,000,INF: IP:172.16.32.44, Puerto:5091
+11:21:46.186,036,QRY: TS20TP000210361|FC1A@
+11:21:46.204,036,RES: TS20TP0002499913025FBB7@
+11:21:46.214,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:22:10.814,000,INF: IP:172.16.32.44, Puerto:5091
+11:22:10.820,035,QRY: TS20TP000240351|0,1FB8B@
+11:22:10.834,035,RES: TS20TP00019035FCC1@
+11:22:10.838,011,QRY: TS20TP000200111FC9E@
+11:22:10.841,011,RES: TS20TP0006501111:24:44|ESPERANDO|0|0|0|0|0|0|11|||||||||||||ECD3@
+11:22:10.842,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>0</CantidadEnEspera><TiempoDeEspera>0</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:22:25.898,000,INF: IP:172.16.32.44, Puerto:5091
+11:22:25.905,036,QRY: TS20TP000210361|FC1A@
+11:22:25.918,036,RES: TS20TP0002499911599FBA9@
+11:22:25.929,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>11599</CodigoRespuesta><GlosaRespuesta>Error Desconocido</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:22:55.570,000,INF: IP:172.16.32.44, Puerto:5091
+11:23:01.560,036,QRY: TS20TP000210361|FC1A@
+11:23:01.575,036,RES: TS20TP0002499911599FBA9@
+11:23:34.054,036,QRY: TS20TP000210361|FC1A@
+11:23:40.080,036,RES: TS20TP0002499911599FBA9@
+11:26:20.352,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>11599</CodigoRespuesta><GlosaRespuesta>Error Desconocido</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:28:19.788,000,INF: IP:172.16.32.44, Puerto:5091
+11:28:19.796,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+11:28:19.821,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+11:28:19.868,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:28:30.719,000,INF: IP:172.16.32.44, Puerto:5091
+11:28:30.722,031,QRY: TS20TP000280311|1.0.0.0FACD@
+11:28:30.796,031,RES: TS20TP00019031FCC5@
+11:28:30.799,011,QRY: TS20TP000200111FC9E@
+11:28:30.805,011,RES: TS20TP0013801111:31:04|LLAMANDO|3|79|600|3|79|600|11|6|9|12|A|MercadoLibre y/o Pre Etiquetado|81|600|120|0|600|15086002-4|9999999999|D8E7@
+11:28:30.807,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>79</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>12</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:28:38.493,000,INF: IP:172.16.32.44, Puerto:5091
+11:28:38.496,034,QRY: TS20TP000200341FC99@
+11:28:38.513,034,RES: TS20TP00019034FCC2@
+11:28:38.513,011,QRY: TS20TP000200111FC9E@
+11:28:38.517,011,RES: TS20TP0014001111:31:12|ATENDIENDO|2|88|600|2|88|600|11|6|9|12|A|MercadoLibre y/o Pre Etiquetado|89|600|120|0|600|15086002-4|9999999999|D856@
+11:28:38.517,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>88</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>12</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:29:23.173,000,INF: IP:172.16.32.44, Puerto:5091
+11:29:29.180,036,QRY: TS20TP000220361|2FBE7@
+11:29:40.716,036,RES: TS20TP0002499913025FBB7@
+11:31:50.489,036,QRY: TS20TP000220361|2FBE7@
+11:31:51.525,036,RES: TS20TP0002499913025FBB7@
+11:32:13.968,036,QRY: TS20TP000220361|2FBE7@
+11:54:00.577,000,INF: IP:172.16.32.44, Puerto:5091
+11:54:00.590,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+11:54:00.612,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+11:54:00.651,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:54:10.397,000,INF: IP:172.16.32.44, Puerto:5091
+11:54:10.403,031,QRY: TS20TP000280311|1.0.0.0FACD@
+11:54:10.432,031,RES: TS20TP00019031FCC5@
+11:54:10.437,011,QRY: TS20TP000200111FC9E@
+11:54:10.441,011,RES: TS20TP0014401111:56:44|LLAMANDO|2|1619|600|2|1619|600|11|6|9|13|A|MercadoLibre y/o Pre Etiquetado|1620|600|120|0|600|15086002-4|9999999999|D7BE@
+11:54:10.442,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>1619</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>13</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:54:33.283,000,INF: IP:172.16.32.44, Puerto:5091
+11:54:33.286,034,QRY: TS20TP000200341FC99@
+11:54:33.298,034,RES: TS20TP00019034FCC2@
+11:54:33.298,011,QRY: TS20TP000200111FC9E@
+11:54:33.302,011,RES: TS20TP0014601111:57:07|ATENDIENDO|1|1639|600|1|1639|600|11|6|9|13|A|MercadoLibre y/o Pre Etiquetado|1643|600|120|0|600|15086002-4|9999999999|D722@
+11:54:33.303,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>1639</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>13</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+11:54:45.020,000,INF: IP:172.16.32.44, Puerto:5091
+11:54:45.024,022,QRY: TS20TP000200221FC9C@
+11:54:45.030,022,RES: TS20TP0043202218~Consulta General|5~Envió Cliente TCC|3~Envío Cliente Persona|12~Envío Giro Internacional  |13~Envío Giro Nacional|11~Envío Giro Pre Chequeado |1~Envío MercadoLibre  |4~Envío Por Pagar |2~Envío Pre Etiquetado|17~Informe Equifax|16~Pago Cuentas|8~Retiro Cliente Persona|10~Retiro Cliente TCC|14~Retiro Giro Internacional|15~Retiro Giro Nacional|6~Retiro MercadoLibre |9~Retiro Por Pagar |7~Retiro Pre Etiquetado 61EC@
+11:54:45.032,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:57:25.354,000,INF: IP:172.16.32.44, Puerto:5091
+11:57:25.356,035,QRY: TS20TP000240351|1,1FB8A@
+11:57:25.376,035,RES: TS20TP00019035FCC1@
+11:57:25.377,011,QRY: TS20TP000200111FC9E@
+11:57:25.381,011,RES: TS20TP0007501111:59:59|ESPERANDO|1|1811|600|1|1811|600|11|||||||||||||EAC0@
+11:57:25.381,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>1811</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+11:57:49.640,000,INF: IP:172.16.32.44, Puerto:5091
+11:57:54.931,036,QRY: TS20TP000220361|1FBE8@
+11:57:57.264,036,RES: TS20TP00019036FCC0@
+12:08:45.042,036,QRY: TS20TP000220361|1FBE8@
+12:08:58.571,036,RES: TS20TP00019036FCC0@
+14:19:49.518,000,INF: IP:172.16.32.44, Puerto:5091
+14:19:49.529,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+14:19:49.577,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+14:19:49.615,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:20:42.800,000,INF: IP:172.16.32.44, Puerto:5091
+14:20:42.802,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+14:20:42.820,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+14:20:42.821,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:25:02.965,000,INF: IP:172.16.32.44, Puerto:5091
+14:25:02.967,031,QRY: TS20TP000280311|1.0.0.0FACD@
+14:25:03.036,031,RES: TS20TP00019031FCC5@
+14:25:03.036,011,QRY: TS20TP000200111FC9E@
+14:25:03.039,011,RES: TS20TP0013501114:27:37|LLAMANDO|4|465|600|4|465|600|11|1|0|13|A|Confirmar reserva de hora|474|600|120|0|600|15086002-4|9999999999|DA43@
+14:25:03.040,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>4</CantidadEnEspera><TiempoDeEspera>465</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>13</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+14:25:13.359,000,INF: IP:172.16.32.44, Puerto:5091
+14:25:13.362,034,QRY: TS20TP000200341FC99@
+14:25:13.379,034,RES: TS20TP00019034FCC2@
+14:25:13.379,011,QRY: TS20TP000200111FC9E@
+14:25:13.383,011,RES: TS20TP0013701114:27:47|ATENDIENDO|3|474|600|3|474|600|11|1|0|13|A|Confirmar reserva de hora|484|600|120|0|600|15086002-4|9999999999|D9AE@
+14:25:13.384,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>474</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>13</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+14:25:53.953,000,INF: IP:172.16.32.44, Puerto:5091
+14:25:53.954,034,QRY: TS20TP000200341FC99@
+14:25:53.961,034,RES: TS20TP0002499913025FBB7@
+14:25:53.986,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:26:01.877,000,INF: IP:172.16.32.44, Puerto:5091
+14:26:01.884,034,QRY: TS20TP000200341FC99@
+14:26:01.898,034,RES: TS20TP0002499913025FBB7@
+14:26:01.907,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:26:10.704,000,INF: IP:172.16.32.44, Puerto:5091
+14:26:10.707,022,QRY: TS20TP000200221FC9C@
+14:26:10.713,022,RES: TS20TP00019022FCC5@
+14:26:10.713,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:26:25.783,000,INF: IP:172.16.32.44, Puerto:5091
+14:26:25.785,035,QRY: TS20TP000210351|FC1B@
+14:26:25.803,035,RES: TS20TP00019035FCC1@
+14:26:25.803,011,QRY: TS20TP000200111FC9E@
+14:26:25.807,011,RES: TS20TP0007301114:29:00|ESPERANDO|3|555|600|3|555|600|11|||||||||||||EB24@
+14:26:25.807,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>555</TiempoDeEspera><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:53:26.160,000,INF: IP:172.16.32.44, Puerto:5091
+14:53:26.165,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+14:53:26.186,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+14:53:26.190,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+14:53:36.217,000,INF: IP:172.16.32.44, Puerto:5091
+14:53:36.222,031,QRY: TS20TP000280311|1.0.0.0FACD@
+14:53:36.266,031,RES: TS20TP00019031FCC5@
+14:53:36.267,011,QRY: TS20TP000200111FC9E@
+14:53:36.270,011,RES: TS20TP0013801114:56:10|LLAMANDO|3|2178|600|3|2178|600|11|1|0|14|A|Confirmar reserva de hora|2186|600|120|0|600|15086002-4|9999999999|D9B0@
+14:53:36.271,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>3</CantidadEnEspera><TiempoDeEspera>2178</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>14</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+14:54:02.682,000,INF: IP:172.16.32.44, Puerto:5091
+14:54:06.141,032,QRY: TS20TP000200321FC9B@
+14:54:07.233,032,RES: TS20TP00019032FCC4@
+14:55:14.609,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+15:09:56.284,000,INF: IP:172.16.32.44, Puerto:5091
+15:09:56.294,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+15:09:56.316,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+15:09:56.356,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+15:10:11.497,000,INF: IP:172.16.32.44, Puerto:5091
+15:10:11.500,031,QRY: TS20TP000280311|1.0.0.0FACD@
+15:10:11.528,031,RES: TS20TP00019031FCC5@
+15:10:11.535,011,QRY: TS20TP000200111FC9E@
+15:10:11.539,011,RES: TS20TP0013801115:12:45|LLAMANDO|2|3181|600|2|3181|600|11|1|0|15|A|Confirmar reserva de hora|3182|600|120|0|600|15086002-4|9999999999|D9BD@
+15:10:11.540,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>2</CantidadEnEspera><TiempoDeEspera>3181</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>15</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+15:10:37.453,000,INF: IP:172.16.32.44, Puerto:5091
+15:10:37.454,031,QRY: TS20TP000280311|1.0.0.0FACD@
+15:10:37.464,031,RES: TS20TP0002499913025FBB7@
+15:10:37.484,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>13025</CodigoRespuesta><GlosaRespuesta>Atención no válida</GlosaRespuesta><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+15:11:14.924,000,INF: IP:172.16.32.44, Puerto:5091
+15:11:14.929,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+15:11:14.949,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+15:11:14.949,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+15:11:30.569,000,INF: IP:172.16.32.44, Puerto:5091
+15:11:30.576,031,QRY: TS20TP000280311|1.0.0.0FACD@
+15:11:30.593,031,RES: TS20TP00019031FCC5@
+15:11:30.593,011,QRY: TS20TP000200111FC9E@
+15:11:30.605,011,RES: TS20TP0013801115:14:04|LLAMANDO|1|3252|600|1|3252|600|11|1|0|16|A|Confirmar reserva de hora|3260|600|120|0|600|15086002-4|9999999999|D9C6@
+15:11:30.606,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><CantidadEnEspera>1</CantidadEnEspera><TiempoDeEspera>3252</TiempoDeEspera><LetraTurno>A</LetraTurno><NumeroTurno>16</NumeroTurno><Rut>15086002-4</Rut></RespuestaWS>
+15:11:50.971,000,INF: IP:172.16.32.44, Puerto:5091
+15:11:51.850,032,QRY: TS20TP000200321FC9B@
+15:11:51.864,032,RES: TS20TP00019032FCC4@
+15:11:51.873,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>

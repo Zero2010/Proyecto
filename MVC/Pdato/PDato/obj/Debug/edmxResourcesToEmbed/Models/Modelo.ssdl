@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pasaelda_PasaelDatoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="pasaelda_PasaelDatoModelStoreContainer">
+    <EntitySet Name="categoria" EntityType="pasaelda_PasaelDatoModel.Store.categoria" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="comentario" EntityType="pasaelda_PasaelDatoModel.Store.comentario" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="comentario_x_producto" EntityType="pasaelda_PasaelDatoModel.Store.comentario_x_producto" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="comentario_x_sucursal" EntityType="pasaelda_PasaelDatoModel.Store.comentario_x_sucursal" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="comuna" EntityType="pasaelda_PasaelDatoModel.Store.comuna" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="direccion" EntityType="pasaelda_PasaelDatoModel.Store.direccion" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="email" EntityType="pasaelda_PasaelDatoModel.Store.email" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="empresa" EntityType="pasaelda_PasaelDatoModel.Store.empresa" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="imagen_producto" EntityType="pasaelda_PasaelDatoModel.Store.imagen_producto" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="imagen_sucursal" EntityType="pasaelda_PasaelDatoModel.Store.imagen_sucursal" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="imagen_x_producto" EntityType="pasaelda_PasaelDatoModel.Store.imagen_x_producto" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="medios_pago" EntityType="pasaelda_PasaelDatoModel.Store.medios_pago" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="producto" EntityType="pasaelda_PasaelDatoModel.Store.producto" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="puntaje" EntityType="pasaelda_PasaelDatoModel.Store.puntaje" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="puntaje_x_categoria" EntityType="pasaelda_PasaelDatoModel.Store.puntaje_x_categoria" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="region" EntityType="pasaelda_PasaelDatoModel.Store.region" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="restricciones" EntityType="pasaelda_PasaelDatoModel.Store.restricciones" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="servicio_habitacion" EntityType="pasaelda_PasaelDatoModel.Store.servicio_habitacion" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="servicio_motel" EntityType="pasaelda_PasaelDatoModel.Store.servicio_motel" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="servicio_sucursal" EntityType="pasaelda_PasaelDatoModel.Store.servicio_sucursal" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="servicio_x_producto" EntityType="pasaelda_PasaelDatoModel.Store.servicio_x_producto" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="sucursal" EntityType="pasaelda_PasaelDatoModel.Store.sucursal" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="telefono" EntityType="pasaelda_PasaelDatoModel.Store.telefono" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="tipo_habitacion" EntityType="pasaelda_PasaelDatoModel.Store.tipo_habitacion" store:Type="Tables" Schema="pasaelda_admin" />
+    <EntitySet Name="tipohabitacion_x_sucursal" EntityType="pasaelda_PasaelDatoModel.Store.tipohabitacion_x_sucursal" store:Type="Tables" Schema="pasaelda_admin" />
+    <AssociationSet Name="Relationship12" Association="pasaelda_PasaelDatoModel.Store.Relationship12">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship13" Association="pasaelda_PasaelDatoModel.Store.Relationship13">
+      <End Role="tipo_habitacion" EntitySet="tipo_habitacion" />
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship14" Association="pasaelda_PasaelDatoModel.Store.Relationship14">
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship15" Association="pasaelda_PasaelDatoModel.Store.Relationship15">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="imagen_sucursal" EntitySet="imagen_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship17" Association="pasaelda_PasaelDatoModel.Store.Relationship17">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="servicio_sucursal" EntitySet="servicio_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship18" Association="pasaelda_PasaelDatoModel.Store.Relationship18">
+      <End Role="servicio_motel" EntitySet="servicio_motel" />
+      <End Role="servicio_sucursal" EntitySet="servicio_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship25" Association="pasaelda_PasaelDatoModel.Store.Relationship25">
+      <End Role="restricciones" EntitySet="restricciones" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship32" Association="pasaelda_PasaelDatoModel.Store.Relationship32">
+      <End Role="comentario" EntitySet="comentario" />
+      <End Role="comentario_x_sucursal" EntitySet="comentario_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship33" Association="pasaelda_PasaelDatoModel.Store.Relationship33">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="comentario_x_sucursal" EntitySet="comentario_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship34" Association="pasaelda_PasaelDatoModel.Store.Relationship34">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="comentario_x_producto" EntitySet="comentario_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship35" Association="pasaelda_PasaelDatoModel.Store.Relationship35">
+      <End Role="comentario" EntitySet="comentario" />
+      <End Role="comentario_x_producto" EntitySet="comentario_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship36" Association="pasaelda_PasaelDatoModel.Store.Relationship36">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="imagen_x_producto" EntitySet="imagen_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship37" Association="pasaelda_PasaelDatoModel.Store.Relationship37">
+      <End Role="imagen_producto" EntitySet="imagen_producto" />
+      <End Role="imagen_x_producto" EntitySet="imagen_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship38" Association="pasaelda_PasaelDatoModel.Store.Relationship38">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="servicio_x_producto" EntitySet="servicio_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship39" Association="pasaelda_PasaelDatoModel.Store.Relationship39">
+      <End Role="servicio_habitacion" EntitySet="servicio_habitacion" />
+      <End Role="servicio_x_producto" EntitySet="servicio_x_producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship42" Association="pasaelda_PasaelDatoModel.Store.Relationship42">
+      <End Role="puntaje" EntitySet="puntaje" />
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship43" Association="pasaelda_PasaelDatoModel.Store.Relationship43">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship44" Association="pasaelda_PasaelDatoModel.Store.Relationship44">
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+      <End Role="comentario" EntitySet="comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship45" Association="pasaelda_PasaelDatoModel.Store.Relationship45">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="email" EntitySet="email" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship46" Association="pasaelda_PasaelDatoModel.Store.Relationship46">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="telefono" EntitySet="telefono" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship6" Association="pasaelda_PasaelDatoModel.Store.Relationship6">
+      <End Role="empresa" EntitySet="empresa" />
+      <End Role="sucursal" EntitySet="sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship7" Association="pasaelda_PasaelDatoModel.Store.Relationship7">
+      <End Role="region" EntitySet="region" />
+      <End Role="comuna" EntitySet="comuna" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="pasaelda_PasaelDatoModel.Store.Relationship8">
+      <End Role="comuna" EntitySet="comuna" />
+      <End Role="direccion" EntitySet="direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="pasaelda_PasaelDatoModel.Store.Relationship9">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="direccion" EntitySet="direccion" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="categoria" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="comentario">
+    <Key>
+      <PropertyRef Name="idcomentario" />
+    </Key>
+    <Property Name="idcomentario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="comentario" Type="varchar" MaxLength="500" />
+    <Property Name="fecha" Type="varchar" MaxLength="20" />
+    <Property Name="idpuntaje" Type="int" />
+    <Property Name="idcategoria" Type="int" />
+  </EntityType>
+  <EntityType Name="comentario_x_producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+      <PropertyRef Name="idcomentario" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="idcomentario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comentario_x_sucursal">
+    <Key>
+      <PropertyRef Name="idcomentario" />
+      <PropertyRef Name="idsucursal" />
+    </Key>
+    <Property Name="idcomentario" Type="int" Nullable="false" />
+    <Property Name="idsucursal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comuna">
+    <Key>
+      <PropertyRef Name="idcomuna" />
+    </Key>
+    <Property Name="idcomuna" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="comuna" Type="varchar" MaxLength="200" />
+    <Property Name="idregion" Type="int" />
+  </EntityType>
+  <EntityType Name="direccion">
+    <Key>
+      <PropertyRef Name="iddireccion" />
+    </Key>
+    <Property Name="iddireccion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" />
+    <Property Name="numero" Type="varchar" MaxLength="50" />
+    <Property Name="idcomuna" Type="int" />
+    <Property Name="idsucursal" Type="int" />
+  </EntityType>
+  <EntityType Name="email">
+    <Key>
+      <PropertyRef Name="idemail" />
+    </Key>
+    <Property Name="idemail" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="idsucursal" Type="int" />
+  </EntityType>
+  <EntityType Name="empresa">
+    <Key>
+      <PropertyRef Name="idempresa" />
+    </Key>
+    <Property Name="idempresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" MaxLength="200" />
+    <Property Name="rut" Type="varchar" MaxLength="12" />
+    <Property Name="giro" Type="varchar" MaxLength="100" />
+    <Property Name="historia" Type="varchar" MaxLength="1000" />
+    <Property Name="path_imagenempresa" Type="varchar" MaxLength="500" />
+    <Property Name="link" Type="varchar" MaxLength="500" />
+    <Property Name="descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="path_imagen" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="imagen_producto">
+    <Key>
+      <PropertyRef Name="idimagenproducto" />
+    </Key>
+    <Property Name="idimagenproducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="path_imagenproducto" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="imagen_sucursal">
+    <Key>
+      <PropertyRef Name="idimagensucursal" />
+    </Key>
+    <Property Name="idimagensucursal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="path_imagensucursal" Type="varchar" MaxLength="500" />
+    <Property Name="idsucursal" Type="int" />
+  </EntityType>
+  <EntityType Name="imagen_x_producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+      <PropertyRef Name="idimagenproducto" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="idimagenproducto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="medios_pago">
+    <Key>
+      <PropertyRef Name="idpago" />
+    </Key>
+    <Property Name="idpago" Type="int" Nullable="false" />
+    <Property Name="tipo_pago" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_producto" Type="varchar" MaxLength="500" />
+    <Property Name="fecha_ini" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_fin" Type="varchar" MaxLength="100" />
+    <Property Name="idrestriccion" Type="int" />
+    <Property Name="idsucursal" Type="int" />
+    <Property Name="idtipo_habitacion" Type="int" />
+    <Property Name="precio1" Type="varchar" MaxLength="30" />
+    <Property Name="precio2" Type="varchar" MaxLength="30" />
+    <Property Name="descuento" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="puntaje">
+    <Key>
+      <PropertyRef Name="idpuntaje" />
+    </Key>
+    <Property Name="idpuntaje" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="puntaje" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="puntaje_x_categoria">
+    <Key>
+      <PropertyRef Name="idpuntaje" />
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idpuntaje" Type="int" Nullable="false" />
+    <Property Name="idcategoria" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="region">
+    <Key>
+      <PropertyRef Name="idregion" />
+    </Key>
+    <Property Name="idregion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="region" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="restricciones">
+    <Key>
+      <PropertyRef Name="idrestriccion" />
+    </Key>
+    <Property Name="idrestriccion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="restriccion" Type="varchar" MaxLength="600" />
+    <Property Name="descripcion_horario" Type="varchar" MaxLength="400" />
+    <Property Name="descripcion_fecha" Type="varchar" MaxLength="200" />
+    <Property Name="idproducto" Type="int" />
+    <Property Name="idsucursal" Type="int" />
+    <Property Name="precio" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="servicio_habitacion">
+    <Key>
+      <PropertyRef Name="idserviciohabitacion" />
+    </Key>
+    <Property Name="idserviciohabitacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descriocion_serviciohabitacion" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="servicio_motel">
+    <Key>
+      <PropertyRef Name="idserviciomotel" />
+    </Key>
+    <Property Name="idserviciomotel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_serviciomotel" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="servicio_sucursal">
+    <Key>
+      <PropertyRef Name="idsucursal" />
+      <PropertyRef Name="id_serviciomotel" />
+    </Key>
+    <Property Name="idsucursal" Type="int" Nullable="false" />
+    <Property Name="id_serviciomotel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servicio_x_producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+      <PropertyRef Name="idserviciohabitacion" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="idserviciohabitacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sucursal">
+    <Key>
+      <PropertyRef Name="idsucursal" />
+    </Key>
+    <Property Name="idsucursal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" MaxLength="500" />
+    <Property Name="idempresa" Type="int" />
+  </EntityType>
+  <EntityType Name="telefono">
+    <Key>
+      <PropertyRef Name="idtelefono" />
+    </Key>
+    <Property Name="idtelefono" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="telefono" Type="varchar" MaxLength="15" />
+    <Property Name="idsucursal" Type="int" />
+  </EntityType>
+  <EntityType Name="tipo_habitacion">
+    <Key>
+      <PropertyRef Name="idtipo_habitacion" />
+    </Key>
+    <Property Name="idtipo_habitacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_tipohabitacion" Type="varchar" MaxLength="500" />
+    <Property Name="link" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tipohabitacion_x_sucursal">
+    <Key>
+      <PropertyRef Name="idsucursal" />
+      <PropertyRef Name="idtipo_habitacion" />
+    </Key>
+    <Property Name="idsucursal" Type="int" Nullable="false" />
+    <Property Name="idtipo_habitacion" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Relationship12">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="1" />
+    <End Role="tipohabitacion_x_sucursal" Type="pasaelda_PasaelDatoModel.Store.tipohabitacion_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship13">
+    <End Role="tipo_habitacion" Type="pasaelda_PasaelDatoModel.Store.tipo_habitacion" Multiplicity="1" />
+    <End Role="tipohabitacion_x_sucursal" Type="pasaelda_PasaelDatoModel.Store.tipohabitacion_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_habitacion">
+        <PropertyRef Name="idtipo_habitacion" />
+      </Principal>
+      <Dependent Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idtipo_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship14">
+    <End Role="tipohabitacion_x_sucursal" Type="pasaelda_PasaelDatoModel.Store.tipohabitacion_x_sucursal" Multiplicity="0..1" />
+    <End Role="producto" Type="pasaelda_PasaelDatoModel.Store.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idsucursal" />
+        <PropertyRef Name="idtipo_habitacion" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idsucursal" />
+        <PropertyRef Name="idtipo_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship15">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="0..1" />
+    <End Role="imagen_sucursal" Type="pasaelda_PasaelDatoModel.Store.imagen_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="imagen_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship17">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="1" />
+    <End Role="servicio_sucursal" Type="pasaelda_PasaelDatoModel.Store.servicio_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="servicio_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship18">
+    <End Role="servicio_motel" Type="pasaelda_PasaelDatoModel.Store.servicio_motel" Multiplicity="1" />
+    <End Role="servicio_sucursal" Type="pasaelda_PasaelDatoModel.Store.servicio_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicio_motel">
+        <PropertyRef Name="idserviciomotel" />
+      </Principal>
+      <Dependent Role="servicio_sucursal">
+        <PropertyRef Name="id_serviciomotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship25">
+    <End Role="restricciones" Type="pasaelda_PasaelDatoModel.Store.restricciones" Multiplicity="0..1" />
+    <End Role="producto" Type="pasaelda_PasaelDatoModel.Store.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restricciones">
+        <PropertyRef Name="idrestriccion" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idrestriccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship32">
+    <End Role="comentario" Type="pasaelda_PasaelDatoModel.Store.comentario" Multiplicity="1" />
+    <End Role="comentario_x_sucursal" Type="pasaelda_PasaelDatoModel.Store.comentario_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comentario">
+        <PropertyRef Name="idcomentario" />
+      </Principal>
+      <Dependent Role="comentario_x_sucursal">
+        <PropertyRef Name="idcomentario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship33">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="1" />
+    <End Role="comentario_x_sucursal" Type="pasaelda_PasaelDatoModel.Store.comentario_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="comentario_x_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship34">
+    <End Role="producto" Type="pasaelda_PasaelDatoModel.Store.producto" Multiplicity="1" />
+    <End Role="comentario_x_producto" Type="pasaelda_PasaelDatoModel.Store.comentario_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="comentario_x_producto">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship35">
+    <End Role="comentario" Type="pasaelda_PasaelDatoModel.Store.comentario" Multiplicity="1" />
+    <End Role="comentario_x_producto" Type="pasaelda_PasaelDatoModel.Store.comentario_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comentario">
+        <PropertyRef Name="idcomentario" />
+      </Principal>
+      <Dependent Role="comentario_x_producto">
+        <PropertyRef Name="idcomentario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship36">
+    <End Role="producto" Type="pasaelda_PasaelDatoModel.Store.producto" Multiplicity="1" />
+    <End Role="imagen_x_producto" Type="pasaelda_PasaelDatoModel.Store.imagen_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="imagen_x_producto">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship37">
+    <End Role="imagen_producto" Type="pasaelda_PasaelDatoModel.Store.imagen_producto" Multiplicity="1" />
+    <End Role="imagen_x_producto" Type="pasaelda_PasaelDatoModel.Store.imagen_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="imagen_producto">
+        <PropertyRef Name="idimagenproducto" />
+      </Principal>
+      <Dependent Role="imagen_x_producto">
+        <PropertyRef Name="idimagenproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship38">
+    <End Role="producto" Type="pasaelda_PasaelDatoModel.Store.producto" Multiplicity="1" />
+    <End Role="servicio_x_producto" Type="pasaelda_PasaelDatoModel.Store.servicio_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="servicio_x_producto">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship39">
+    <End Role="servicio_habitacion" Type="pasaelda_PasaelDatoModel.Store.servicio_habitacion" Multiplicity="1" />
+    <End Role="servicio_x_producto" Type="pasaelda_PasaelDatoModel.Store.servicio_x_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicio_habitacion">
+        <PropertyRef Name="idserviciohabitacion" />
+      </Principal>
+      <Dependent Role="servicio_x_producto">
+        <PropertyRef Name="idserviciohabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship42">
+    <End Role="puntaje" Type="pasaelda_PasaelDatoModel.Store.puntaje" Multiplicity="1" />
+    <End Role="puntaje_x_categoria" Type="pasaelda_PasaelDatoModel.Store.puntaje_x_categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="puntaje">
+        <PropertyRef Name="idpuntaje" />
+      </Principal>
+      <Dependent Role="puntaje_x_categoria">
+        <PropertyRef Name="idpuntaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship43">
+    <End Role="categoria" Type="pasaelda_PasaelDatoModel.Store.categoria" Multiplicity="1" />
+    <End Role="puntaje_x_categoria" Type="pasaelda_PasaelDatoModel.Store.puntaje_x_categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="puntaje_x_categoria">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship44">
+    <End Role="puntaje_x_categoria" Type="pasaelda_PasaelDatoModel.Store.puntaje_x_categoria" Multiplicity="0..1" />
+    <End Role="comentario" Type="pasaelda_PasaelDatoModel.Store.comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="puntaje_x_categoria">
+        <PropertyRef Name="idpuntaje" />
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="comentario">
+        <PropertyRef Name="idpuntaje" />
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship45">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="0..1" />
+    <End Role="email" Type="pasaelda_PasaelDatoModel.Store.email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="email">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship46">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="0..1" />
+    <End Role="telefono" Type="pasaelda_PasaelDatoModel.Store.telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="telefono">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship6">
+    <End Role="empresa" Type="pasaelda_PasaelDatoModel.Store.empresa" Multiplicity="0..1" />
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empresa">
+        <PropertyRef Name="idempresa" />
+      </Principal>
+      <Dependent Role="sucursal">
+        <PropertyRef Name="idempresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship7">
+    <End Role="region" Type="pasaelda_PasaelDatoModel.Store.region" Multiplicity="0..1" />
+    <End Role="comuna" Type="pasaelda_PasaelDatoModel.Store.comuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="idregion" />
+      </Principal>
+      <Dependent Role="comuna">
+        <PropertyRef Name="idregion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="comuna" Type="pasaelda_PasaelDatoModel.Store.comuna" Multiplicity="0..1" />
+    <End Role="direccion" Type="pasaelda_PasaelDatoModel.Store.direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comuna">
+        <PropertyRef Name="idcomuna" />
+      </Principal>
+      <Dependent Role="direccion">
+        <PropertyRef Name="idcomuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="sucursal" Type="pasaelda_PasaelDatoModel.Store.sucursal" Multiplicity="0..1" />
+    <End Role="direccion" Type="pasaelda_PasaelDatoModel.Store.direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="direccion">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="MenuIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="pasaelda_admin" />
+  <Function Name="ValidarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="pasaelda_mfelipe">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

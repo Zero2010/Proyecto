@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Nuevos";
+}
+
+<br>
+<form>
+    <div class="container">
+        <br><br>
+        <div class="row">
+
+            <br />
+
+            <br>
+            <div class="col-sm-3">
+                <br /> <br />
+                <div class="form-group">
+                    <ul class="list-group list-group-flush listgroup">
+
+                        <div class="alert alert-danger">
+                            <strong>@ViewBag.Title</strong><a class="alert-link"></a>.
+                        </div>
+
+
+                        @foreach (var item in ViewBag.menu)
+                        {
+                            <li class="list-group-item listgroup"><a href="@item.LinkH">@item.DescripcionTHabitacion<span class="float-right badge badge-danger round">@item.id</span></a></li>
+                        }
+                        <br>
+
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <br>
+            <div class="col-sm-9">
+
+                <br />
+
+                @foreach (var item in ViewBag.Habitaciones)
+                {
+                    <br>
+                    <div class="row featurette">
+                        <div class="col-sm-8">
+
+
+                            <div class="row featurette">
+                                <div class="col-12 col-sm-11">
+                                    <h2 class="text-center text-uppercase encabezado">
+                                        <span class="text-lowercase d-block" align="left"><p class="Letras">@item.DescripcionProducto</p></span>
+                                    </h2>
+                                    <hr class="col-sm-11" />
+                                    <p class="ListadoLetras"><strong>Descripción :</strong>@item.DescripcionSucursal</p>
+                                    <p class="ListadoLetras"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i><strong>Precios:</strong></p>
+
+                                    @foreach (var precio in ViewBag.precio)
+                                    {
+                                        if (item.IdProducto == precio.IdProducto)
+                                        {
+                                            <p class="ListadoLetrasPrecio"><strong>@precio.DetalleRestriccion</strong></p>
+                                            <p class="ListadoLetrasPrecio">$ @precio.Precio </p>
+                                        }
+                                    }
+
+                                    <li class="list-inline-item">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                        <span><strong>Servicios:</strong></span>
+                                        @foreach (var servicios in ViewBag.servicio_x_Habitacion)
+                                        {
+                                            if (item.IdProducto == servicios.IdProducto)
+                                            {
+                                                <span class="badge badge-pill badge-danger">@servicios.descripcionshabitacion</span>
+                                            }
+                                        }
+
+                                        <br /><br />
+                                        <a href="/Motel/DetalleHabitacion/@item.IdProducto" class="btn btn-outline-danger">Ver Más</a>
+                                    </li>
+                                </div>
+                                <div class="col-12 col-sm-1">
+                                    <img class="imagencard sombra" p src="/@item.HabitacionPath" alt="Generic placeholder image">
+                                </div>
+                            </div>
+
+
+                        </div><br>
+                    </div>
+
+                    <h1 class="one centraricono"><span><img src="~/Imagenes/Logo/colgador.png" /></span></h1>
+                }
+            </div>
+
+        </div>
+    </div>
+</form>

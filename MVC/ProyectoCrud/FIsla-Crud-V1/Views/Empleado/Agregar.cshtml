@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar</h2>
+
+<form action="/Empleado/Agregar" method="post" >
+    <p><label>Nombre</label><br><input type="text" name="Nombre" placeholder="Nombre" requiered/><br></p><p id="inombre"></p>
+    <p><label>APaterno</label><br><input type="text" name="Apaterno" placeholder="Apaterno" requiered/><br></p><p id="ipaterno"></p>
+    <p><label>AMaterno</label><br><input type="text" name="Amaterno" placeholder="Amaterno"requiered/><br></p><p id="imaterno"></p>
+    <p><label>Rut</label><br><input type="text" name="Rut" placeholder="Rut" requiered/><br></p><p id="irut"></p>
+    <button type="submit">Guardar  </button> <a href="/Empleado/Index"> Volver</a>
+</form> 

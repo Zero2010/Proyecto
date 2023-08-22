@@ -1,0 +1,303 @@
+﻿@{
+    /**/
+
+    ViewBag.Title = "Detalle Motel";
+}
+
+<br>
+
+@foreach (var item in ViewBag.portada)
+{
+    <div class="col-sm-12">
+        <hr>
+        <div class="col-sm-12 pt-4">
+            <h1 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase"><p class="Letras TituloLetra">@item.Nombre</p></span>
+            </h1>
+        </div>
+        <hr>
+    </div>
+}
+<br><br>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-3 col-ml-3 col-lg-3">
+            <br>
+            <ul class="list-group list-group-flush listgroup">
+                @foreach (var item in ViewBag.menu)
+                {
+                    <li class="list-group-item listgroup"><a href="@item.LinkH">@item.DescripcionTHabitacion<span class="float-right badge badge-danger round">@item.id</span></a></li>
+                }
+            </ul>
+
+            <ul class="multiselect-container dropdown-menu">
+                <li class="active">
+                    <div class="checkbox">
+                        <label class="checkbox">
+                            <input value="AD" type="checkbox"> Andorra (AD)
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="col-sm-9 col-ml-9 col-lg-9">
+            <img src="@ViewBag.IPortada" class="first-slide imagenportada" alt="Generic placeholder image">
+        </div>
+    </div>
+</div>
+
+      
+
+
+<br /><br />
+
+<div class="container-fluid">
+        <hr class="col-sm-12 col-ml-12 col-lg-12">
+        <div class="col-sm-12 col-ml-12 col-lg-12 pt-4">
+            <h1 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase"><p class="Letras TituloLetra">Nuestras Habitaciones</p></span>
+            </h1>
+        </div>
+        <hr class="col-sm-12 col-ml-12 col-lg-12">
+    </div>
+
+<div class="container">
+        <div class="col-sm-12 col-ml-12 col-lg-12">
+
+            @foreach (var item in ViewBag.Habitaciones)
+            {
+                <div class="row featurette">
+                    <div class="col-lg-9">
+                        <h2 class="text-center text-uppercase encabezado">
+                            <span class="text-lowercase d-block" align="left"><p class="Letras">@item.DescripcionProducto</p></span>
+                        </h2>
+                        <p class="ListadoLetras"><strong>Descripción :</strong>@item.DescripcionSucursal</p>
+                        <p class="ListadoLetras"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i><strong>Precios:</strong></p>
+
+                        @foreach (var precio in ViewBag.precio)
+                        {
+                            if (item.IdProducto == precio.IdProducto)
+                            {
+                                <p class="ListadoLetrasPrecio"><strong>@precio.DetalleRestriccion</strong></p>
+                                <p class="ListadoLetrasPrecio">$ @precio.Precio</p>
+                            }
+                        }
+
+                        <li class="list-inline-item">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <span><strong>Servicios:</strong></span>
+                            @foreach (var servicios in ViewBag.servicio_x_Habitacion)
+                            {
+                                if (item.IdProducto == servicios.IdProducto)
+                                {
+                                    <span class="badge badge-pill badge-danger">@servicios.descripcionshabitacion</span>
+                                }
+                            }
+
+                            <br />  <br />
+                            <a href="/Motel/DetalleHabitacion/@item.IdProducto" class="btn btn-outline-danger">Ver Más</a>
+                        </li>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="imagencard sombra" p src="/@item.HabitacionPath" alt="Generic placeholder image">
+                    </div>
+                </div>
+                <h1 class="one centraricono"><span><img src="~/Imagenes/Logo/colgador.png" /></span></h1>
+            }
+        </div>
+
+    </div>
+
+
+<div class="container-fluid">
+
+    <hr class="col-sm-12 col-ml-12 col-lg-12">
+    <div class="col-sm-12 col-ml-12 col-lg-12 pt-4">
+        <h1 class="text-center text-uppercase encabezado">
+            <span class="text-lowercase"><p class="Letras TituloLetra">Servicios</p></span>
+        </h1>
+    </div>
+    <hr class="col-sm-12 col-ml-12 col-lg-12">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-bath fa-2x"></i>
+                        <h4>Hidromaje</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-snowflake-o fa-2x"></i>
+                        <h4>Aire Acondicionado</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-car fa-2x"></i>
+                        <h4>Estacionamiento</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-cutlery fa-2x"></i>
+                        <h4>Menú</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-street-view fa-2x"></i>
+                        <h4>Atención 24 hrs.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-coffee fa-2x"></i>
+                        <h4>Desayuno.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-shower fa-2x"></i>
+                        <h4>Ducha.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-money fa-2x"></i>
+                        <h4>Tipo Pago.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-wifi fa-2x"></i>
+                        <h4>Wifi.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-play fa-2x"></i>
+                        <h4>Equipo Música.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-television fa-2x"></i>
+                        <h4>Tv Cable.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-ml-3 col-lg-3">
+                <div class="mg-feature">
+                    <div class="mg-feature-icon-title">
+                        <i class="fa fa-glass fa-2x"></i>
+                        <h4>MiniBar.</h4>
+                    </div>
+                    <p>eius defuturum sua dolorum.</p>
+                </div>
+            </div>
+            <!-- -->
+
+        </div>
+    </div>
+</div>
+
+<hr class="col-sm-12 col-ml-12 col-lg-12">
+
+<div class="container-fluid FooterMotel">
+    <br />
+    <div class="row">
+        <div class="col-sm-3 col-ml-3 col-lg-3">
+            <h3 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase d-block" align="left"><p class="Letras">Web</p></span>
+            </h3>
+            @foreach (var item in ViewBag.portada)
+            {
+                <p class="LetrasFooter"><i class="fa fa-html5" aria-hidden="true"></i> @item.WeB</p>
+            }
+        </div>
+        <div class="col-sm-3 col-ml-3 col-lg-3">
+            <h3 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase d-block" align="left"><p class="Letras">Redes Sociales</p></span>
+            </h3>
+            @foreach (var item in ViewBag.portada)
+            {
+                <p class="LetrasFooter"><i class="fa fa-facebook-square" aria-hidden="true"></i> @item.Facebook</p>
+                <p class="LetrasFooter"><i class="fa fa-twitter" aria-hidden="true"></i> @item.Twitter</p>
+                <p class="LetrasFooter"><i class="fa fa-instagram" aria-hidden="true"></i> @item.Instagram</p>
+            }
+
+        </div>
+        <div class="col-sm-3 col-ml-3 col-lg-3">
+            <h3 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase d-block" align="left"><p class="Letras">Teléfono</p></span>
+            </h3>            
+            @foreach (var item in ViewBag.TelefonoSucursal)
+            {
+                <p class="LetrasFooter"><i class="fa fa-address-book" aria-hidden="true"></i> @item.Telefono</p>
+            }
+        </div>
+        <div class="col-sm-3 col-ml-3 col-lg-3">
+            <h3 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase d-block" align="left"><p class="Letras">Dirección</p></span>
+            </h3>
+            @foreach (var item in ViewBag.portada)
+            {
+                <p class="LetrasFooter"><i class="fa fa-map-marker" aria-hidden="true"></i> @item.direccion @item.Numero</p>
+                <p class="LetrasFooter">@item.Comuna</p>
+            }
+        </div>
+    </div>
+</div>
+
+
+<br>

@@ -1,0 +1,1049 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SitemapAspNet</name>
+    </assembly>
+    <members>
+        <member name="T:SitemapAspNet.Attributes.SitemapAttribute">
+             <summary>
+                 Attribute for <see cref="T:System.Web.Mvc.ActionResult"/> method representing a Web resource (HTML files, JPEG files, etc.).
+             </summary>
+             <author>Cyril Schumacher</author>
+             <date>15/02/2014T18:18:16+01:00</date>
+             <copyright file="/Attributes/SitemapAttribute.cs">
+                 The MIT License (MIT)
+            
+                 Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                 Permission is hereby granted, free of charge, to any person obtaining a copy
+                 of this software and associated documentation files (the "Software"), to deal
+                 in the Software without restriction, including without limitation the rights
+                 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                 copies of the Software, and to permit persons to whom the Software is
+                 furnished to do so, subject to the following conditions:
+            
+                 The above copyright notice and this permission notice shall be included in
+                 all copies or substantial portions of the Software.
+            
+                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                 THE SOFTWARE.
+             </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.PriorityDefault">
+            <summary>
+                Default priority of a page.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute._changeFrequently">
+            <summary>
+                Frequency of the page.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute._lastModification">
+            <summary>
+                Date of last modification file.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute._priority">
+            <summary>
+                Priority of URL entry.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor">
+            <summary>
+                Constructor.
+            </summary>
+            <seealso cref="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,SitemapAspNet.Attributes.SitemapAttribute.Frequence,System.Double)"/>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="lastModification">Date of last modification file.</param>
+            <seealso cref="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,SitemapAspNet.Attributes.SitemapAttribute.Frequence,System.Double)"/>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,SitemapAspNet.Attributes.SitemapAttribute.Frequence)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="lastModification">Date of last modification file.</param>
+            <param name="changeFrequently">Frequency of the page.</param>
+            <seealso cref="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,SitemapAspNet.Attributes.SitemapAttribute.Frequence,System.Double)"/>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,SitemapAspNet.Attributes.SitemapAttribute.Frequence,System.Double)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="lastModification">Optional. Date of last modification file.</param>
+            <param name="changeFrequently">Optional. Frequency of the page.</param>
+            <param name="priority">Optional. Priority of URL entry.</param>
+            <exception cref="T:System.ArgumentException">Throw if <paramref name="lastModification"/> isn't in W3C format.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                Throw if <paramref name="priority"/> has a value less than 0.0 or
+                greater than 1.0.
+            </exception>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="lastModification">Date of last modification file.</param>
+            <param name="changeFrequently">Frequency of the page.</param>
+            <param name="priority">Priority of URL entry.</param>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute._IsValidDate(System.String)">
+            <summary>
+                Determines if the date is W3C format.
+            </summary>
+            <param name="lastModification">Date of last modification file.</param>
+            <returns>True if the date is valid, False else.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Attributes.SitemapAttribute._IsValidPriority(System.Double)">
+            <summary>
+                Determines if the priority is between 0.0 and 1.0.
+            </summary>
+            <param name="priority">Priority.</param>
+            <returns>True if the priority is valid, False else.</returns>
+            <returns></returns>
+        </member>
+        <member name="P:SitemapAspNet.Attributes.SitemapAttribute.Address">
+            <summary>
+                Get or set a URL entry.
+            </summary>
+            <value>URL entry.</value>
+            <remarks>This property is required and is used to resolve the URL.</remarks>
+        </member>
+        <member name="P:SitemapAspNet.Attributes.SitemapAttribute.ChangeFrequently">
+            <summary>
+                Get a frequency of the page.
+            </summary>
+            <value>Frequency.</value>
+            <seealso cref="T:SitemapAspNet.Attributes.SitemapAttribute.Frequence">This property is optional and represents the rate of change of the page.</seealso>
+        </member>
+        <member name="P:SitemapAspNet.Attributes.SitemapAttribute.LastModification">
+            <summary>
+                Get a date of last modification file.
+            </summary>
+            <value>Date of last modification file.</value>
+            <remarks>This property is optional and the date must be in the format W3C: YYYY-MM-DDThh:mmTZD.</remarks>
+        </member>
+        <member name="P:SitemapAspNet.Attributes.SitemapAttribute.Priority">
+            <summary>
+                Get a priority of URL entry.
+            </summary>
+            <value>Priority of URL entry.</value>
+            <remarks>The property is optional and must be represented by float number between 0.0 and 1.0.</remarks>
+        </member>
+        <member name="T:SitemapAspNet.Attributes.SitemapAttribute.Frequence">
+            <summary>
+                Frequency of the page.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Always">
+            <summary>
+                Always.
+            </summary>
+            <remarks>Use for pages that change every time they are accessed.</remarks>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Hourly">
+            <summary>
+                Hourly.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Daily">
+            <summary>
+                Daily.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Weekly">
+            <summary>
+                Weekly.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Monthly">
+            <summary>
+                Monthly.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Yearly">
+            <summary>
+                AnnuelleYearly.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Attributes.SitemapAttribute.Frequence.Never">
+            <summary>
+                Never.
+            </summary>
+            <remarks>Use this value for archived URLs.</remarks>
+        </member>
+        <member name="T:SitemapAspNet.Builders.ISitemapBuilder">
+            <summary>
+                Interface for sitemap builder.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>09/08/2014T13:18:32+01:00</date>
+            <copyright file="/Builders/ISitemapBuilder.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="M:SitemapAspNet.Builders.ISitemapBuilder.CreateEntry(SitemapAspNet.Attributes.SitemapAttribute,System.Uri)">
+            <summary>
+                Create a URL entry.
+            </summary>
+            <param name="page">URL entry informations.</param>
+            <param name="rootUri">Uri address of application.</param>
+        </member>
+        <member name="M:SitemapAspNet.Builders.ISitemapBuilder.Generate">
+            <summary>
+                Generate a sitemap.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Builders.ISitemapBuilder.Generate(System.Text.Encoding)">
+            <summary>
+                Generate a sitemap.
+            </summary>
+            <param name="encoding">Encoding.</param>
+        </member>
+        <member name="T:SitemapAspNet.Builders.XmlSitemapBuilder">
+             <summary>
+                 XML Sitemap builder.
+             </summary>
+             <author>Cyril Schumacher</author>
+             <date>09/08/2014T13:18:14+01:00</date>
+             <copyright file="/Builders/XmlSitemapBuilder.cs">
+                 The MIT License (MIT)
+            
+                 Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                 Permission is hereby granted, free of charge, to any person obtaining a copy
+                 of this software and associated documentation files (the "Software"), to deal
+                 in the Software without restriction, including without limitation the rights
+                 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                 copies of the Software, and to permit persons to whom the Software is
+                 furnished to do so, subject to the following conditions:
+            
+                 The above copyright notice and this permission notice shall be included in
+                 all copies or substantial portions of the Software.
+            
+                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                 THE SOFTWARE.
+             </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Builders.XmlSitemapBuilder._model">
+            <summary>
+                Model.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder.#ctor">
+            <summary>
+                Constructor.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder.#ctor(SitemapAspNet.Models.UrlSetModel)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="model">Model.</param>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder.CreateEntry(SitemapAspNet.Attributes.SitemapAttribute,System.Uri)">
+            <summary>
+                Create a URL entry.
+            </summary>
+            <param name="page">URL entry informations.</param>
+            <param name="rootUri">Uri address of application.</param>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="page"/> or <paramref name="rootUri"/> are null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder.Generate">
+            <summary>
+                Generate a sitemap.
+            </summary>
+            <seealso cref="M:SitemapAspNet.Builders.XmlSitemapBuilder.Generate(System.Text.Encoding)"/>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder.Generate(System.Text.Encoding)">
+            <summary>
+                Generate a sitemap.
+            </summary>
+            <param name="encoding">Encoding.</param>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="encoding"/> is null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder._AddEntry(SitemapAspNet.Models.EntryModel)">
+            <summary>
+                Add a entry.
+            </summary>
+            <param name="entry">Entry.</param>
+        </member>
+        <member name="M:SitemapAspNet.Builders.XmlSitemapBuilder._CreateEntry(System.String,System.String,System.String,System.String)">
+            <summary>
+                Create a URL entry.
+            </summary>
+            <param name="address">Uri address.</param>
+            <param name="changeFrequentyle">Frequency.</param>
+            <param name="priority">Priorirty.</param>
+            <param name="lastModification">Last modification file.</param>
+            <returns>URL entry.</returns>
+        </member>
+        <member name="T:SitemapAspNet.Configurations.SitemapConfiguration">
+            <summary>
+                Sitemap Configuration.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>08/08/2014T21:13:59+01:00</date>
+            <copyright file="/Configurations/SitemapConfiguration.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Configurations.SitemapConfiguration.RouteName">
+            <summary>
+                Default route name.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Configurations.SitemapConfiguration.UrlPattern">
+            <summary>
+                Default URL pattern.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Configurations.SitemapConfiguration.Register(System.Web.Routing.RouteCollection)">
+            <summary>
+                Set a URL route.
+            </summary>
+            <param name="routes">A collection of routes for the application.</param>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="routes"/> is null.</exception>
+            <seealso cref="M:SitemapAspNet.Configurations.SitemapConfiguration.Register(System.Web.Routing.RouteCollection,System.String)"/>
+        </member>
+        <member name="M:SitemapAspNet.Configurations.SitemapConfiguration.Register(System.Web.Routing.RouteCollection,System.String)">
+            <summary>
+                Set a URL route.
+            </summary>
+            <param name="routes">A collection of routes for the application.</param>
+            <param name="urlPattern">The URL pattern for the route.</param>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="routes"/> is null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.Configurations.SitemapConfiguration._Register(System.Web.Routing.RouteCollection,System.String,System.String,System.Object)">
+            <summary>
+                Set a URL route.
+            </summary>
+            <param name="routes">A collection of routes for the application.</param>
+            <param name="routeName">Name of route.</param>
+            <param name="urlPattern">The URL pattern for the route.</param>
+            <param name="defaultRouteValues">Default route values.</param>
+        </member>
+        <member name="T:SitemapAspNet.Controllers.SitemapController">
+             <summary>
+                 Sitemap Controller.
+             </summary>
+             <author>Cyril Schumacher</author>
+             <date>08/08/2014T21:17:52+01:00</date>
+             <copyright file="/Controllers/SitemapController.cs">
+                 The MIT License (MIT)
+            
+                 Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                 Permission is hereby granted, free of charge, to any person obtaining a copy
+                 of this software and associated documentation files (the "Software"), to deal
+                 in the Software without restriction, including without limitation the rights
+                 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                 copies of the Software, and to permit persons to whom the Software is
+                 furnished to do so, subject to the following conditions:
+            
+                 The above copyright notice and this permission notice shall be included in
+                 all copies or substantial portions of the Software.
+            
+                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                 THE SOFTWARE.
+             </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Controllers.SitemapController.sitemapBuilder">
+            <summary>
+                Sitemap builder.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Controllers.SitemapController.#ctor">
+            <summary>
+                Constructor.
+            </summary>
+            <seealso cref="M:SitemapAspNet.Controllers.SitemapController.#ctor(SitemapAspNet.Builders.ISitemapBuilder)"/>
+        </member>
+        <member name="M:SitemapAspNet.Controllers.SitemapController.#ctor(SitemapAspNet.Builders.ISitemapBuilder)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="builder">Sitemap builder.</param>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="builder"/> is null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.Controllers.SitemapController.Index">
+            <summary>
+                Return the sitemap.
+            </summary>
+            <returns>XML content.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Controllers.SitemapController._GenerateSitemap(SitemapAspNet.SitemapService)">
+            <summary>
+                Generate a sitemap.
+            </summary>
+            <param name="service">Sitemap service.</param>
+            <returns>XML content.</returns>
+        </member>
+        <member name="T:SitemapAspNet.Extensions.ICustomAttributeProviderExtensions">
+            <summary>
+                Extension class for <see cref="T:System.Reflection.ICustomAttributeProvider"/>.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>22/08/2014T20:33:21+01:00</date>
+            <copyright file="/Extensions/ICustomAttributeProviderExtensions.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.ICustomAttributeProviderExtensions.GetCustomAttributesByType``1(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+                Return attributes by type.
+            </summary>
+            <typeparam name="T">Attributes type.</typeparam>
+            <param name="customAttributeProvider">Attribute.</param>
+            <returns>Attributes.</returns>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="customAttributeProvider"/> is null.</exception>
+        </member>
+        <member name="T:SitemapAspNet.Extensions.UriExtensions">
+            <summary>
+                Extension class for <see cref="T:System.Uri"/>.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>22/08/2014T20:33:21+01:00</date>
+            <copyright file="/Extensions/UriExtensions.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.UriExtensions.GetHostNameWithProtocol(System.Uri)">
+            <summary>
+                Return the hostname with a protocol.
+            </summary>
+            <param name="address">Uri address.</param>
+            <returns>Uri address represents the hostname with protocol.</returns>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="address"/> is null.</exception>
+        </member>
+        <member name="T:SitemapAspNet.Extensions.XmlSerializerExtensions">
+            <summary>
+                Extension class for <see cref="T:System.Xml.Serialization.XmlSerializer"/>.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>22/08/2014T20:33:21+01:00</date>
+            <copyright file="/Extensions/XmlSerializerExtensions.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.XmlSerializerExtensions.SerializeToString``1(``0)">
+            <summary>
+                Serialize a object into <see cref="T:System.String"/>.
+            </summary>
+            <typeparam name="T">Object type to serialize.</typeparam>
+            <param name="model">Object to serialize.</param>
+            <returns><see cref="T:System.String"/> represents object.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.XmlSerializerExtensions.SerializeToString``1(``0,System.Text.Encoding)">
+            <summary>
+                Serialize a object into <see cref="T:System.String"/>.
+            </summary>
+            <typeparam name="T">Object type to serialize.</typeparam>
+            <param name="model">Object to serialize.</param>
+            <param name="encoding">Encoding.</param>
+            <returns><see cref="T:System.String"/> represents object.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.XmlSerializerExtensions.SerializeToString``1(``0,System.Text.Encoding,System.Boolean)">
+            <summary>
+                Serialize a object into <see cref="T:System.String"/>.
+            </summary>
+            <typeparam name="T">Object type to serialize.</typeparam>
+            <param name="model">Object to serialize.</param>
+            <param name="encoding">Encoding.</param>
+            <param name="indent">Must be intent.</param>
+            <returns><see cref="T:System.String"/> represents object.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Extensions.XmlSerializerExtensions._SerializeToString``1(System.Xml.Serialization.XmlSerializer,``0,System.IO.TextWriter,System.Xml.XmlWriterSettings)">
+            <summary>
+                Serialize a object into <see cref="T:System.String"/>.
+            </summary>
+            <param name="serializer"><see cref="T:System.Xml.Serialization.XmlSerializer"/> instance.</param>
+            <param name="model">Object to serialize.</param>
+            <param name="writer">Stream contains result of the serialization.</param>
+            <param name="settings">Parameters.</param>
+            <returns><see cref="T:System.String"/> represents <paramref name="model"/> in XML format.</returns>
+        </member>
+        <member name="T:SitemapAspNet.Models.EntryModel">
+            <summary>
+                Entry URL.
+                Encloses all information about a specific URL
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>22/08/2014T20:17:04+01:00</date>
+            <copyright file="/Models/EntryModel.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="P:SitemapAspNet.Models.EntryModel.Address">
+            <summary>
+                Get or set a Uri address.
+            </summary>
+            <value>Uri address.</value>
+        </member>
+        <member name="P:SitemapAspNet.Models.EntryModel.LastModification">
+            <summary>
+                Get or set a last date modification.
+            </summary>
+            <value>Last date modification.</value>
+        </member>
+        <member name="P:SitemapAspNet.Models.EntryModel.ChangeFrequently">
+            <summary>
+                Get or set a frequency.
+            </summary>
+            <value>Frequency.</value>
+        </member>
+        <member name="P:SitemapAspNet.Models.EntryModel.Priority">
+            <summary>
+                Get or set a priority.
+            </summary>
+            <value>Priority.</value>
+        </member>
+        <member name="T:SitemapAspNet.Models.SitemapModel">
+            <summary>
+                Page informations.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>22/08/2014T20:17:04+01:00</date>
+            <copyright file="/Models/SitemapModel.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="P:SitemapAspNet.Models.SitemapModel.ControllerName">
+            <summary>
+                Get or set a controller name.
+            </summary>
+            <value>Controller name.</value>
+        </member>
+        <member name="P:SitemapAspNet.Models.SitemapModel.ActionName">
+            <summary>
+                Get or set action name.
+            </summary>
+            <value>Action name.</value>
+        </member>
+        <member name="P:SitemapAspNet.Models.SitemapModel.Sitemap">
+            <summary>
+                Get or set a <see cref="T:SitemapAspNet.Attributes.SitemapAttribute"/> attribute.
+            </summary>
+            <value><see cref="T:SitemapAspNet.Attributes.SitemapAttribute"/> attribute.</value>
+        </member>
+        <member name="T:SitemapAspNet.Models.UrlSetModel">
+             <summary>
+                 Encapsulates the file and references the current protocol standard.
+             </summary>
+             <author>Cyril Schumacher</author>
+             <date>22/08/2014T20:17:04+01:00</date>
+             <copyright file="/Models/UrlSetModel.cs">
+                 The MIT License (MIT)
+            
+                 Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                 Permission is hereby granted, free of charge, to any person obtaining a copy
+                 of this software and associated documentation files (the "Software"), to deal
+                 in the Software without restriction, including without limitation the rights
+                 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                 copies of the Software, and to permit persons to whom the Software is
+                 furnished to do so, subject to the following conditions:
+            
+                 The above copyright notice and this permission notice shall be included in
+                 all copies or substantial portions of the Software.
+            
+                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                 THE SOFTWARE.
+             </copyright>
+        </member>
+        <member name="M:SitemapAspNet.Models.UrlSetModel.#ctor">
+            <summary>
+                Constructor.
+            </summary>
+        </member>
+        <member name="P:SitemapAspNet.Models.UrlSetModel.Url">
+            <summary>
+                Get or set a <see cref="T:SitemapAspNet.Models.EntryModel"/> list.
+            </summary>
+            <value><see cref="T:SitemapAspNet.Models.EntryModel"/> list.</value>
+        </member>
+        <member name="T:SitemapAspNet.Researcher.ApplicationResearcher">
+            <summary>
+                Class search <see cref="T:System.Reflection.Assembly"/> is an application.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>15/08/2014T11:26:41+01:00</date>
+            <copyright file="/Researcher/ApplicationResearcher.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Researcher.ApplicationResearcher._assemblies">
+            <summary>
+                <see cref="T:System.Reflection.Assembly"/> list.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.ApplicationResearcher.#ctor(System.Collections.Generic.IEnumerable{System.Reflection.Assembly})">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="assemblies"><see cref="T:System.Reflection.Assembly"/> list.</param>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.ApplicationResearcher.Search">
+            <summary>
+                Return a <see cref="T:System.Reflection.Assembly"/> list represents a application.
+            </summary>
+            <returns>A <see cref="T:System.Reflection.Assembly"/> list.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.ApplicationResearcher._GetApplicationAssemblies">
+            <summary>
+                Return application assembly.
+            </summary>
+            <returns>Assemblies.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.ApplicationResearcher._IsApplication(System.Reflection.Assembly)">
+            <summary>
+                Determines if the assembly represent a application.
+            </summary>
+            <param name="assembly">Assembly to test.</param>
+            <returns>True if assembly represents a application, False else.</returns>
+        </member>
+        <member name="T:SitemapAspNet.Researcher.TypeResearcher">
+            <summary>
+                Class search <see cref="T:System.Type"/>.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>15/08/2014T11:26:41+01:00</date>
+            <copyright file="/Researcher/TypeResearcher.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="F:SitemapAspNet.Researcher.TypeResearcher._assemblies">
+            <summary>
+                <see cref="T:System.Reflection.Assembly"/> list.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.Researcher.TypeResearcher._type">
+            <summary>
+                Type desired.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.TypeResearcher.#ctor(System.Collections.Generic.IEnumerable{System.Reflection.Assembly})">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="assemblies"><see cref="T:System.Reflection.Assembly"/> list.</param>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.TypeResearcher.Search(System.Type)">
+            <summary>
+                Search <see cref="T:System.Type"/> by a <see cref="T:System.Type"/>.
+            </summary>
+            <param name="type"><see cref="T:System.Type"/> searched.</param>
+            <returns><see cref="T:System.Type"/> list.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.TypeResearcher._IsTypeRequired(System.Type)">
+            <summary>
+                Determines if a <see cref="T:System.Type"/> is <see cref="F:SitemapAspNet.Researcher.TypeResearcher._type"/>.
+            </summary>
+            <param name="type">Type to check.</param>
+            <returns>True if type is, False else.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.TypeResearcher._GetTypesAssemblies(System.Reflection.Assembly)">
+            <summary>
+                Return types corresponding to a <see cref="T:System.Reflection.Assembly"/>.
+            </summary>
+            <param name="assembly">Assembly.</param>
+            <returns><see cref="T:System.Reflection.Assembly"/> list.</returns>
+        </member>
+        <member name="M:SitemapAspNet.Researcher.TypeResearcher._GetClassTypes">
+            <summary>
+                Return for the types class.
+            </summary>
+            <returns>Types class.</returns>
+        </member>
+        <member name="T:SitemapAspNet.SitemapEngine">
+             <summary>
+                 Sitemap engine.
+             </summary>
+             <author>Cyril Schumacher</author>
+             <date>15/08/2014T11:26:41+01:00</date>
+             <copyright file="/SitemapEngine.cs">
+                 The MIT License (MIT)
+            
+                 Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                 Permission is hereby granted, free of charge, to any person obtaining a copy
+                 of this software and associated documentation files (the "Software"), to deal
+                 in the Software without restriction, including without limitation the rights
+                 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                 copies of the Software, and to permit persons to whom the Software is
+                 furnished to do so, subject to the following conditions:
+            
+                 The above copyright notice and this permission notice shall be included in
+                 all copies or substantial portions of the Software.
+            
+                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                 THE SOFTWARE.
+             </copyright>
+        </member>
+        <member name="F:SitemapAspNet.SitemapEngine._controllers">
+            <summary>
+                Controllers.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine.#ctor(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="controllers">Controllers type.</param>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine.GetPages">
+            <summary>
+                Return pages.
+            </summary>
+            <returns>Pages.</returns>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine._GetSitemapAttributes(System.Collections.Generic.IEnumerable{SitemapAspNet.Models.SitemapModel})">
+            <summary>
+                Return pages informations following existing controller.
+            </summary>
+            <returns>Informations sur les pages.</returns>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine._GetAttributeMethod(System.Reflection.MemberInfo)">
+            <summary>
+                Return <see cref="T:SitemapAspNet.Attributes.SitemapAttribute"/> of method.
+            </summary>
+            <param name="methodInfo">Method informations.</param>
+            <returns><see cref="T:SitemapAspNet.Attributes.SitemapAttribute"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="methodInfo"/> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Throw if <see cref="P:System.Reflection.MemberInfo.ReflectedType"/> of <paramref name="methodInfo"/> is null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine._GetValidPages(System.Collections.Generic.IEnumerable{SitemapAspNet.Models.SitemapModel})">
+            <summary>
+                Return valid pages.
+            </summary>
+            <param name="pages">Pages.</param>
+            <returns><see cref="T:SitemapAspNet.Models.SitemapModel"/> list valid.</returns>
+        </member>
+        <member name="M:SitemapAspNet.SitemapEngine._GetControllersInformations(System.Type)">
+            <summary>
+                Return informations pages.
+            </summary>
+            <param name="typeController">Controller type.</param>
+            <returns>Pages informations list.</returns>
+        </member>
+        <member name="T:SitemapAspNet.SitemapService">
+            <summary>
+                Sitemap service.
+            </summary>
+            <author>Cyril Schumacher</author>
+            <date>15/02/2014T18:28:54+01:00</date>
+            <copyright file="/SitemapService.cs">
+                The MIT License (MIT)
+            
+                Copyright (c) 2014, SitemapAspNet by Cyril Schumacher
+            
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+            
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+            </copyright>
+        </member>
+        <member name="F:SitemapAspNet.SitemapService.ControllerPrefix">
+            <summary>
+                Default Controller prefix.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.SitemapService._controllerPrefix">
+            <summary>
+                Controller prefix.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.SitemapService._requestContext">
+            <summary>
+                HTTP request informations.
+            </summary>
+        </member>
+        <member name="F:SitemapAspNet.SitemapService._routes">
+            <summary>
+                A collection of routes for the application.
+            </summary>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService.#ctor(System.Web.Routing.RequestContext,System.Web.Routing.RouteCollection)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="requestContext">HTTP request informations.</param>
+            <param name="routes">A collection of routes for the application.</param>
+            <exception cref="T:System.ArgumentNullException">
+                Throw if <paramref name="requestContext"/> or <paramref name="routes"/> are
+                null.
+            </exception>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService.#ctor(System.Web.Routing.RequestContext,System.Web.Routing.RouteCollection,System.String)">
+            <summary>
+                Constructor.
+            </summary>
+            <param name="requestContext">HTTP request informations.</param>
+            <param name="routes">A collection of routes for the application.</param>
+            <param name="controllerPrefix">Controller prefix.</param>
+            <exception cref="T:System.ArgumentNullException">
+                Throw if <paramref name="requestContext"/> or <paramref name="routes"/> are
+                null.
+            </exception>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService.Generate(SitemapAspNet.Builders.ISitemapBuilder,System.Uri)">
+            <summary>
+                Generate a sitemap by attributes <seealso cref="T:SitemapAspNet.Attributes.SitemapAttribute"/>.
+            </summary>
+            <param name="builder">Sitemap builder.</param>
+            <param name="rootUri">Uri address of server.</param>
+            <returns>Valid XML document.</returns>
+            <exception cref="T:System.ArgumentNullException">Throw if <paramref name="builder"/> or <paramref name="rootUri"/> are null.</exception>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService._CreateEntries(SitemapAspNet.Builders.ISitemapBuilder,System.Collections.Generic.IEnumerable{SitemapAspNet.Attributes.SitemapAttribute},System.Uri)">
+            <summary>
+                Create a entries by pages.
+            </summary>
+            <param name="builder">Sitemap builder.</param>
+            <param name="pages">URL entry.</param>
+            <param name="rootUri">Uri address of server.</param>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService._GetPageAddress(System.String,System.String)">
+            <summary>
+                Return page address.
+            </summary>
+            <param name="controllerName">Controller name.</param>
+            <param name="actionName">Action name.</param>
+            <returns>Page address.</returns>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService._GetPages">
+            <summary>
+                Return pages.
+            </summary>
+            <returns>Pages.</returns>
+        </member>
+        <member name="M:SitemapAspNet.SitemapService._GetControllersType">
+            <summary>
+                Return pages informations of <see cref="T:System.Web.Mvc.Controller"/>.
+            </summary>
+            <returns>Pages informations.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="localhost" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="localhost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="localhost">
+      <s:element name="Reserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_dealer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_sucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_nota_venta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orden_compra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelo_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="version_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="color_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stock_asig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nom_vendedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_vendedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="monto_reserva" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moneda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mot_anula_vta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_reserva" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReservaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:Reserva" />
+  </wsdl:message>
+  <wsdl:message name="ReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReservaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="reservaSoap">
+    <wsdl:operation name="Reserva">
+      <wsdl:input message="tns:ReservaSoapIn" />
+      <wsdl:output message="tns:ReservaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="reservaSoap" type="tns:reservaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Reserva">
+      <soap:operation soapAction="localhost/Reserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="reservaSoap12" type="tns:reservaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Reserva">
+      <soap12:operation soapAction="localhost/Reserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="reserva">
+    <wsdl:port name="reservaSoap" binding="tns:reservaSoap">
+      <soap:address location="http://10.10.10.102/ws/reserva.asmx" />
+    </wsdl:port>
+    <wsdl:port name="reservaSoap12" binding="tns:reservaSoap12">
+      <soap12:address location="http://10.10.10.102/ws/reserva.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

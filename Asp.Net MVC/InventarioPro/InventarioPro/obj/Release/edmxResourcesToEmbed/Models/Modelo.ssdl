@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioProModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Avance">
+    <Key>
+      <PropertyRef Name="IdAvance" />
+    </Key>
+    <Property Name="IdAvance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CantidadRegistro" Type="int" />
+    <Property Name="DescripcionPasillo" Type="varchar" MaxLength="300" />
+    <Property Name="MontoTipoUbicacion" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PorcentajeAvance" Type="varchar" MaxLength="50" />
+    <Property Name="Total" Type="int" />
+    <Property Name="TipoUbicacion" Type="varchar" MaxLength="300" />
+    <Property Name="IdLocal" Type="int" />
+  </EntityType>
+  <EntityType Name="AvanceCaptura">
+    <Key>
+      <PropertyRef Name="IdAPatente" />
+    </Key>
+    <Property Name="IdAPatente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ubicacion" Type="varchar" MaxLength="300" />
+    <Property Name="Motivo" Type="varchar" MaxLength="300" />
+    <Property Name="IdUbicacion" Type="int" />
+    <Property Name="IdTUbicacion" Type="int" />
+  </EntityType>
+  <EntityType Name="Captura">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+    </Key>
+    <Property Name="IdCaptura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="FechaCaptura" Type="datetime" />
+    <Property Name="CantidadCaptura" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Lote" Type="varchar" MaxLength="500" />
+    <Property Name="FechaLote" Type="datetime" />
+    <Property Name="IdProducto" Type="int" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="IsEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Captura_Local_Producto">
+    <Key>
+      <PropertyRef Name="IdCaptura" />
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdCaptura" Type="int" Nullable="false" />
+    <Property Name="IdLocal" Type="int" Nullable="false" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="IsEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Empresa1" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Empresa_X_Local">
+    <Key>
+      <PropertyRef Name="Empresa_IdEmpresa" />
+      <PropertyRef Name="Locales_IdLocal" />
+    </Key>
+    <Property Name="Empresa_IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Locales_IdLocal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kardex">
+    <Key>
+      <PropertyRef Name="IdKardex" />
+    </Key>
+    <Property Name="IdKardex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="FechaKardex" Type="datetime" />
+    <Property Name="CantidadKardex" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IdProducto" Type="int" />
+  </EntityType>
+  <EntityType Name="Locales">
+    <Key>
+      <PropertyRef Name="IdLocal" />
+    </Key>
+    <Property Name="IdLocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreLocal" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Locales_Ubicacion">
+    <Key>
+      <PropertyRef Name="IdLocal" />
+      <PropertyRef Name="IdUbicacion" />
+      <PropertyRef Name="IdTUbicacion" />
+    </Key>
+    <Property Name="IdLocal" Type="int" Nullable="false" />
+    <Property Name="IdUbicacion" Type="int" Nullable="false" />
+    <Property Name="IdTUbicacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModificacionCaptura">
+    <Key>
+      <PropertyRef Name="IdModificacion" />
+    </Key>
+    <Property Name="IdModificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Conteo1" Type="int" />
+    <Property Name="Conteo2" Type="int" />
+    <Property Name="IdCaptura" Type="int" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sku" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Moneda" Type="varchar" MaxLength="5" />
+    <Property Name="Ean" Type="varchar" MaxLength="50" />
+    <Property Name="IsEstado" Type="bit" />
+    <Property Name="Clase" Type="varchar" MaxLength="500" />
+    <Property Name="DescripcionClase" Type="varchar" MaxLength="500" />
+    <Property Name="SubClase" Type="varchar" MaxLength="500" />
+    <Property Name="DescripcionSubClase" Type="varchar" MaxLength="500" />
+    <Property Name="IdLocal" Type="int" />
+    <Property Name="IdUbicacion" Type="int" />
+    <Property Name="IdTUbicacion" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoUbicacion">
+    <Key>
+      <PropertyRef Name="IdTUbicacion" />
+    </Key>
+    <Property Name="IdTUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUbicacion1" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="IdTUsuario" />
+    </Key>
+    <Property Name="IdTUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUsuario1" Type="varchar" MaxLength="100" />
+    <Property Name="Link" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Ubicacion">
+    <Key>
+      <PropertyRef Name="IdUbicacion" />
+    </Key>
+    <Property Name="IdUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+    <Property Name="RangoBajo" Type="int" />
+    <Property Name="RangoAlto" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="IdLocal" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario1" Type="varchar" MaxLength="30" />
+    <Property Name="Clave" Type="varchar" MaxLength="50" />
+    <Property Name="FCreacion" Type="datetime" />
+    <Property Name="FModificacion" Type="datetime" />
+    <Property Name="IsEstado" Type="bit" />
+    <Property Name="Ip" Type="varchar" MaxLength="100" />
+    <Property Name="IdLocal" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario_X_Tipo">
+    <Key>
+      <PropertyRef Name="TipoUsuario_IdTUsuario" />
+      <PropertyRef Name="Usuario_IdUsuario" />
+    </Key>
+    <Property Name="TipoUsuario_IdTUsuario" Type="int" Nullable="false" />
+    <Property Name="Usuario_IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_CantDiferenciaNegativa' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_CantDiferenciaNegativa">
+    <Key>
+      <PropertyRef Name="IdCountSku" />
+    </Key>
+    <Property Name="IdCountSku" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="Diferencia" Type="decimal" Precision="38" Scale="2" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_CantDiferenciaPositiva' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_CantDiferenciaPositiva">
+    <Key>
+      <PropertyRef Name="IdCountSku" />
+    </Key>
+    <Property Name="IdCountSku" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="Diferencia" Type="decimal" Precision="38" Scale="2" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Locales' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_Locales">
+    <Key>
+      <PropertyRef Name="IdLocal" />
+    </Key>
+    <Property Name="IdLocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreLocal" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_SkuCapturados' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_SkuCapturados">
+    <Key>
+      <PropertyRef Name="IdCountSku" />
+    </Key>
+    <Property Name="IdCountSku" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="CountSku" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_TipoUbicacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_TipoUbicacion">
+    <Key>
+      <PropertyRef Name="IdTUbicacion" />
+    </Key>
+    <Property Name="IdTUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUbicacion1" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Ubicacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="View_Ubicacion">
+    <Key>
+      <PropertyRef Name="IdUbicacion" />
+    </Key>
+    <Property Name="IdUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="300" />
+    <Property Name="RangoBajo" Type="int" />
+    <Property Name="RangoAlto" Type="int" />
+  </EntityType>
+  <Association Name="FK_Captura_CapturaLocalProducto">
+    <End Role="Captura" Type="Self.Captura" Multiplicity="1" />
+    <End Role="Captura_Local_Producto" Type="Self.Captura_Local_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Captura">
+        <PropertyRef Name="IdCaptura" />
+      </Principal>
+      <Dependent Role="Captura_Local_Producto">
+        <PropertyRef Name="IdCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Captura_ModificacionCaptura">
+    <End Role="Captura" Type="Self.Captura" Multiplicity="0..1" />
+    <End Role="ModificacionCaptura" Type="Self.ModificacionCaptura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Captura">
+        <PropertyRef Name="IdCaptura" />
+      </Principal>
+      <Dependent Role="ModificacionCaptura">
+        <PropertyRef Name="IdCaptura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_X_Local_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Empresa_X_Local" Type="Self.Empresa_X_Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa_X_Local">
+        <PropertyRef Name="Empresa_IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_X_Local_Locales">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="1" />
+    <End Role="Empresa_X_Local" Type="Self.Empresa_X_Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocal" />
+      </Principal>
+      <Dependent Role="Empresa_X_Local">
+        <PropertyRef Name="Locales_IdLocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Local_Usuario">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocal" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdLocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Locales_Avance">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="Avance" Type="Self.Avance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocal" />
+      </Principal>
+      <Dependent Role="Avance">
+        <PropertyRef Name="IdLocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Locales_CapturaLocalProducto">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="1" />
+    <End Role="Captura_Local_Producto" Type="Self.Captura_Local_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="IdLocal" />
+      </Principal>
+      <Dependent Role="Captura_Local_Producto">
+        <PropertyRef Name="IdLocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalesUbicacion_Productos">
+    <End Role="Locales_Ubicacion" Type="Self.Locales_Ubicacion" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales_Ubicacion">
+        <PropertyRef Name="IdLocal" />
+        <PropertyRef Name="IdUbicacion" />
+        <PropertyRef Name="IdTUbicacion" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdLocal" />
+        <PropertyRef Name="IdUbicacion" />
+        <PropertyRef Name="IdTUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalesUbicacion_Ubicacion">
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="1" />
+    <End Role="Locales_Ubicacion" Type="Self.Locales_Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubicacion">
+        <PropertyRef Name="IdUbicacion" />
+      </Principal>
+      <Dependent Role="Locales_Ubicacion">
+        <PropertyRef Name="IdUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_CapturaLocalProducto">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+    <End Role="Captura_Local_Producto" Type="Self.Captura_Local_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Captura_Local_Producto">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Captura">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
+    <End Role="Captura" Type="Self.Captura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Captura">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Kardex">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoUbicacion_AvanceCaptura">
+    <End Role="TipoUbicacion" Type="Self.TipoUbicacion" Multiplicity="0..1" />
+    <End Role="AvanceCaptura" Type="Self.AvanceCaptura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUbicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Principal>
+      <Dependent Role="AvanceCaptura">
+        <PropertyRef Name="IdTUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoUbicacion_LocalesUbicacion">
+    <End Role="TipoUbicacion" Type="Self.TipoUbicacion" Multiplicity="1" />
+    <End Role="Locales_Ubicacion" Type="Self.Locales_Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUbicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Principal>
+      <Dependent Role="Locales_Ubicacion">
+        <PropertyRef Name="IdTUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ubicacion_AvanceCaptura">
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="0..1" />
+    <End Role="AvanceCaptura" Type="Self.AvanceCaptura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubicacion">
+        <PropertyRef Name="IdUbicacion" />
+      </Principal>
+      <Dependent Role="AvanceCaptura">
+        <PropertyRef Name="IdUbicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Captura">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Captura" Type="Self.Captura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Captura">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_X_Tipo_TipoUsuario">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Usuario_X_Tipo" Type="Self.Usuario_X_Tipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="IdTUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_X_Tipo">
+        <PropertyRef Name="TipoUsuario_IdTUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_X_Tipo_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_X_Tipo" Type="Self.Usuario_X_Tipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_X_Tipo">
+        <PropertyRef Name="Usuario_IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SP_ListadoDiferenciaNegativa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ListadoDiferenciaPositiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ListadoProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ListadoUbicaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="InventarioProModelStoreContainer">
+    <EntitySet Name="Avance" EntityType="Self.Avance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AvanceCaptura" EntityType="Self.AvanceCaptura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Captura" EntityType="Self.Captura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Captura_Local_Producto" EntityType="Self.Captura_Local_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa_X_Local" EntityType="Self.Empresa_X_Local" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kardex" EntityType="Self.Kardex" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locales" EntityType="Self.Locales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locales_Ubicacion" EntityType="Self.Locales_Ubicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModificacionCaptura" EntityType="Self.ModificacionCaptura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUbicacion" EntityType="Self.TipoUbicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_X_Tipo" EntityType="Self.Usuario_X_Tipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_CantDiferenciaNegativa" EntityType="Self.View_CantDiferenciaNegativa" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_CantDiferenciaNegativa].[IdCountSku] AS [IdCountSku], 
+    [View_CantDiferenciaNegativa].[Diferencia] AS [Diferencia]
+    FROM [dbo].[View_CantDiferenciaNegativa] AS [View_CantDiferenciaNegativa]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_CantDiferenciaPositiva" EntityType="Self.View_CantDiferenciaPositiva" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_CantDiferenciaPositiva].[IdCountSku] AS [IdCountSku], 
+    [View_CantDiferenciaPositiva].[Diferencia] AS [Diferencia]
+    FROM [dbo].[View_CantDiferenciaPositiva] AS [View_CantDiferenciaPositiva]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_Locales" EntityType="Self.View_Locales" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Locales].[IdLocal] AS [IdLocal], 
+    [View_Locales].[NombreLocal] AS [NombreLocal]
+    FROM [dbo].[View_Locales] AS [View_Locales]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_SkuCapturados" EntityType="Self.View_SkuCapturados" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_SkuCapturados].[IdCountSku] AS [IdCountSku], 
+    [View_SkuCapturados].[CountSku] AS [CountSku]
+    FROM [dbo].[View_SkuCapturados] AS [View_SkuCapturados]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_TipoUbicacion" EntityType="Self.View_TipoUbicacion" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_TipoUbicacion].[IdTUbicacion] AS [IdTUbicacion], 
+    [View_TipoUbicacion].[TipoUbicacion1] AS [TipoUbicacion1]
+    FROM [dbo].[View_TipoUbicacion] AS [View_TipoUbicacion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_Ubicacion" EntityType="Self.View_Ubicacion" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_Ubicacion].[IdUbicacion] AS [IdUbicacion], 
+    [View_Ubicacion].[Descripcion] AS [Descripcion], 
+    [View_Ubicacion].[RangoBajo] AS [RangoBajo], 
+    [View_Ubicacion].[RangoAlto] AS [RangoAlto]
+    FROM [dbo].[View_Ubicacion] AS [View_Ubicacion]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Captura_CapturaLocalProducto" Association="Self.FK_Captura_CapturaLocalProducto">
+      <End Role="Captura" EntitySet="Captura" />
+      <End Role="Captura_Local_Producto" EntitySet="Captura_Local_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Captura_ModificacionCaptura" Association="Self.FK_Captura_ModificacionCaptura">
+      <End Role="Captura" EntitySet="Captura" />
+      <End Role="ModificacionCaptura" EntitySet="ModificacionCaptura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_X_Local_Empresa" Association="Self.FK_Empresa_X_Local_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa_X_Local" EntitySet="Empresa_X_Local" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_X_Local_Locales" Association="Self.FK_Empresa_X_Local_Locales">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Empresa_X_Local" EntitySet="Empresa_X_Local" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Local_Usuario" Association="Self.FK_Local_Usuario">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Locales_Avance" Association="Self.FK_Locales_Avance">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Avance" EntitySet="Avance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Locales_CapturaLocalProducto" Association="Self.FK_Locales_CapturaLocalProducto">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Captura_Local_Producto" EntitySet="Captura_Local_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalesUbicacion_Productos" Association="Self.FK_LocalesUbicacion_Productos">
+      <End Role="Locales_Ubicacion" EntitySet="Locales_Ubicacion" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalesUbicacion_Ubicacion" Association="Self.FK_LocalesUbicacion_Ubicacion">
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+      <End Role="Locales_Ubicacion" EntitySet="Locales_Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_CapturaLocalProducto" Association="Self.FK_Producto_CapturaLocalProducto">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="Captura_Local_Producto" EntitySet="Captura_Local_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Captura" Association="Self.FK_Productos_Captura">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="Captura" EntitySet="Captura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Kardex" Association="Self.FK_Productos_Kardex">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoUbicacion_AvanceCaptura" Association="Self.FK_TipoUbicacion_AvanceCaptura">
+      <End Role="TipoUbicacion" EntitySet="TipoUbicacion" />
+      <End Role="AvanceCaptura" EntitySet="AvanceCaptura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoUbicacion_LocalesUbicacion" Association="Self.FK_TipoUbicacion_LocalesUbicacion">
+      <End Role="TipoUbicacion" EntitySet="TipoUbicacion" />
+      <End Role="Locales_Ubicacion" EntitySet="Locales_Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ubicacion_AvanceCaptura" Association="Self.FK_Ubicacion_AvanceCaptura">
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+      <End Role="AvanceCaptura" EntitySet="AvanceCaptura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Captura" Association="Self.FK_Usuario_Captura">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Captura" EntitySet="Captura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_X_Tipo_TipoUsuario" Association="Self.FK_Usuario_X_Tipo_TipoUsuario">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Usuario_X_Tipo" EntitySet="Usuario_X_Tipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_X_Tipo_Usuario" Association="Self.FK_Usuario_X_Tipo_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_X_Tipo" EntitySet="Usuario_X_Tipo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

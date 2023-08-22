@@ -1,0 +1,48 @@
+﻿article, aside, figure, footer, header, hgroup,
+menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: "Open Sans Condensed", sans-serif;
+    /*text-align: center;*/
+    background: white;
+    padding: 10px 40px;
+}
+
+.centraricono {
+    text-align: center;
+}
+
+p {
+    /*text-align: left;*/
+    margin-bottom: 30px;
+    line-height: 24px;
+}
+
+h1 {
+    position: relative;
+    margin-top: 20px;
+}
+
+    h1.one {
+        margin-top: 0;
+    }
+
+        h1.one:before {
+            content: "";
+            display: block;
+            border-top: solid 1px #e28c1da6;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+
+        h1.one span {
+            background: #fff;
+            padding: 0 20px;
+            position: relative;
+            z-index: 5;
+        }

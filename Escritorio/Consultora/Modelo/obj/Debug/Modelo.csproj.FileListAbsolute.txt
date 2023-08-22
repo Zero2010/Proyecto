@@ -1,0 +1,10 @@
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Modelo\bin\Debug\Modelo.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Flia Isla Mosquera\Desktop\Backup_Consultora-V2\Modelo\obj\Debug\Modelo.pdb

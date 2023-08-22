@@ -1,0 +1,17 @@
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Servidor.deps.json
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Servidor.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\ref\Servidor.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Servidor.pdb
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.csproj.AssemblyReference.cache
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.AssemblyInfoInputs.cache
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.AssemblyInfo.cs
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\ref\Servidor.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.pdb
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Controlador.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Modelo.dll
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Controlador.pdb
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\bin\Debug\net5.0\Modelo.pdb
+C:\Users\Felipe Isla\source\repos\WSocketServerInv\Servidor\obj\Debug\net5.0\Servidor.csproj.CopyComplete

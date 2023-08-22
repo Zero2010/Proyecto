@@ -1,0 +1,11 @@
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Release\Vista.exe.config
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Release\Vista.exe
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Release\Vista.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Release\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\bin\Release\Controlador.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\ResolveAssemblyReference.cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\Vista.frmConsume.resources
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\Vista.Properties.Resources.resources
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\Vista.csproj.GenerateResource.Cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\Vista.exe
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Vista\obj\Release\Vista.pdb

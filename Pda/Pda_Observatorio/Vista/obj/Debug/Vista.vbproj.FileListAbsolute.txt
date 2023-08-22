@@ -1,0 +1,74 @@
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Vista.exe
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Vista.pdb
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Vista.xml
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Controlador.dll
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Controlador.pdb
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Controlador.xml
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.frmAdministrador.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.frmPrincipal.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.vbproj.GenerateResource.Cache
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.exe
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.xml
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.pdb
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.frmInventario.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.frmRevision.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\obj\Debug\Vista.frmUbicacion.resources
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Modelo.dll
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Modelo.pdb
+C:\Users\Flia Isla Mosquera\Documents\Visual Studio 2008\Projects\Eso\Vista\bin\Debug\Modelo.xml
+F:\Projects\Eso\Vista\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\Eso\Vista\obj\Debug\Vista.frmAdministrador.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.frmRevision.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.frmUbicacion.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.frmInventario.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.frmPrincipal.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.Resources.resources
+F:\Projects\Eso\Vista\obj\Debug\Vista.vbproj.GenerateResource.Cache
+F:\Projects\Eso\Vista\obj\Debug\Vista.exe
+F:\Projects\Eso\Vista\obj\Debug\Vista.xml
+F:\Projects\Eso\Vista\obj\Debug\Vista.pdb
+F:\Projects\Eso\Vista\bin\Debug\Vista.exe
+F:\Projects\Eso\Vista\bin\Debug\Vista.pdb
+F:\Projects\Eso\Vista\bin\Debug\Vista.xml
+F:\Projects\Eso\Vista\bin\Debug\Controlador.dll
+F:\Projects\Eso\Vista\bin\Debug\Modelo.dll
+F:\Projects\Eso\Vista\bin\Debug\System.Data.SqlServerCe.dll
+F:\Projects\Eso\Vista\bin\Debug\Modelo.pdb
+F:\Projects\Eso\Vista\bin\Debug\Modelo.xml
+F:\Projects\Eso\Vista\bin\Debug\Controlador.pdb
+F:\Projects\Eso\Vista\bin\Debug\Controlador.xml
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Vista.exe
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Vista.pdb
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Vista.xml
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Controlador.dll
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Modelo.dll
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Modelo.pdb
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Modelo.xml
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Controlador.pdb
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\bin\Debug\Controlador.xml
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.frmAdministrador.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.frmRevision.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.frmUbicacion.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.frmInventario.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.frmPrincipal.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.vbproj.GenerateResource.Cache
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.exe
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.xml
+C:\Users\bcamucet\Desktop\Projects\Eso\Vista\obj\Debug\Vista.pdb
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.frmAdministrador.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.FrmEliminarPatente.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.frmRevision.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.frmUbicacion.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.frmInventario.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.frmPrincipal.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.FrmUsuario.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.FrmUsuarioAdmin.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.Resources.resources
+C:\Users\mfelipe\Desktop\Eso\Vista\obj\Debug\Vista.vbproj.GenerateResource.Cache

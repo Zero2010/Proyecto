@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<a href="/Empleado/Agregar/">Agregar</a><br>
+
+<select onchange="filtrarEmpleado(this)">
+    <option value="0">Seleccione una opción</option>
+    @foreach (var item in ViewBag.ListadoEmpleado)
+    {
+        <option value="@item.IdEmpleado"> @item.Nombre </option>
+    }
+</select>
+<br><br>
+
+<table class="table" id="cuerpo">
+    <tr>
+        <th>IdEmpleado</th>
+        <th>Nombre</th>
+        <th>APaterno</th>
+        <th>AMaterno</th>
+        <th>Rut</th>
+    </tr>
+
+    @foreach (var item in ViewBag.ListadoEmpleado)
+    {
+        <tr>
+            <td>@item.IdEmpleado</td>
+            <td>@item.Nombre</td>
+            <td>@item.Apaterno</td>
+            <td>@item.Amaterno</td>
+            <td>@item.Rut</td>
+            <td>
+                <a href="/Empleado/Modificar/@item.IdEmpleado">Modificar</a> |
+                <a href="/Empleado/Detalle/@item.IdEmpleado">Detalle</a> |
+                <a href="/Empleado/Eliminar/@item.IdEmpleado">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>

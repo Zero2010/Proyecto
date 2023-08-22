@@ -1,0 +1,27 @@
+﻿@model InventarioPro.Models.Locales
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_CargaMasiva.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Locales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreLocal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdLocal }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

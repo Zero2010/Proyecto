@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="localhost" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="localhost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="localhost">
+      <s:element name="RegistroGarantia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_dealer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_sucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fech_entre_vehi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_asua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nom_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nom2_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apep_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apem_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dire_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comu_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciud_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel_part_ufinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel_come_ufinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel_celu_ufinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sexo_usua_final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fech_nac_ufinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_stock" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_factura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_vendedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usua_regist_venta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero_factura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contr_seguro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contr_credito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_poliza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inst_seguro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inst_credito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroGarantiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroGarantiaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistroGarantiaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroGarantia" />
+  </wsdl:message>
+  <wsdl:message name="RegistroGarantiaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroGarantiaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="reggarantiaSoap">
+    <wsdl:operation name="RegistroGarantia">
+      <wsdl:input message="tns:RegistroGarantiaSoapIn" />
+      <wsdl:output message="tns:RegistroGarantiaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="reggarantiaSoap" type="tns:reggarantiaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistroGarantia">
+      <soap:operation soapAction="localhost/RegistroGarantia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="reggarantiaSoap12" type="tns:reggarantiaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistroGarantia">
+      <soap12:operation soapAction="localhost/RegistroGarantia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="reggarantia">
+    <wsdl:port name="reggarantiaSoap" binding="tns:reggarantiaSoap">
+      <soap:address location="http://10.10.10.102/ws/reggarantia.asmx" />
+    </wsdl:port>
+    <wsdl:port name="reggarantiaSoap12" binding="tns:reggarantiaSoap12">
+      <soap12:address location="http://10.10.10.102/ws/reggarantia.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

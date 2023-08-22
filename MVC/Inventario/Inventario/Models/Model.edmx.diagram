@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0829b638dc3145dd87f06dd0f85d8127" Name="Diagram1">
+        <EntityTypeShape EntityType="InventarioModel.AVANCE_INVENTARIO" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.ESTADO_MAESTRA" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.ESTADO_PATENTE" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.ESTADO_USUARIO" Width="1.5" PointX="2.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.MAESTRA_INPUT" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.MODIFICAR_CAPTURA" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.TIPO_UBICACION" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.TIPO_USUARIO" Width="1.5" PointX="7.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.UBICACION" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.USUARIO" Width="1.5" PointX="5" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="InventarioModel.Relationship11" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship12" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship14" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship5" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship6" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship3" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship8" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship9" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.Relationship4" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.USUARIO_X_TIPO" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="InventarioModel.ESTADO_INVENTARIO" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="InventarioModel.PORCENTAJE_AVANCE" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="InventarioModel.TIPO_BUSQUEDA" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="InventarioModel.MAESTRA_CONGELADO" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="InventarioModel.MAESTRA_PROCESO" Width="1.5" PointX="9.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

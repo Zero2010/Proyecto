@@ -1,0 +1,14 @@
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.exe
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.deps.json
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.runtimeconfig.json
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.runtimeconfig.dev.json
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.dll
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\bin\Debug\netcoreapp3.1\WSocketClient.pdb
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.csproj.AssemblyReference.cache
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.AssemblyInfoInputs.cache
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.AssemblyInfo.cs
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.dll
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.pdb
+C:\Users\Felipe Isla\source\repos\WSocketClient\WSocketClient\obj\Debug\netcoreapp3.1\WSocketClient.genruntimeconfig.cache

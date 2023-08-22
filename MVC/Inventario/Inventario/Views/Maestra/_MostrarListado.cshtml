@@ -1,0 +1,120 @@
+﻿@model Inventario.ViewModel.CargaMaestraViewModel
+@{
+    TempData.Keep("ListaMaestra");
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="container">
+                <h2>Close Alerts Via JavaScript</h2>
+                <div class="alert alert-success alert-dismissible" id="myAlert">
+                    <h2>Carga de Registos Incorrectos</h2>
+                    <div class="panel-heading">Se van a cargar: @TempData["ListaMaestraCount"] registros </div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Revisar</button>
+                    <a href="Maestra/InsertarRegistro" class="btn btn-success">
+                        <input type="button" value="Cargar Resgistros" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="container">
+                <h2>Close Alerts Via JavaScript</h2>
+                <div class="alert alert-danger alert-dismissible" id="myAlert">
+                    <h2>Carga de Registos Incorrectos</h2>
+                    <div class="panel-heading">Se van a cargar: @TempData["ListaMaestraRpteCount"] registros </div>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal2">Revisar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    @if (TempData["ListaMaestra"] != null)
+                    {<h2>Hover Rows</h2>
+                        <p>The .table-hover class enables a hover state on table rows:</p>
+
+                        <table class="table table-hover-condensed Grilla">
+                            <thead>
+                                <tr>
+                                    <th class="col-sm-3">Descripcion</th>
+                                    <th class="col-sm-1">Sku</th>
+                                    <th class="col-sm-1">Ean</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in TempData["ListaMaestra"] as IEnumerable<Inventario.ViewModel.MaestraViewModel>)
+                                {
+                                    using (Html.BeginForm("InsertarRegistro", "Maestra", null, FormMethod.Post, new { id = @ViewBag.ListaMaestra }))
+                                    {
+                                        <tr>
+                                            <td>@Html.TextBoxFor(m => item.DESCRIPCION)</td>
+                                            <td>@Html.TextBoxFor(m => item.CODIGO_INTERNO)</td>
+                                            <td>@Html.TextBoxFor(m => item.EAN)</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                        <input type="submit" name="SaveButton" value="Save" />
+                    }
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal2">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    @if (TempData["ListaMaestraRpte"] != null)
+                    {
+                        <h2>Hover Rows</h2>
+                        <p>The .table-hover class enables a hover state on table rows:</p>
+                    }
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

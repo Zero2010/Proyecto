@@ -1,0 +1,212 @@
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\InventarioPro.dll.config
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\InventarioPro.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\InventarioPro.pdb
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\csc.exe
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\csc.exe.config
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\csc.rsp
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\csi.exe
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\csi.rsp
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.AppContext.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\vbc.exe
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\vbc.exe.config
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\vbc.rsp
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\EntityFramework.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\Newtonsoft.Json.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Helpers.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Http.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Mvc.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Razor.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\EntityFramework.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Razor.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Helpers.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Mvc.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\Newtonsoft.Json.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Http.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Razor.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Helpers.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Mvc.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Http.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.AssemblyReference.cache
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CoreCompileInputs.cache
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CopyComplete
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Release\InventarioPro.dll
+C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Release\InventarioPro.pdb
+C:\Users\Felipe Isla\Desktop\C-Sharp\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.AssemblyReference.cache
+C:\Users\Felipe Isla\Desktop\C-Sharp\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CoreCompileInputs.cache
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.dll.config
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.pdb
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.exe
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.exe.config
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.rsp
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csi.exe
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csi.rsp
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.AppContext.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Collections.Immutable.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Reflection.Metadata.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.exe
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.exe.config
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.rsp
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe.config
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\Newtonsoft.Json.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Helpers.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Mvc.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Razor.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Razor.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Helpers.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Mvc.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\Newtonsoft.Json.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Razor.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Helpers.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Mvc.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Http.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.AssemblyReference.cache
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CoreCompileInputs.cache
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CopyComplete
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.dll
+C:\Proyectos\Proyectos-mfelipe\C-Sharp\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.pdb
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.dll.config
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\InventarioPro.pdb
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.exe
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.exe.config
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csc.rsp
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csi.exe
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\csi.rsp
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.AppContext.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Collections.Immutable.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\System.Reflection.Metadata.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.exe
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.exe.config
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\vbc.rsp
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\roslyn\VBCSCompiler.exe.config
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\Newtonsoft.Json.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Helpers.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Mvc.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Razor.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\EntityFramework.SqlServer.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Razor.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Deployment.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Webpages.Razor.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Helpers.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Mvc.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\Newtonsoft.Json.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Net.Http.Formatting.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\System.Web.Http.WebHost.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Razor.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Helpers.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Mvc.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Http.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.AssemblyReference.cache
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CoreCompileInputs.cache
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.csproj.CopyComplete
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.dll
+C:\Proyectos\Asp.Net MVC\InventarioPro\InventarioPro\obj\Release\InventarioPro.pdb

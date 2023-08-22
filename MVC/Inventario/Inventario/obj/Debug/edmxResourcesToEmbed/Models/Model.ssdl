@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AVANCE_INVENTARIO">
+    <Key>
+      <PropertyRef Name="PATENTE" />
+    </Key>
+    <Property Name="PATENTE" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ID_TIPO_PAT" Type="int" />
+    <Property Name="ID_BODEGA" Type="int" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="100" />
+    <Property Name="TIPO_PATENTE" Type="varchar" MaxLength="150" />
+    <Property Name="ID_PATENTE" Type="int" />
+  </EntityType>
+  <EntityType Name="ESTADO_INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="int" Nullable="false" />
+    <Property Name="ESTADO_INVENTARIO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ESTADO_MAESTRA">
+    <Key>
+      <PropertyRef Name="ID_EST" />
+    </Key>
+    <Property Name="ID_EST" Type="int" Nullable="false" />
+    <Property Name="DETALLE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ESTADO_PATENTE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_PAT" />
+    </Key>
+    <Property Name="ID_TIPO_PAT" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ESTADO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="int" Nullable="false" />
+    <Property Name="DETALLE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MAESTRA_CONGELADO">
+    <Key>
+      <PropertyRef Name="IDMCONG" />
+    </Key>
+    <Property Name="NUMCONTEO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="20" />
+    <Property Name="CODIGO_INTERNO" Type="varchar" MaxLength="100" />
+    <Property Name="LOCALES" Type="varchar" MaxLength="100" />
+    <Property Name="TIPO_INVENTARIO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="MARCA" Type="varchar" MaxLength="100" />
+    <Property Name="UNIDAD_MEDIDA" Type="varchar" MaxLength="10" />
+    <Property Name="PRECIO" Type="varchar" MaxLength="100" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="50" />
+    <Property Name="SUB_CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_SUBCLASE" Type="varchar" MaxLength="100" />
+    <Property Name="CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="SUB_DEPARTAMENTO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_SUB_DPTO" Type="varchar" MaxLength="100" />
+    <Property Name="DEPARTAMENTO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_DPTO" Type="varchar" MaxLength="100" />
+    <Property Name="FECHA_CREACION_ARCHIVO" Type="varchar" MaxLength="20" />
+    <Property Name="TIPO_CODBARRA" Type="varchar" MaxLength="50" />
+    <Property Name="EAN" Type="varchar" MaxLength="20" />
+    <Property Name="CANTIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="IDMCONG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAESTRA_INPUT">
+    <Key>
+      <PropertyRef Name="ID_INPUT" />
+    </Key>
+    <Property Name="ID_INPUT" Type="int" Nullable="false" />
+    <Property Name="LOCAL" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO_INVENTARIO" Type="varchar" MaxLength="50" />
+    <Property Name="PATENTE" Type="int" />
+    <Property Name="EAN" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="SKU" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="PRECIO" Type="numeric" Precision="38" Scale="3" />
+    <Property Name="UNIDAD" Type="varchar" MaxLength="10" />
+    <Property Name="RUT" Type="varchar" MaxLength="10" />
+    <Property Name="HORA" Type="varchar" MaxLength="20" />
+    <Property Name="FECHA" Type="varbinary" MaxLength="50" />
+    <Property Name="ID_EST" Type="int" />
+    <Property Name="ID_BODEGA" Type="int" />
+    <Property Name="DESCRIPCION_PAT" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="MAESTRA_PROCESO">
+    <Key>
+      <PropertyRef Name="IDMPROC" />
+    </Key>
+    <Property Name="NUMCONTEO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="20" />
+    <Property Name="CODIGO_INTERNO" Type="varchar" MaxLength="100" />
+    <Property Name="LOCALES" Type="varchar" MaxLength="100" />
+    <Property Name="TIPO_INVENTARIO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="MARCA" Type="varchar" MaxLength="100" />
+    <Property Name="UNIDAD_MEDIDA" Type="varchar" MaxLength="10" />
+    <Property Name="PRECIO" Type="varchar" MaxLength="100" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="50" />
+    <Property Name="SUB_CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_SUBCLASE" Type="varchar" MaxLength="100" />
+    <Property Name="CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_CLASE" Type="varchar" MaxLength="100" />
+    <Property Name="SUB_DEPARTAMENTO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_SUB_DPTO" Type="varchar" MaxLength="100" />
+    <Property Name="DEPARTAMENTO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_DPTO" Type="varchar" MaxLength="100" />
+    <Property Name="FECHA_CREACION_ARCHIVO" Type="varchar" MaxLength="20" />
+    <Property Name="TIPO_CODBARRA" Type="varchar" MaxLength="50" />
+    <Property Name="EAN" Type="varchar" MaxLength="20" />
+    <Property Name="CANTIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="IDMPROC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MODIFICAR_CAPTURA">
+    <Key>
+      <PropertyRef Name="ID_MOD" />
+    </Key>
+    <Property Name="ID_MOD" Type="int" Nullable="false" />
+    <Property Name="CONTEO1" Type="varchar" MaxLength="50" />
+    <Property Name="CONTEO2" Type="varchar" MaxLength="20" />
+    <Property Name="ID_EST" Type="int" />
+    <Property Name="ID_INPUT" Type="int" />
+  </EntityType>
+  <EntityType Name="PORCENTAJE_AVANCE">
+    <Key>
+      <PropertyRef Name="ID_AVANCE" />
+    </Key>
+    <Property Name="ID_AVANCE" Type="int" Nullable="false" />
+    <Property Name="REGISTROS" Type="varchar" MaxLength="100" />
+    <Property Name="EXTENDIDO" Type="varchar" MaxLength="100" />
+    <Property Name="PORCENTAJE" Type="varchar" MaxLength="100" />
+    <Property Name="TOTAL" Type="varchar" MaxLength="100" />
+    <Property Name="UBICACION" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIPO_BUSQUEDA">
+    <Key>
+      <PropertyRef Name="ID_BUSQUEDA" />
+    </Key>
+    <Property Name="ID_BUSQUEDA" Type="int" Nullable="false" />
+    <Property Name="BUSQUEDA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIPO_UBICACION">
+    <Key>
+      <PropertyRef Name="ID_BODEGA" />
+    </Key>
+    <Property Name="ID_BODEGA" Type="int" Nullable="false" />
+    <Property Name="BODEGA" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TIPO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_TIPO" />
+    </Key>
+    <Property Name="ID_TIPO" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="ID_PATENTE" />
+    </Key>
+    <Property Name="ID_PATENTE" Type="int" Nullable="false" />
+    <Property Name="ID_PATENTE_BODEGA" Type="int" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="RANGO_BAJO" Type="varchar" MaxLength="50" />
+    <Property Name="RANGO_ALTO" Type="varchar" MaxLength="50" />
+    <Property Name="TOTAL" Type="varchar" MaxLength="50" />
+    <Property Name="ID_BODEGA" Type="int" />
+    <Property Name="AVANCE_CERRADO" Type="varchar" MaxLength="50" />
+    <Property Name="AVANCE_ABIERTO" Type="varchar" MaxLength="50" />
+    <Property Name="AVANCE_NULO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="RUT" Type="varchar" MaxLength="50" />
+    <Property Name="ID_ESTADO" Type="int" />
+  </EntityType>
+  <EntityType Name="USUARIO_X_TIPO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+      <PropertyRef Name="ID_TIPO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="ID_TIPO" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Relationship1">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="USUARIO_X_TIPO" Type="Self.USUARIO_X_TIPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="USUARIO_X_TIPO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship11">
+    <End Role="ESTADO_PATENTE" Type="Self.ESTADO_PATENTE" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_PATENTE">
+        <PropertyRef Name="ID_TIPO_PAT" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_TIPO_PAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship12">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship14">
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="0..1" />
+    <End Role="AVANCE_INVENTARIO" Type="Self.AVANCE_INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UBICACION">
+        <PropertyRef Name="ID_PATENTE" />
+      </Principal>
+      <Dependent Role="AVANCE_INVENTARIO">
+        <PropertyRef Name="ID_PATENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship2">
+    <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="1" />
+    <End Role="USUARIO_X_TIPO" Type="Self.USUARIO_X_TIPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_USUARIO">
+        <PropertyRef Name="ID_TIPO" />
+      </Principal>
+      <Dependent Role="USUARIO_X_TIPO">
+        <PropertyRef Name="ID_TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="ESTADO_USUARIO" Type="Self.ESTADO_USUARIO" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_USUARIO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship4">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship5">
+    <End Role="ESTADO_MAESTRA" Type="Self.ESTADO_MAESTRA" Multiplicity="0..1" />
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_MAESTRA">
+        <PropertyRef Name="ID_EST" />
+      </Principal>
+      <Dependent Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_EST" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship6">
+    <End Role="ESTADO_MAESTRA" Type="Self.ESTADO_MAESTRA" Multiplicity="0..1" />
+    <End Role="MODIFICAR_CAPTURA" Type="Self.MODIFICAR_CAPTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_MAESTRA">
+        <PropertyRef Name="ID_EST" />
+      </Principal>
+      <Dependent Role="MODIFICAR_CAPTURA">
+        <PropertyRef Name="ID_EST" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="TIPO_UBICACION" Type="Self.TIPO_UBICACION" Multiplicity="0..1" />
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_UBICACION">
+        <PropertyRef Name="ID_BODEGA" />
+      </Principal>
+      <Dependent Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_BODEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="MAESTRA_INPUT" Type="Self.MAESTRA_INPUT" Multiplicity="0..1" />
+    <End Role="MODIFICAR_CAPTURA" Type="Self.MODIFICAR_CAPTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAESTRA_INPUT">
+        <PropertyRef Name="ID_INPUT" />
+      </Principal>
+      <Dependent Role="MODIFICAR_CAPTURA">
+        <PropertyRef Name="ID_INPUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InventarioModelStoreContainer">
+    <EntitySet Name="AVANCE_INVENTARIO" EntityType="Self.AVANCE_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO_INVENTARIO" EntityType="Self.ESTADO_INVENTARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO_MAESTRA" EntityType="Self.ESTADO_MAESTRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO_PATENTE" EntityType="Self.ESTADO_PATENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO_USUARIO" EntityType="Self.ESTADO_USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAESTRA_CONGELADO" EntityType="Self.MAESTRA_CONGELADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAESTRA_INPUT" EntityType="Self.MAESTRA_INPUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAESTRA_PROCESO" EntityType="Self.MAESTRA_PROCESO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODIFICAR_CAPTURA" EntityType="Self.MODIFICAR_CAPTURA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PORCENTAJE_AVANCE" EntityType="Self.PORCENTAJE_AVANCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_BUSQUEDA" EntityType="Self.TIPO_BUSQUEDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_UBICACION" EntityType="Self.TIPO_UBICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_USUARIO" EntityType="Self.TIPO_USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO_X_TIPO" EntityType="Self.USUARIO_X_TIPO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="USUARIO_X_TIPO" EntitySet="USUARIO_X_TIPO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship11" Association="Self.Relationship11">
+      <End Role="ESTADO_PATENTE" EntitySet="ESTADO_PATENTE" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship12" Association="Self.Relationship12">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship14" Association="Self.Relationship14">
+      <End Role="UBICACION" EntitySet="UBICACION" />
+      <End Role="AVANCE_INVENTARIO" EntitySet="AVANCE_INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />
+      <End Role="USUARIO_X_TIPO" EntitySet="USUARIO_X_TIPO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="ESTADO_USUARIO" EntitySet="ESTADO_USUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship4" Association="Self.Relationship4">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="UBICACION" EntitySet="UBICACION" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship5" Association="Self.Relationship5">
+      <End Role="ESTADO_MAESTRA" EntitySet="ESTADO_MAESTRA" />
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship6" Association="Self.Relationship6">
+      <End Role="ESTADO_MAESTRA" EntitySet="ESTADO_MAESTRA" />
+      <End Role="MODIFICAR_CAPTURA" EntitySet="MODIFICAR_CAPTURA" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="TIPO_UBICACION" EntitySet="TIPO_UBICACION" />
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="MAESTRA_INPUT" EntitySet="MAESTRA_INPUT" />
+      <End Role="MODIFICAR_CAPTURA" EntitySet="MODIFICAR_CAPTURA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

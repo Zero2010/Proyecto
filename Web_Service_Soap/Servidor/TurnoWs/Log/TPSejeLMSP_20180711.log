@@ -1,0 +1,40 @@
+12:51:54.503,000,INF: IP:172.16.32.44, Puerto:5091
+12:51:54.524,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+12:51:54.659,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+12:51:54.775,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:47:25.246,000,INF: IP:172.16.32.44, Puerto:5091
+17:47:25.250,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+17:47:25.272,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+17:47:25.366,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+17:48:02.287,000,INF: IP:172.16.32.44, Puerto:5091
+17:48:20.387,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:15:10.969,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:15:10.972,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:27:23.456,000,INF: IP:172.16.32.44, Puerto:5091
+18:28:20.365,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:28:20.408,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:28:20.408,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:28:25.916,000,INF: IP:172.16.32.44, Puerto:5091
+18:28:51.174,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:28:51.193,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:28:51.196,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:28:55.408,000,INF: IP:172.16.32.44, Puerto:5091
+18:28:56.460,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:28:56.475,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:28:56.476,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:33:08.525,000,INF: IP:172.16.32.44, Puerto:5091
+18:33:11.404,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:33:11.423,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:33:11.427,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:34:03.682,000,INF: IP:172.16.32.44, Puerto:5091
+18:34:03.683,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:34:03.696,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:34:03.697,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:34:08.087,000,INF: IP:172.16.32.44, Puerto:5091
+18:34:08.088,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:34:08.107,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:34:08.108,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>
+18:40:40.061,000,INF: IP:172.16.32.44, Puerto:5091
+18:40:40.062,001,QRY: TS20TP000310011|eje1|1234|F8FA@
+18:40:40.103,001,RES: TS20TP000760012|Chilexpress Demo1|1|1|Ejecutivo Prueba Totalpack|PAUSA|E77F@
+18:40:40.103,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>

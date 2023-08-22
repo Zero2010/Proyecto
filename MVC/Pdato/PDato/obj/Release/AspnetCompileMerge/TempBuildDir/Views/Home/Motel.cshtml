@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Motel";
+}
+
+<br>
+<!-- Page Content -->
+<div class="container">
+
+    <br /> <br />
+    <div class="row">
+
+        <div class="col-sm-3">
+            <ul class="list-group list-group-flush listgroup">
+                @foreach (var item in ViewBag.menu)
+                {
+                    <li class="list-group-item listgroup"><a href="@item.LinkH">@item.DescripcionTHabitacion<span class="float-right badge badge-danger round">@item.id</span></a></li>
+                }
+            </ul>
+        </div>
+
+
+        <div class="col-sm-9">
+            @foreach (var item in ViewBag.portada)
+            {
+                <img class="imagenportada redondearimagen" src="/@item.PortadaPath" alt="Card image cap">
+                <div class="card-body">
+                    <br />
+                    <h3 class="text-center text-uppercase encabezado">
+                        <span class="text-lowercase d-block" align="left"><p class="Letras">Motel : @item.Nombre</p></span>
+                    </h3>
+                    
+                    <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true"></i><strong> Dirección:</strong> <br> @item.direccion @item.Numero, @item.Comuna </p>
+                    <p class="card-text"><i class="fa fa-hand-o-right" aria-hidden="true"></i><strong> Nosotros:</strong> <br> @item.Nosotros</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            }
+
+            <h1 class="one centraricono"><span><img src="~/Imagenes/Logo/colgador.png" /></span></h1>
+
+            <p class="card-text"><i class="fa fa-credit-card-alt" aria-hidden="true"></i><strong> Formas de Pago:</strong></p>
+
+            @foreach (var item in ViewBag.fpago)
+            {
+                <p class="ListadoLetras">-@item.Mediopago</p>
+            }
+        </div>
+    </div>
+    <br /><br />
+</div>
+
+<div class="container-fluid">
+    <hr class="col-sm-12">
+    <div class="col-sm-12 pt-4">
+        <h1 class="text-center text-uppercase encabezado">
+            <span class="text-lowercase"><p class="Letras TituloLetra">Formas de Pago</p></span>
+        </h1>
+    </div>
+    <hr class="col-sm-12">
+</div>
+
+@foreach (var item in ViewBag.portada)
+{
+    <div class="col-sm-12">
+        <hr>
+        <div class="col-sm-12 pt-4">
+            <h1 class="text-center text-uppercase encabezado">
+                <span class="text-lowercase"><p class="Letras TituloLetra">@item.Nombre</p></span>
+            </h1>
+        </div>
+        <hr>
+    </div>
+}
+<br><br>
+
+
+<div class="container-fluid">
+    <hr class="col-sm-12">
+    <div class="col-sm-12 pt-4">
+        <h1 class="text-center text-uppercase encabezado">
+            <span class="text-lowercase"><p class="Letras TituloLetra">Nuestras Habitaciones</p></span>
+        </h1>
+    </div>
+    <hr class="col-sm-12">
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var item in ViewBag.Habitaciones)
+        {
+            <div class="col-sm-4 text-center mb-4">
+                <div class="imagen-servicio">
+                    <img src="/@item.HabitacionPath" class="img-fluid" style="width:400px;height:300px">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-sm-10 pt-4 servicio-info">
+                            <h3 class="text-center text-uppercase encabezado">
+                                <span class="text-lowercase d-block"><p class="Letras">@item.DescripcionProducto</p></span>
+                                <ul class="list-group list-group-flush">
+                                    @foreach (var precio in ViewBag.precio)
+                                    {
+                                        if (item.IdProducto == precio.IdProducto)
+                                        {
+                                            <li class="list-group-item ListadoLetrasPromo"><strong>@precio.DetalleRestriccion</strong></li>
+                                            <li class="list-group-item ListadoLetrasPromo">@precio.Precio</li>
+                                        }
+                                    }
+                                </ul>
+                            </h3>
+                            <a href="/Motel/DetalleHabitacion/@item.IdProducto" class="btn btn-primary btn-block text-uppercase mt-4 py-3">Ver más</a>
+                        </div>
+                    </div> <!--.row-->
+                </div> <!--.imagen-destacada-->
+            </div> <!--.col-sm-4-->
+
+        }
+
+    </div>
+</div>
+
+

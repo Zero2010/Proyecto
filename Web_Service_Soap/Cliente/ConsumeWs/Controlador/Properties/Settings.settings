@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Controlador.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Controlador_cotizacion_Cotizacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.10.102/ws/Cotizacion.asmx</Value>
+    </Setting>
+    <Setting Name="Controlador_facturacion_facturacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.10.102/ws/facturacion.asmx</Value>
+    </Setting>
+    <Setting Name="Controlador_recepcion_recepcion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.10.102/ws/recepcion.asmx</Value>
+    </Setting>
+    <Setting Name="Controlador_garantia_reggarantia" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.10.102/ws/reggarantia.asmx</Value>
+    </Setting>
+    <Setting Name="Controlador_reserva_reserva" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.10.102/ws/reserva.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

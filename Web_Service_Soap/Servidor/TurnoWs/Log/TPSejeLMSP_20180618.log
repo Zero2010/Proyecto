@@ -1,0 +1,8 @@
+09:03:03.040,000,INF: IP:172.16.32.44, Puerto:5091
+09:03:03.052,010,QRY: TS20TP000210102|FC21@
+09:03:03.062,010,RES: TS20TP000350102||2|0||LOGOFF||F715@
+09:03:03.139,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWSGetEdoBase><CodigoRespuesta>0</CodigoRespuesta><GlosaRespuesta /><Oficina>2</Oficina><Escritorio /><IdEje>2</IdEje><Ejecutivo>0</Ejecutivo><Estado /><ClienteInterno>LOGOFF</ClienteInterno><Encuesta /></RespuestaWSGetEdoBase>
+09:06:56.565,000,INF: IP:172.16.32.44, Puerto:5091
+09:06:56.566,001,QRY: TS20TP000310012|eje1|1234|F8F9@
+09:06:56.617,001,RES: TS20TP000760012|Chilexpress Demo1|2|1|Ejecutivo Prueba Totalpack|PAUSA|E77E@
+09:06:56.659,000,RES: <?xml version="1.0" encoding="utf-16"?><RespuestaWS><CodigoRespuesta /><GlosaRespuesta /><CantidadEnEspera /><TiempoDeEspera /><LetraTurno /><NumeroTurno /><Rut /></RespuestaWS>

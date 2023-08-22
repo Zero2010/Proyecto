@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "IngresoDescripcion";
+    Layout = "~/Views/Shared/_CargaMasiva.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Captura Producto</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(-5px, 31px, 0px); top: 0px; left: 0px; will-change: transform;">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" style="display: block;">
+
+                <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                            Ingrese Ean o Sku <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" id="first-name" required="required" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Descripción <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" id="last-name" name="last-name" required="required" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Cantidad <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" id="last-name" name="last-name" required="required" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Locales <span class="required">*</span>
+                        </label>
+
+                        <div class="col-md-6 col-sm-6 ">
+                            <select class="form-control">
+                                @foreach (var item in ViewBag._Locales)
+                                {
+                                    <option>@item.NombreLocal</option>
+                                }
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Ubicación <span class="required">*</span>
+                        </label>
+
+                        <div class="col-md-6 col-sm-6 ">
+                            <select class="form-control">
+
+                                @foreach (var item in ViewBag._Ubicacion)
+                                {
+                                    <option>@item.Descripcion</option>
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Tipo ubicación <span class="required">*</span>
+                        </label>
+
+                        <div class="col-md-6 col-sm-6 ">
+                            <select class="form-control">
+                                @foreach (var item in ViewBag._TipoUbicacion)
+                                {
+                                    <option>@item.TipoUbicacion1</option>
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="ln_solid"></div>
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                            <button class="btn btn-primary" type="button">Cancelar</button>
+                            <button class="btn btn-primary" type="reset">Limpiar</button>
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

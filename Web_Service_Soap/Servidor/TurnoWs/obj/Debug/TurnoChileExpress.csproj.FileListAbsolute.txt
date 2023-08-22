@@ -1,0 +1,32 @@
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\bin\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\bin\TurnoChileExpress.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\obj\Debug\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\obj\Debug\TurnoChileExpress.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress\TurnoChileExpress\obj\Debug\TurnoChileExpress.csprojResolveAssemblyReference.cache
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csprojResolveAssemblyReference.cache
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.pdb
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.pdb
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.dll
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.pdb
+C:\Users\mario.isla\Desktop\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csprojResolveAssemblyReference.cache
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.pdb
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csprojAssemblyReference.cache
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csproj.CoreCompileInputs.cache
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.dll
+D:\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll.config
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\bin\TurnoChileExpress.pdb
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csprojAssemblyReference.cache
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.csproj.CoreCompileInputs.cache
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.dll
+C:\Users\mario.isla\Documents\Visual Studio 2015\Projects\Desarrollo web-service\proyecto\TurnoChileExpress -V2\TurnoChileExpress\obj\Debug\TurnoChileExpress.pdb

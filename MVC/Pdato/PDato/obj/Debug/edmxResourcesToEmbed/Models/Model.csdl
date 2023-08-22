@@ -1,0 +1,981 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pasaelda_PasaelDatoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cargo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario_x_Cargo_x_TCuenta" Relationship="Self.Relationship101" FromRole="Cargo" ToRole="Usuario_x_Cargo_x_TCuenta" />
+  </EntityType>
+  <EntityType Name="Comentario">
+    <Key>
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdComentario" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSucursal" Type="Int64" />
+    <Property Name="Comentario1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdHabitacion" Type="Int64" />
+    <NavigationProperty Name="Puntaje_x_Comentario" Relationship="Self.Relationship109" FromRole="Comentario" ToRole="Puntaje_x_Comentario" />
+  </EntityType>
+  <EntityType Name="Comuna">
+    <Key>
+      <PropertyRef Name="IdComuna" />
+    </Key>
+    <Property Name="IdComuna" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Comuna1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdRegion" Type="Int64" />
+    <NavigationProperty Name="Region" Relationship="Self.Relationship1" FromRole="Comuna" ToRole="Region" />
+    <NavigationProperty Name="Direccion" Relationship="Self.Relationship2" FromRole="Comuna" ToRole="Direccion" />
+  </EntityType>
+  <EntityType Name="DatosPersonales">
+    <Key>
+      <PropertyRef Name="IdDPersonales" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdDPersonales" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RPreguntaSecreta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Relationship103" FromRole="DatosPersonales" ToRole="Usuario" />
+    <NavigationProperty Name="PreguntaSecreta" Relationship="Self.DPersonales_x_PSecreta" FromRole="DatosPersonales" ToRole="PreguntaSecreta" />
+  </EntityType>
+  <EntityType Name="Direccion">
+    <Key>
+      <PropertyRef Name="IdDireccion" />
+    </Key>
+    <Property Name="IdDireccion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Direccion1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Numero" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Piso" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Dpto" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IdComuna" Type="Int64" />
+    <Property Name="IdSucursal" Type="Int64" />
+    <NavigationProperty Name="Comuna" Relationship="Self.Relationship2" FromRole="Direccion" ToRole="Comuna" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Relationship3" FromRole="Direccion" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="IdEmail" />
+    </Key>
+    <Property Name="IdEmail" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Sucursal_x_Email" FromRole="Email" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Rut" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Dv" Type="Binary" MaxLength="1" FixedLength="false" />
+    <Property Name="Historia" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Nosotros" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TipoCuenta" Relationship="Self.FK_TipoCuenta_Empresa" FromRole="Empresa" ToRole="TipoCuenta" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Empresa_x_Sucursal" FromRole="Empresa" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="EstadoReserva">
+    <Key>
+      <PropertyRef Name="IdEReserva" />
+    </Key>
+    <Property Name="IdEReserva" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EstadoReserva1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdProducto" Type="Int64" />
+    <NavigationProperty Name="Producto" Relationship="Self.Relationship21" FromRole="EstadoReserva" ToRole="Producto" />
+    <NavigationProperty Name="Reserva" Relationship="Self.Relationship22" FromRole="EstadoReserva" ToRole="Reserva" />
+  </EntityType>
+  <EntityType Name="MedioPago">
+    <Key>
+      <PropertyRef Name="IdMPago" />
+    </Key>
+    <Property Name="IdMPago" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mediopago1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.MPago_x_Sucursal" FromRole="MedioPago" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="PathImagenhabitacion">
+    <Key>
+      <PropertyRef Name="IdImagenH" />
+    </Key>
+    <Property Name="IdImagenH" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HabitacionPath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ImagenBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.Producto_x_PIHabitacion" FromRole="PathImagenhabitacion" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="PathImagenPortada">
+    <Key>
+      <PropertyRef Name="IdPImagenP" />
+    </Key>
+    <Property Name="IdPImagenP" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PortadaPath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ImagenBase64" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Sucursal_x_PIPortada" FromRole="PathImagenPortada" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="Precio">
+    <Key>
+      <PropertyRef Name="IdPrecio" />
+    </Key>
+    <Property Name="IdPrecio" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Precio1" Type="Int32" />
+    <Property Name="Precio2" Type="Int32" />
+    <Property Name="Descuento" Type="Int32" />
+    <Property Name="IdProducto" Type="Int64" />
+    <Property Name="Horas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.Relationship23" FromRole="Precio" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="PreguntaSecreta">
+    <Key>
+      <PropertyRef Name="IdPSecreta" />
+    </Key>
+    <Property Name="IdPSecreta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PreguntaSecreta1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DatosPersonales" Relationship="Self.DPersonales_x_PSecreta" FromRole="PreguntaSecreta" ToRole="DatosPersonales" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionProducto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DetalleProducto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EstadoReserva" Relationship="Self.Relationship21" FromRole="Producto" ToRole="EstadoReserva" />
+    <NavigationProperty Name="Precio" Relationship="Self.Relationship23" FromRole="Producto" ToRole="Precio" />
+    <NavigationProperty Name="Producto_x_TCondicion" Relationship="Self.Relationship24" FromRole="Producto" ToRole="Producto_x_TCondicion" />
+    <NavigationProperty Name="THabitacion_x_SHabitacion" Relationship="Self.Relationship29" FromRole="Producto" ToRole="THabitacion_x_SHabitacion" />
+    <NavigationProperty Name="PathImagenhabitacion" Relationship="Self.Producto_x_PIHabitacion" FromRole="Producto" ToRole="PathImagenhabitacion" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Sucursal_x_Producto" FromRole="Producto" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="Producto_x_TCondicion">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+      <PropertyRef Name="IdTCondicion" />
+    </Key>
+    <Property Name="IdProducto" Type="Int64" Nullable="false" />
+    <Property Name="IdTCondicion" Type="Int64" Nullable="false" />
+    <Property Name="IdPrecio" Type="Int64" />
+    <NavigationProperty Name="Producto" Relationship="Self.Relationship24" FromRole="Producto_x_TCondicion" ToRole="Producto" />
+    <NavigationProperty Name="TerminoCondiciones" Relationship="Self.Relationship25" FromRole="Producto_x_TCondicion" ToRole="TerminoCondiciones" />
+  </EntityType>
+  <EntityType Name="Puntaje">
+    <Key>
+      <PropertyRef Name="IdPuntaje" />
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdPuntaje" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemPuntaje" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Relationship107" FromRole="Puntaje" ToRole="Usuario" />
+    <NavigationProperty Name="Puntaje_x_Comentario" Relationship="Self.Relationship108" FromRole="Puntaje" ToRole="Puntaje_x_Comentario" />
+  </EntityType>
+  <EntityType Name="Puntaje_x_Comentario">
+    <Key>
+      <PropertyRef Name="IdPuntaje" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdPuntaje" Type="Int64" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" />
+    <Property Name="IdComentario" Type="Int64" Nullable="false" />
+    <Property Name="Valor" Type="Int32" />
+    <NavigationProperty Name="Comentario" Relationship="Self.Relationship109" FromRole="Puntaje_x_Comentario" ToRole="Comentario" />
+    <NavigationProperty Name="Puntaje" Relationship="Self.Relationship108" FromRole="Puntaje_x_Comentario" ToRole="Puntaje" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="IdRegion" />
+    </Key>
+    <Property Name="IdRegion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Region1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Comuna" Relationship="Self.Relationship1" FromRole="Region" ToRole="Comuna" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="IdReserva" />
+    </Key>
+    <Property Name="IdReserva" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FReserva" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HReserva" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombreReserva" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IdEReserva" Type="Int64" />
+    <NavigationProperty Name="EstadoReserva" Relationship="Self.Relationship22" FromRole="Reserva" ToRole="EstadoReserva" />
+  </EntityType>
+  <EntityType Name="ServicioHabitacion">
+    <Key>
+      <PropertyRef Name="IdSHabitacion" />
+    </Key>
+    <Property Name="IdSHabitacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionSHabitacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IhabitacionMediano" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IhabitacionPequeno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DetalleServicio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="THabitacion_x_SHabitacion" Relationship="Self.Relationship16" FromRole="ServicioHabitacion" ToRole="THabitacion_x_SHabitacion" />
+  </EntityType>
+  <EntityType Name="ServicioSucursal">
+    <Key>
+      <PropertyRef Name="IdSSucursal" />
+    </Key>
+    <Property Name="IdSSucursal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionSSucursal" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Sucursal_x_Servicio" FromRole="ServicioSucursal" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="Sucursal">
+    <Key>
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdSucursal" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreSucursal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DescripcionSucursal" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Nosotros" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Historia" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Contactanos" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Web" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Direccion" Relationship="Self.Relationship3" FromRole="Sucursal" ToRole="Direccion" />
+    <NavigationProperty Name="Empresa" Relationship="Self.Empresa_x_Sucursal" FromRole="Sucursal" ToRole="Empresa" />
+    <NavigationProperty Name="MedioPago" Relationship="Self.MPago_x_Sucursal" FromRole="Sucursal" ToRole="MedioPago" />
+    <NavigationProperty Name="Email" Relationship="Self.Sucursal_x_Email" FromRole="Sucursal" ToRole="Email" />
+    <NavigationProperty Name="PathImagenPortada" Relationship="Self.Sucursal_x_PIPortada" FromRole="Sucursal" ToRole="PathImagenPortada" />
+    <NavigationProperty Name="Producto" Relationship="Self.Sucursal_x_Producto" FromRole="Sucursal" ToRole="Producto" />
+    <NavigationProperty Name="ServicioSucursal" Relationship="Self.Sucursal_x_Servicio" FromRole="Sucursal" ToRole="ServicioSucursal" />
+    <NavigationProperty Name="Telefono" Relationship="Self.Sucursal_x_Telefono" FromRole="Sucursal" ToRole="Telefono" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Telefono">
+    <Key>
+      <PropertyRef Name="IdTel" />
+    </Key>
+    <Property Name="IdTel" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Telefono1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sucursal" Relationship="Self.Sucursal_x_Telefono" FromRole="Telefono" ToRole="Sucursal" />
+  </EntityType>
+  <EntityType Name="TerminoCondiciones">
+    <Key>
+      <PropertyRef Name="IdTCondicion" />
+    </Key>
+    <Property Name="IdTCondicion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIni" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FTer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RestriccionHorario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DetalleRestriccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Hrs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoIncluye" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Producto_x_TCondicion" Relationship="Self.Relationship25" FromRole="TerminoCondiciones" ToRole="Producto_x_TCondicion" />
+  </EntityType>
+  <EntityType Name="THabitacion_x_SHabitacion">
+    <Key>
+      <PropertyRef Name="IdSHabitacion" />
+      <PropertyRef Name="IdTHabitacion" />
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdSHabitacion" Type="Int64" Nullable="false" />
+    <Property Name="IdTHabitacion" Type="Int64" Nullable="false" />
+    <Property Name="IdProducto" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.Relationship29" FromRole="THabitacion_x_SHabitacion" ToRole="Producto" />
+    <NavigationProperty Name="ServicioHabitacion" Relationship="Self.Relationship16" FromRole="THabitacion_x_SHabitacion" ToRole="ServicioHabitacion" />
+    <NavigationProperty Name="TipoHabitacion" Relationship="Self.Relationship17" FromRole="THabitacion_x_SHabitacion" ToRole="TipoHabitacion" />
+  </EntityType>
+  <EntityType Name="TipoCuenta">
+    <Key>
+      <PropertyRef Name="IdTipoCuenta" />
+    </Key>
+    <Property Name="IdTipoCuenta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionCuenta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdEmpresa" Type="Int64" />
+    <NavigationProperty Name="Empresa" Relationship="Self.FK_TipoCuenta_Empresa" FromRole="TipoCuenta" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario_x_Cargo_x_TCuenta" Relationship="Self.Relationship104" FromRole="TipoCuenta" ToRole="Usuario_x_Cargo_x_TCuenta" />
+  </EntityType>
+  <EntityType Name="TipoHabitacion">
+    <Key>
+      <PropertyRef Name="IdTHabitacion" />
+    </Key>
+    <Property Name="IdTHabitacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescripcionTHabitacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LinkH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoServicio" Type="Int32" />
+    <NavigationProperty Name="THabitacion_x_SHabitacion" Relationship="Self.Relationship17" FromRole="TipoHabitacion" ToRole="THabitacion_x_SHabitacion" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DatosPersonales" Relationship="Self.Relationship103" FromRole="Usuario" ToRole="DatosPersonales" />
+    <NavigationProperty Name="Puntaje" Relationship="Self.Relationship107" FromRole="Usuario" ToRole="Puntaje" />
+    <NavigationProperty Name="Usuario_x_Cargo_x_TCuenta" Relationship="Self.Relationship100" FromRole="Usuario" ToRole="Usuario_x_Cargo_x_TCuenta" />
+  </EntityType>
+  <EntityType Name="Usuario_x_Cargo_x_TCuenta">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdCargo" />
+      <PropertyRef Name="IdTipoCuenta" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int64" Nullable="false" />
+    <Property Name="IdCargo" Type="Int64" Nullable="false" />
+    <Property Name="IdTipoCuenta" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Cargo" Relationship="Self.Relationship101" FromRole="Usuario_x_Cargo_x_TCuenta" ToRole="Cargo" />
+    <NavigationProperty Name="TipoCuenta" Relationship="Self.Relationship104" FromRole="Usuario_x_Cargo_x_TCuenta" ToRole="TipoCuenta" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Relationship100" FromRole="Usuario_x_Cargo_x_TCuenta" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="Relationship101">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship109">
+    <End Role="Comentario" Type="Self.Comentario" Multiplicity="1" />
+    <End Role="Puntaje_x_Comentario" Type="Self.Puntaje_x_Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comentario">
+        <PropertyRef Name="IdComentario" />
+      </Principal>
+      <Dependent Role="Puntaje_x_Comentario">
+        <PropertyRef Name="IdComentario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship1">
+    <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="IdRegion" />
+      </Principal>
+      <Dependent Role="Comuna">
+        <PropertyRef Name="IdRegion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship2">
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comuna">
+        <PropertyRef Name="IdComuna" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdComuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship103">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DatosPersonales">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship3">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal">
+        <PropertyRef Name="IdSucursal" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoCuenta_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="TipoCuenta" Type="Self.TipoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoCuenta">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship21">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="EstadoReserva" Type="Self.EstadoReserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="EstadoReserva">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship22">
+    <End Role="EstadoReserva" Type="Self.EstadoReserva" Multiplicity="0..1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoReserva">
+        <PropertyRef Name="IdEReserva" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="IdEReserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship23">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="Precio" Type="Self.Precio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Precio">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship24">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Producto_x_TCondicion" Type="Self.Producto_x_TCondicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="Producto_x_TCondicion">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship29">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship25">
+    <End Role="TerminoCondiciones" Type="Self.TerminoCondiciones" Multiplicity="1" />
+    <End Role="Producto_x_TCondicion" Type="Self.Producto_x_TCondicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TerminoCondiciones">
+        <PropertyRef Name="IdTCondicion" />
+      </Principal>
+      <Dependent Role="Producto_x_TCondicion">
+        <PropertyRef Name="IdTCondicion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship107">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Puntaje" Type="Self.Puntaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Puntaje">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship108">
+    <End Role="Puntaje" Type="Self.Puntaje" Multiplicity="1" />
+    <End Role="Puntaje_x_Comentario" Type="Self.Puntaje_x_Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Puntaje">
+        <PropertyRef Name="IdPuntaje" />
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Puntaje_x_Comentario">
+        <PropertyRef Name="IdPuntaje" />
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship16">
+    <End Role="ServicioHabitacion" Type="Self.ServicioHabitacion" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicioHabitacion">
+        <PropertyRef Name="IdSHabitacion" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdSHabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship17">
+    <End Role="TipoHabitacion" Type="Self.TipoHabitacion" Multiplicity="1" />
+    <End Role="THabitacion_x_SHabitacion" Type="Self.THabitacion_x_SHabitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoHabitacion">
+        <PropertyRef Name="IdTHabitacion" />
+      </Principal>
+      <Dependent Role="THabitacion_x_SHabitacion">
+        <PropertyRef Name="IdTHabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship104">
+    <End Role="TipoCuenta" Type="Self.TipoCuenta" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuenta">
+        <PropertyRef Name="IdTipoCuenta" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdTipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship100">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_x_Cargo_x_TCuenta" Type="Self.Usuario_x_Cargo_x_TCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Usuario_x_Cargo_x_TCuenta">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DPersonales_x_PSecreta">
+    <End Role="PreguntaSecreta" Type="Self.PreguntaSecreta" Multiplicity="*" />
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="*" />
+  </Association>
+  <Association Name="Empresa_x_Sucursal">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="MPago_x_Sucursal">
+    <End Role="MedioPago" Type="Self.MedioPago" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="Producto_x_PIHabitacion">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <End Role="PathImagenhabitacion" Type="Self.PathImagenhabitacion" Multiplicity="*" />
+  </Association>
+  <Association Name="Sucursal_x_Email">
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="Sucursal_x_PIPortada">
+    <End Role="PathImagenPortada" Type="Self.PathImagenPortada" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="Sucursal_x_Producto">
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+  </Association>
+  <Association Name="Sucursal_x_Servicio">
+    <End Role="ServicioSucursal" Type="Self.ServicioSucursal" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="Sucursal_x_Telefono">
+    <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
+    <End Role="Sucursal" Type="Self.Sucursal" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="pasaelda_PasaelDatoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cargo" EntityType="Self.Cargo" />
+    <EntitySet Name="Comentario" EntityType="Self.Comentario" />
+    <EntitySet Name="Comuna" EntityType="Self.Comuna" />
+    <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
+    <EntitySet Name="Direccion" EntityType="Self.Direccion" />
+    <EntitySet Name="Email" EntityType="Self.Email" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" />
+    <EntitySet Name="EstadoReserva" EntityType="Self.EstadoReserva" />
+    <EntitySet Name="MedioPago" EntityType="Self.MedioPago" />
+    <EntitySet Name="PathImagenhabitacion" EntityType="Self.PathImagenhabitacion" />
+    <EntitySet Name="PathImagenPortada" EntityType="Self.PathImagenPortada" />
+    <EntitySet Name="Precio" EntityType="Self.Precio" />
+    <EntitySet Name="PreguntaSecreta" EntityType="Self.PreguntaSecreta" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="Producto_x_TCondicion" EntityType="Self.Producto_x_TCondicion" />
+    <EntitySet Name="Puntaje" EntityType="Self.Puntaje" />
+    <EntitySet Name="Puntaje_x_Comentario" EntityType="Self.Puntaje_x_Comentario" />
+    <EntitySet Name="Region" EntityType="Self.Region" />
+    <EntitySet Name="Reserva" EntityType="Self.Reserva" />
+    <EntitySet Name="ServicioHabitacion" EntityType="Self.ServicioHabitacion" />
+    <EntitySet Name="ServicioSucursal" EntityType="Self.ServicioSucursal" />
+    <EntitySet Name="Sucursal" EntityType="Self.Sucursal" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Telefono" EntityType="Self.Telefono" />
+    <EntitySet Name="TerminoCondiciones" EntityType="Self.TerminoCondiciones" />
+    <EntitySet Name="THabitacion_x_SHabitacion" EntityType="Self.THabitacion_x_SHabitacion" />
+    <EntitySet Name="TipoCuenta" EntityType="Self.TipoCuenta" />
+    <EntitySet Name="TipoHabitacion" EntityType="Self.TipoHabitacion" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Usuario_x_Cargo_x_TCuenta" EntityType="Self.Usuario_x_Cargo_x_TCuenta" />
+    <AssociationSet Name="Relationship101" Association="Self.Relationship101">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship109" Association="Self.Relationship109">
+      <End Role="Comentario" EntitySet="Comentario" />
+      <End Role="Puntaje_x_Comentario" EntitySet="Puntaje_x_Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship1" Association="Self.Relationship1">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Comuna" EntitySet="Comuna" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship2" Association="Self.Relationship2">
+      <End Role="Comuna" EntitySet="Comuna" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship103" Association="Self.Relationship103">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship3" Association="Self.Relationship3">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoCuenta_Empresa" Association="Self.FK_TipoCuenta_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship21" Association="Self.Relationship21">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="EstadoReserva" EntitySet="EstadoReserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship22" Association="Self.Relationship22">
+      <End Role="EstadoReserva" EntitySet="EstadoReserva" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship23" Association="Self.Relationship23">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Precio" EntitySet="Precio" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship24" Association="Self.Relationship24">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Producto_x_TCondicion" EntitySet="Producto_x_TCondicion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship29" Association="Self.Relationship29">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship25" Association="Self.Relationship25">
+      <End Role="TerminoCondiciones" EntitySet="TerminoCondiciones" />
+      <End Role="Producto_x_TCondicion" EntitySet="Producto_x_TCondicion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship107" Association="Self.Relationship107">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Puntaje" EntitySet="Puntaje" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship108" Association="Self.Relationship108">
+      <End Role="Puntaje" EntitySet="Puntaje" />
+      <End Role="Puntaje_x_Comentario" EntitySet="Puntaje_x_Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship16" Association="Self.Relationship16">
+      <End Role="ServicioHabitacion" EntitySet="ServicioHabitacion" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship17" Association="Self.Relationship17">
+      <End Role="TipoHabitacion" EntitySet="TipoHabitacion" />
+      <End Role="THabitacion_x_SHabitacion" EntitySet="THabitacion_x_SHabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship104" Association="Self.Relationship104">
+      <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship100" Association="Self.Relationship100">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_x_Cargo_x_TCuenta" EntitySet="Usuario_x_Cargo_x_TCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="DPersonales_x_PSecreta" Association="Self.DPersonales_x_PSecreta">
+      <End Role="PreguntaSecreta" EntitySet="PreguntaSecreta" />
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+    </AssociationSet>
+    <AssociationSet Name="Empresa_x_Sucursal" Association="Self.Empresa_x_Sucursal">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="MPago_x_Sucursal" Association="Self.MPago_x_Sucursal">
+      <End Role="MedioPago" EntitySet="MedioPago" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Producto_x_PIHabitacion" Association="Self.Producto_x_PIHabitacion">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="PathImagenhabitacion" EntitySet="PathImagenhabitacion" />
+    </AssociationSet>
+    <AssociationSet Name="Sucursal_x_Email" Association="Self.Sucursal_x_Email">
+      <End Role="Email" EntitySet="Email" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Sucursal_x_PIPortada" Association="Self.Sucursal_x_PIPortada">
+      <End Role="PathImagenPortada" EntitySet="PathImagenPortada" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Sucursal_x_Producto" Association="Self.Sucursal_x_Producto">
+      <End Role="Sucursal" EntitySet="Sucursal" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="Sucursal_x_Servicio" Association="Self.Sucursal_x_Servicio">
+      <End Role="ServicioSucursal" EntitySet="ServicioSucursal" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Sucursal_x_Telefono" Association="Self.Sucursal_x_Telefono">
+      <End Role="Telefono" EntitySet="Telefono" />
+      <End Role="Sucursal" EntitySet="Sucursal" />
+    </AssociationSet>
+    <FunctionImport Name="ActualizarPass">
+      <Parameter Name="usu" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CrearUsuario">
+      <Parameter Name="usu" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Detalle_x_SHabitacion" ReturnType="Collection(pasaelda_PasaelDatoModel.Detalle_x_SHabitacion_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FPagoSucursal" ReturnType="Collection(pasaelda_PasaelDatoModel.FPagoSucursal_Result)">
+      <Parameter Name="IdSucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Habitacion_x_Motel" ReturnType="Collection(pasaelda_PasaelDatoModel.Habitacion_x_Motel_Result)">
+      <Parameter Name="IdTHabitacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Habitacion_x_Motel_x_Detalle" ReturnType="Collection(pasaelda_PasaelDatoModel.Habitacion_x_Motel_x_Detalle_Result)">
+      <Parameter Name="idsucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="HorarioHabitacion" ReturnType="Collection(pasaelda_PasaelDatoModel.HorarioHabitacion_Result)">
+      <Parameter Name="idsucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Imagen_x_Habitacion" ReturnType="Collection(pasaelda_PasaelDatoModel.Imagen_x_Habitacion_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Listado_x_Motel" ReturnType="Collection(pasaelda_PasaelDatoModel.Listado_x_Motel_Result)" />
+    <FunctionImport Name="ListadoMoteles" ReturnType="Collection(pasaelda_PasaelDatoModel.ListadoMoteles_Result)" />
+    <FunctionImport Name="MenuIndex" ReturnType="Collection(pasaelda_PasaelDatoModel.MenuIndex_Result)" />
+    <FunctionImport Name="Pagecounts" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="Portada_x_Carrusel" ReturnType="Collection(pasaelda_PasaelDatoModel.Portada_x_Carrusel_Result)" />
+    <FunctionImport Name="Portada_x_Motel" ReturnType="Collection(pasaelda_PasaelDatoModel.Portada_x_Motel_Result)">
+      <Parameter Name="idmotel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Precio_x_Habitacion" ReturnType="Collection(pasaelda_PasaelDatoModel.Precio_x_Habitacion_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Precio_x_Producto" ReturnType="Collection(pasaelda_PasaelDatoModel.Precio_x_Producto_Result)" />
+    <FunctionImport Name="Precio_x_Producto_x_Max" ReturnType="Collection(pasaelda_PasaelDatoModel.Precio_x_Producto_x_Max_Result)" />
+    <FunctionImport Name="Precio_x_Producto_x_Min" ReturnType="Collection(pasaelda_PasaelDatoModel.Precio_x_Producto_x_Min_Result)" />
+    <FunctionImport Name="Servicio_x_Habitacion" ReturnType="Collection(pasaelda_PasaelDatoModel.Servicio_x_Habitacion_Result)" />
+    <FunctionImport Name="Servicio_x_Sucursal" ReturnType="Collection(pasaelda_PasaelDatoModel.Servicio_x_Sucursal_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(pasaelda_PasaelDatoModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(pasaelda_PasaelDatoModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="Sucursal_x_Telefonos" ReturnType="Collection(pasaelda_PasaelDatoModel.Sucursal_x_Telefonos_Result)">
+      <Parameter Name="idsucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Detalle_Sucursal" />
+    <FunctionImport Name="MenuIndex1" />
+    <FunctionImport Name="ValidarUsuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Detalle_x_SHabitacion_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="DescripcionSHabitacion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IhabitacionPequeno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IhabitacionMediano" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DetalleServicio" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="FPagoSucursal_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="Int64" Name="IdMPago" Nullable="false" />
+    <Property Type="String" Name="Mediopago" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Habitacion_x_Motel_Result">
+    <Property Type="Int64" Name="IdTHabitacion" Nullable="false" />
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="String" Name="NombreSucursal" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DescripcionSucursal" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="DescripcionProducto" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="precio1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="precio2" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="HabitacionPath" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Habitacion_x_Motel_x_Detalle_Result">
+    <Property Type="Int64" Name="IdTHabitacion" Nullable="false" />
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="String" Name="NombreSucursal" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DescripcionSucursal" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Nosotros" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Historia" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="DescripcionProducto" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="precio1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="precio2" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="HabitacionPath" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="HorarioHabitacion_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="FIni" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="FTer" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RestriccionHorario" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Imagen_x_Habitacion_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="DetalleProducto" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="DescripcionProducto" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="HabitacionPath" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Listado_x_Motel_Result">
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Historia" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Nosotros" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PortadaPath" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Numero" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Comuna" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ListadoMoteles_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="String" Name="NombreSucursal" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DescripcionSucursal" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PortadaPath" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Numero" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Comuna" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="MenuIndex_Result">
+    <Property Type="Int32" Name="id" Nullable="true" />
+    <Property Type="String" Name="DescripcionTHabitacion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LinkH" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Portada_x_Carrusel_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="String" Name="NombreSucursal" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Historia" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Nosotros" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PortadaPath" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ImagenBase64" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Portada_x_Motel_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Historia" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Nosotros" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PortadaPath" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ImagenBase64" Nullable="true" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Numero" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="Comuna" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Facebook" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Twitter" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Instagram" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="WeB" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Contactanos" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="Precio_x_Habitacion_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="Int64" Name="IdTCondicion" Nullable="false" />
+    <Property Type="String" Name="DetalleRestriccion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RestriccionHorario" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Precio" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="hrs" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Precio_x_Producto_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="DetalleRestriccion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RestriccionHorario" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Precio" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="hrs" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Precio_x_Producto_x_Max_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="DetalleRestriccion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RestriccionHorario" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Precio" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="hrs" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Precio_x_Producto_x_Min_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="DetalleRestriccion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RestriccionHorario" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Precio" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="Descuento" Nullable="true" />
+    <Property Type="String" Name="hrs" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Servicio_x_Habitacion_Result">
+    <Property Type="Int64" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="descripcionshabitacion" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Servicio_x_Sucursal_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="Int64" Name="IdSSucursal" Nullable="false" />
+    <Property Type="String" Name="DescripcionSSucursal" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Sucursal_x_Telefonos_Result">
+    <Property Type="Int64" Name="IdSucursal" Nullable="false" />
+    <Property Type="Int64" Name="IdTel" Nullable="false" />
+    <Property Type="String" Name="Telefono" Nullable="true" MaxLength="20" />
+  </ComplexType>
+</Schema>

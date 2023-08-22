@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrudFIslaModelStoreContainer" CdmEntityContainer="CrudFIslaEntities">
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="CrudFIslaModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apaterno" ColumnName="Apaterno" />
+          <ScalarProperty Name="Amaterno" ColumnName="Amaterno" />
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="CrudFIslaModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
+          <ScalarProperty Name="RutEmpresa" ColumnName="RutEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa_x_TCargo_x_Empleado">
+      <EntityTypeMapping TypeName="CrudFIslaModel.Empresa_x_TCargo_x_Empleado">
+        <MappingFragment StoreEntitySet="Empresa_x_TCargo_x_Empleado">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_x_Cargo">
+      <EntityTypeMapping TypeName="CrudFIslaModel.Tipo_x_Cargo">
+        <MappingFragment StoreEntitySet="Tipo_x_Cargo">
+          <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+          <ScalarProperty Name="DescripcionCargo" ColumnName="DescripcionCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

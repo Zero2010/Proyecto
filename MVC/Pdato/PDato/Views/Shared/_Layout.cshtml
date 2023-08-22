@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KLD4WFK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="Motel, Silla del Amor, Jazcuzzi, Promociones, Sex Shop, Vip, Suite, Privacidad, Caño, MiniBar, Cama de Agua, Estacionamiento Privado, Pasión,Promociones, Privacidad, Habitaciones, Jacuzzi, SexShop, Ambientación, Sexo, Amantes, Motel Santiago
+          , Motel Florida, Motel Peñaflor, Motel Buin, Motel, Talagante, Motel Puente alto, culiar, sexchop, sex chop, sex shop, sexchop, precio motel, precio culiar, precio hora motel">
+    <meta name="description" content="Busqueda de Moteles en distinta comunas de las regiones de chile">
+
+    @*<link href="~/Content/css/bootstrap-slider.css" rel="stylesheet" />
+    <link async href="~/Content/css/diseno.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-grid.css" rel="stylesheet" />
+        <link href="~/Content/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link async href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link async href="~/Content/css/carousel.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/Letra/Letras.css" rel="stylesheet" />
+    <link async href="~/Content/css/zoom-imagen.css" rel="stylesheet" />
+    <link async href="~/Content/css/estilos.css" rel="stylesheet" />
+    <link async href="~/Content/css/disenohr.css" rel="stylesheet" />*@
+
+    <link async href="~/Content/css/min/diseno.min.css" rel="stylesheet" />
+    <link async href="~/Content/css/min/zoom-imagen.min.css" rel="stylesheet" />
+    <link async href="~/Content/css/min/Estilos.min.css" rel="stylesheet" />
+    <link async href="~/Content/css/min/disenohr.min.css" rel="stylesheet" />
+    <link async href="~/Content/css/min/bootstrap.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLD4WFK"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    <img async src="~/Imagenes/Logo/Logo.png" alt="Logo PasaelDato2" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Listado">Listado Moteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><br>
+
+    <!--<img class="logo" img src="../Imagenes/logo/logo_pdato.png">-->
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+
+    <br />
+    <footer class="footer">
+        <div class="text-center text-uppercase encabezado">
+            <span class="text-lowercase d-block" align="left"><p align="center" class="footer text-lowercase d-block">Copyright &copy; @DateTime.Now.Year - Info@pasaeldato.cl</p></span>
+        </div>
+    </footer>
+
+    @*<script src="~/Scripts/jquery/bootstrap-slider.js"></script>
+    <script src="~/Scripts/jquery/jquery-3.2.1.slim.min.js"></script>*@
+    @*<script src="~/Scripts/jquery/holder.min.js"></script>*@
+    <script async src="~/Scripts/jquery/bootstrap.min.js"></script>
+    @*<script src="~/Scripts/jquery/bootstrap.bundle.min.js"></script>*@
+    @*<script async src="~/Scripts/slider.js"></script>*@
+</body>
+</html>

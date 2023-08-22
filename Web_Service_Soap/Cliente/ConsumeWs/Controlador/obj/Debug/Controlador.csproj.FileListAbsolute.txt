@@ -1,0 +1,12 @@
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Debug\Controlador.dll.config
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Debug\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\bin\Debug\Controlador.pdb
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Debug\Controlador.dll
+C:\Users\ade_fisla\Documents\Visual Studio 2008\Projects\ConsumeWs\Controlador\obj\Debug\Controlador.pdb
+E:\proyecto-toyota\ConsumeWs\Controlador\bin\Debug\Controlador.dll.config
+E:\proyecto-toyota\ConsumeWs\Controlador\bin\Debug\Controlador.dll
+E:\proyecto-toyota\ConsumeWs\Controlador\bin\Debug\Controlador.pdb
+E:\proyecto-toyota\ConsumeWs\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+E:\proyecto-toyota\ConsumeWs\Controlador\obj\Debug\Controlador.dll
+E:\proyecto-toyota\ConsumeWs\Controlador\obj\Debug\Controlador.pdb

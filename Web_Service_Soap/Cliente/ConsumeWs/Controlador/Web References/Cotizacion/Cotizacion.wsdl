@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="localhost" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="localhost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="localhost">
+      <s:element name="cotizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_dealer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_sucursal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="num_cotiza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="modelo_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="version_vehiculo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="monto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moneda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nom_vendedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut_vendedor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="medio_showroom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="test_driver" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cotizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cotizacionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="cotizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:cotizacion" />
+  </wsdl:message>
+  <wsdl:message name="cotizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:cotizacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CotizacionSoap">
+    <wsdl:operation name="cotizacion">
+      <wsdl:input message="tns:cotizacionSoapIn" />
+      <wsdl:output message="tns:cotizacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CotizacionSoap" type="tns:CotizacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cotizacion">
+      <soap:operation soapAction="localhost/cotizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CotizacionSoap12" type="tns:CotizacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cotizacion">
+      <soap12:operation soapAction="localhost/cotizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cotizacion">
+    <wsdl:port name="CotizacionSoap" binding="tns:CotizacionSoap">
+      <soap:address location="http://10.10.10.102/ws/Cotizacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CotizacionSoap12" binding="tns:CotizacionSoap12">
+      <soap12:address location="http://10.10.10.102/ws/Cotizacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
