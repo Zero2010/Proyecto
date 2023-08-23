@@ -281,5 +281,16 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ListadoDiferencia" FunctionName="InventarioProModel.Store.SP_ListadoDiferencia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoDiferencia_Result">
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CantidadKardex" ColumnName="CantidadKardex" />
+          <ScalarProperty Name="CantidadCaptura" ColumnName="CantidadCaptura" />
+          <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

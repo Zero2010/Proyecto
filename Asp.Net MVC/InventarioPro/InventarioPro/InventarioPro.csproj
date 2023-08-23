@@ -3886,6 +3886,9 @@
     <Compile Include="Models\SP_ListadoDiferenciaPositiva_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SP_ListadoDiferencia_Result.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SP_ListadoProductos_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>

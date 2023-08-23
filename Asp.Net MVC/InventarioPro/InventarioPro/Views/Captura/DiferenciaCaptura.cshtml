@@ -46,7 +46,16 @@
                     <td>@item.Descripcion</td>
                     <td>@item.CantidadKardex</td>
                     <td>@item.CantidadCaptura</td>
-                    <td>@item.Diferencia</td>
+
+                    @if (item.Diferencia < 0)
+                    {
+                        <td class="count red">@item.Diferencia</td>
+                    }
+                    else 
+                    { 
+                        <td class="count">@item.Diferencia</td>
+                    }
+                    
                 </tr>
                 }
 

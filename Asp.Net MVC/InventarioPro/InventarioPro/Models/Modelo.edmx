@@ -446,6 +446,7 @@ advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Ubicacion' no tiene d
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="SP_ListadoDiferencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_ListadoDiferenciaNegativa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_ListadoDiferenciaPositiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_ListadoProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -1076,6 +1077,7 @@ advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Ubicacion' no tiene d
           <FunctionImport Name="SP_ListadoDiferenciaPositiva" ReturnType="Collection(InventarioProModel.SP_ListadoDiferenciaPositiva_Result)" />
           <FunctionImport Name="SP_ListadoProductos" ReturnType="Collection(InventarioProModel.SP_ListadoProductos_Result)" />
           <FunctionImport Name="SP_ListadoUbicaciones" ReturnType="Collection(InventarioProModel.SP_ListadoUbicaciones_Result)" />
+          <FunctionImport Name="SP_ListadoDiferencia" ReturnType="Collection(InventarioProModel.SP_ListadoDiferencia_Result)" />
         </EntityContainer>
         <ComplexType Name="SP_ListadoDiferenciaNegativa_Result">
           <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
@@ -1115,6 +1117,13 @@ advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Ubicacion' no tiene d
           <Property Type="Int32" Name="Rango" Nullable="true" />
           <Property Type="String" Name="TipoUbicacion1" Nullable="true" MaxLength="400" />
           <Property Type="String" Name="NombreLocal" Nullable="true" MaxLength="300" />
+        </ComplexType>
+        <ComplexType Name="SP_ListadoDiferencia_Result">
+          <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="300" />
+          <Property Type="Decimal" Name="CantidadKardex" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CantidadCaptura" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Diferencia" Nullable="true" Precision="19" Scale="2" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1399,6 +1408,17 @@ advertencia 6002: La tabla o vista 'InventarioPro.dbo.View_Ubicacion' no tiene d
                 <ScalarProperty Name="Rango" ColumnName="Rango" />
                 <ScalarProperty Name="TipoUbicacion1" ColumnName="TipoUbicacion1" />
                 <ScalarProperty Name="NombreLocal" ColumnName="NombreLocal" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ListadoDiferencia" FunctionName="InventarioProModel.Store.SP_ListadoDiferencia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InventarioProModel.SP_ListadoDiferencia_Result">
+                <ScalarProperty Name="Sku" ColumnName="Sku" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CantidadKardex" ColumnName="CantidadKardex" />
+                <ScalarProperty Name="CantidadCaptura" ColumnName="CantidadCaptura" />
+                <ScalarProperty Name="Diferencia" ColumnName="Diferencia" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

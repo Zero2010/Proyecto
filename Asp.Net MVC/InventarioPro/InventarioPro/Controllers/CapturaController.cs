@@ -119,7 +119,7 @@ namespace InventarioPro.Controllers
 
             using (InventarioProEntities db = new InventarioProEntities())
             {
-                ViewBag._DiferenciaCaptura = db.SP_ListadoDiferenciaNegativa().ToList();
+                ViewBag._DiferenciaCaptura = db.SP_ListadoDiferencia().ToList();
             }
 
             return View();

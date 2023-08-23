@@ -67,5 +67,10 @@ namespace InventarioPro.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_ListadoUbicaciones_Result>("SP_ListadoUbicaciones");
         }
+    
+        public virtual ObjectResult<SP_ListadoDiferencia_Result> SP_ListadoDiferencia()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_ListadoDiferencia_Result>("SP_ListadoDiferencia");
+        }
     }
 }

@@ -494,6 +494,7 @@
     <FunctionImport Name="SP_ListadoDiferenciaPositiva" ReturnType="Collection(InventarioProModel.SP_ListadoDiferenciaPositiva_Result)" />
     <FunctionImport Name="SP_ListadoProductos" ReturnType="Collection(InventarioProModel.SP_ListadoProductos_Result)" />
     <FunctionImport Name="SP_ListadoUbicaciones" ReturnType="Collection(InventarioProModel.SP_ListadoUbicaciones_Result)" />
+    <FunctionImport Name="SP_ListadoDiferencia" ReturnType="Collection(InventarioProModel.SP_ListadoDiferencia_Result)" />
   </EntityContainer>
   <ComplexType Name="SP_ListadoDiferenciaNegativa_Result">
     <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
@@ -533,5 +534,12 @@
     <Property Type="Int32" Name="Rango" Nullable="true" />
     <Property Type="String" Name="TipoUbicacion1" Nullable="true" MaxLength="400" />
     <Property Type="String" Name="NombreLocal" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="SP_ListadoDiferencia_Result">
+    <Property Type="String" Name="Sku" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="300" />
+    <Property Type="Decimal" Name="CantidadKardex" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CantidadCaptura" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Diferencia" Nullable="true" Precision="19" Scale="2" />
   </ComplexType>
 </Schema>
