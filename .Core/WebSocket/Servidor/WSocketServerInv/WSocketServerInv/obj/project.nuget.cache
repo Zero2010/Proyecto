@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VgOv3nWkRu87K4LX9Ojd2slUzuCHbRl5KJTx51jYwP12REllNXODsSYQBhVoPT7zisMo9nqoULDVfUxM5PSCaw==",
+  "dgSpecHash": "8uaimyIKDeVdxrA3BOifb1pCI245JH4DqbtgJjE0lriTuNSQckhJPS5YBihNVwooi8+z4deZPBwRuUiRTs6U2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe Isla\\source\\repos\\WSocketServerInv\\WSocketServerInv\\Vista.csproj",
+  "projectFilePath": "C:\\Proyectos\\Proyecto\\.Core\\WebSocket\\Servidor\\WSocketServerInv\\WSocketServerInv\\Vista.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe Isla\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Felipe Isla\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

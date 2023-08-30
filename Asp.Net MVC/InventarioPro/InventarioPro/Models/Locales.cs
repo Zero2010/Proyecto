@@ -17,21 +17,28 @@ namespace InventarioPro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Locales()
         {
-            this.Avance = new HashSet<Avance>();
-            this.Captura_Local_Producto = new HashSet<Captura_Local_Producto>();
-            this.Usuario = new HashSet<Usuario>();
+            this.Captura = new HashSet<Captura>();
+            this.Kardex = new HashSet<Kardex>();
+            this.TipoUbicacion = new HashSet<TipoUbicacion>();
+            this.Ubicacion = new HashSet<Ubicacion>();
+            this.Direccion = new HashSet<Direccion>();
             this.Empresa = new HashSet<Empresa>();
         }
     
-        public int IdLocal { get; set; }
+        public int idlocal { get; set; }
         public string NombreLocal { get; set; }
+        public Nullable<bool> IsEstado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Avance> Avance { get; set; }
+        public virtual ICollection<Captura> Captura { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Captura_Local_Producto> Captura_Local_Producto { get; set; }
+        public virtual ICollection<Kardex> Kardex { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<TipoUbicacion> TipoUbicacion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ubicacion> Ubicacion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Direccion> Direccion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empresa> Empresa { get; set; }
     }

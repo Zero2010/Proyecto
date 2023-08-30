@@ -17,23 +17,18 @@ namespace InventarioPro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {
-            this.Captura = new HashSet<Captura>();
-            this.TipoUsuario = new HashSet<TipoUsuario>();
+            this.User_TipoUsuario = new HashSet<User_TipoUsuario>();
         }
     
-        public int IdUsuario { get; set; }
-        public string Usuario1 { get; set; }
-        public string Clave { get; set; }
-        public Nullable<System.DateTime> FCreacion { get; set; }
-        public Nullable<System.DateTime> FModificacion { get; set; }
-        public Nullable<bool> IsEstado { get; set; }
-        public string Ip { get; set; }
-        public Nullable<int> IdLocal { get; set; }
+        public int idUser { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
+        public Nullable<System.DateTime> fechaCreation { get; set; }
+        public Nullable<System.DateTime> fechaUpdate { get; set; }
+        public Nullable<System.DateTime> fechaDelete { get; set; }
+        public Nullable<bool> isEstado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Captura> Captura { get; set; }
-        public virtual Locales Locales { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TipoUsuario> TipoUsuario { get; set; }
+        public virtual ICollection<User_TipoUsuario> User_TipoUsuario { get; set; }
     }
 }

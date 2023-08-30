@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0mmRZ0AIPwT/MtKIdeTFs5suSjQ1QJhsoXkBzuI+z4Qtg928lgEALCFoLOgxO7dSaqugPBhxMBj/GQlgfI8CgA==",
+  "dgSpecHash": "mcLvYwaqiFD8gZHwr3Z1DLFYEqJMz3Bcx8MiiLOzdJhyl2sK1ihJ9q3tKVvMheB1IqJFB271Y4qMff1l6/y0eA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe Isla\\source\\repos\\WSocketServerInv\\Servidor\\Servidor.csproj",
+  "projectFilePath": "C:\\Proyectos\\Proyecto\\.Core\\WebSocket\\Servidor\\WSocketServerInv\\Servidor\\Servidor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe Isla\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Felipe Isla\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

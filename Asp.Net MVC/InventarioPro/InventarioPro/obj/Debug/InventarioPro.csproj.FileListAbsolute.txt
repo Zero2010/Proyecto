@@ -68,3 +68,5 @@ C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Debug\InventarioPr
 C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Debug\InventarioPro.csproj.CopyComplete
 C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Debug\InventarioPro.dll
 C:\Users\mfelipe\source\repos\InventarioPro\InventarioPro\obj\Debug\InventarioPro.pdb
+C:\Proyectos\Proyecto\Asp.Net MVC\InventarioPro\InventarioPro\obj\Debug\InventarioPro.csproj.AssemblyReference.cache
+C:\Proyectos\Proyecto\Asp.Net MVC\InventarioPro\InventarioPro\obj\Debug\InventarioPro.csproj.CoreCompileInputs.cache

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventarioNvoModelStoreContainer" CdmEntityContainer="InventarioNvoEntities">
+    <EntitySetMapping Name="Captura">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Captura">
+        <MappingFragment StoreEntitySet="Captura">
+          <ScalarProperty Name="idCaptura" ColumnName="idCaptura" />
+          <ScalarProperty Name="fechaCaptura" ColumnName="fechaCaptura" />
+          <ScalarProperty Name="cantidadCaptura" ColumnName="cantidadCaptura" />
+          <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comuna">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Comuna">
+        <MappingFragment StoreEntitySet="Comuna">
+          <ScalarProperty Name="idComuna" ColumnName="idComuna" />
+          <ScalarProperty Name="Comuna1" ColumnName="Comuna" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direccion">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Direccion">
+        <MappingFragment StoreEntitySet="Direccion">
+          <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
+          <ScalarProperty Name="direccion1" ColumnName="direccion" />
+          <ScalarProperty Name="idComuna" ColumnName="idComuna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="nombreEmpresa" ColumnName="nombreEmpresa" />
+          <ScalarProperty Name="rutEmpresa" ColumnName="rutEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa_Giro">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Empresa_Giro">
+        <MappingFragment StoreEntitySet="Empresa_Giro">
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idGiro" ColumnName="idGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giro">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Giro">
+        <MappingFragment StoreEntitySet="Giro">
+          <ScalarProperty Name="idGiro" ColumnName="idGiro" />
+          <ScalarProperty Name="giroEmpresa" ColumnName="giroEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kardex">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Kardex">
+        <MappingFragment StoreEntitySet="Kardex">
+          <ScalarProperty Name="idKardex" ColumnName="idKardex" />
+          <ScalarProperty Name="sku" ColumnName="sku" />
+          <ScalarProperty Name="fechaKardex" ColumnName="fechaKardex" />
+          <ScalarProperty Name="cantidadKardex" ColumnName="cantidadKardex" />
+          <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locales">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Locales">
+        <MappingFragment StoreEntitySet="Locales">
+          <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+          <ScalarProperty Name="NombreLocal" ColumnName="NombreLocal" />
+          <ScalarProperty Name="IsEstado" ColumnName="IsEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="idProductos" ColumnName="idProductos" />
+          <ScalarProperty Name="descripcionProductos" ColumnName="descripcionProductos" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="clase" ColumnName="clase" />
+          <ScalarProperty Name="descripcionClase" ColumnName="descripcionClase" />
+          <ScalarProperty Name="subClase" ColumnName="subClase" />
+          <ScalarProperty Name="descripcionSubClase" ColumnName="descripcionSubClase" />
+          <ScalarProperty Name="isEstado" ColumnName="isEstado" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="Region1" ColumnName="Region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUbicacion">
+      <EntityTypeMapping TypeName="InventarioNvoModel.TipoUbicacion">
+        <MappingFragment StoreEntitySet="TipoUbicacion">
+          <ScalarProperty Name="idTUbicacion" ColumnName="idTUbicacion" />
+          <ScalarProperty Name="TipoUbicacion1" ColumnName="TipoUbicacion" />
+          <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="InventarioNvoModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+          <ScalarProperty Name="descripcionTipoUsuario" ColumnName="descripcionTipoUsuario" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubicacion">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Ubicacion">
+        <MappingFragment StoreEntitySet="Ubicacion">
+          <ScalarProperty Name="idUbicacion" ColumnName="idUbicacion" />
+          <ScalarProperty Name="descripcionUbicacion" ColumnName="descripcionUbicacion" />
+          <ScalarProperty Name="rangoBajo" ColumnName="rangoBajo" />
+          <ScalarProperty Name="rangoAlto" ColumnName="rangoAlto" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="dpto" ColumnName="dpto" />
+          <ScalarProperty Name="lineal" ColumnName="lineal" />
+          <ScalarProperty Name="metro" ColumnName="metro" />
+          <ScalarProperty Name="pasillo" ColumnName="pasillo" />
+          <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_TipoUsuario">
+      <EntityTypeMapping TypeName="InventarioNvoModel.User_TipoUsuario">
+        <MappingFragment StoreEntitySet="User_TipoUsuario">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="InventarioNvoModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="fechaCreation" ColumnName="fechaCreation" />
+          <ScalarProperty Name="fechaUpdate" ColumnName="fechaUpdate" />
+          <ScalarProperty Name="fechaDelete" ColumnName="fechaDelete" />
+          <ScalarProperty Name="isEstado" ColumnName="isEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Direccion_Locales" TypeName="InventarioNvoModel.Direccion_Locales" StoreEntitySet="Direccion_Locales">
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
+      </EndProperty>
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Empresa_Local" TypeName="InventarioNvoModel.Empresa_Local" StoreEntitySet="Empresa_Local">
+      <EndProperty Name="Empresa">
+        <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+      </EndProperty>
+      <EndProperty Name="Locales">
+        <ScalarProperty Name="idlocal" ColumnName="idlocal" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

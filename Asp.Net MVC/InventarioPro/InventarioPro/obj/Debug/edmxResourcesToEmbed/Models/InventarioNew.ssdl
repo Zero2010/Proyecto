@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioNvoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Captura">
+    <Key>
+      <PropertyRef Name="idCaptura" />
+    </Key>
+    <Property Name="idCaptura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaCaptura" Type="datetime" />
+    <Property Name="cantidadCaptura" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="idlocal" Type="int" />
+  </EntityType>
+  <EntityType Name="Comuna">
+    <Key>
+      <PropertyRef Name="idComuna" />
+    </Key>
+    <Property Name="idComuna" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comuna" Type="varchar" MaxLength="200" />
+    <Property Name="idRegion" Type="int" />
+  </EntityType>
+  <EntityType Name="Direccion">
+    <Key>
+      <PropertyRef Name="idDireccion" />
+    </Key>
+    <Property Name="idDireccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="300" />
+    <Property Name="idComuna" Type="int" />
+  </EntityType>
+  <EntityType Name="Direccion_Locales">
+    <Key>
+      <PropertyRef Name="idDireccion" />
+      <PropertyRef Name="idlocal" />
+    </Key>
+    <Property Name="idDireccion" Type="int" Nullable="false" />
+    <Property Name="idlocal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreEmpresa" Type="varchar" MaxLength="300" />
+    <Property Name="rutEmpresa" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Empresa_Giro">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idGiro" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idGiro" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa_Local">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idlocal" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idlocal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Giro">
+    <Key>
+      <PropertyRef Name="idGiro" />
+    </Key>
+    <Property Name="idGiro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="giroEmpresa" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Kardex">
+    <Key>
+      <PropertyRef Name="idKardex" />
+    </Key>
+    <Property Name="idKardex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sku" Type="varchar" MaxLength="50" />
+    <Property Name="fechaKardex" Type="datetime" />
+    <Property Name="cantidadKardex" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="idlocal" Type="int" />
+  </EntityType>
+  <EntityType Name="Locales">
+    <Key>
+      <PropertyRef Name="idlocal" />
+    </Key>
+    <Property Name="idlocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreLocal" Type="varchar" MaxLength="100" />
+    <Property Name="IsEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="idProductos" />
+    </Key>
+    <Property Name="idProductos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionProductos" Type="varchar" MaxLength="300" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="moneda" Type="varchar" MaxLength="10" />
+    <Property Name="clase" Type="varchar" MaxLength="200" />
+    <Property Name="descripcionClase" Type="varchar" MaxLength="200" />
+    <Property Name="subClase" Type="varchar" MaxLength="200" />
+    <Property Name="descripcionSubClase" Type="varchar" MaxLength="200" />
+    <Property Name="isEstado" Type="bit" />
+    <Property Name="idEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="idRegion" />
+    </Key>
+    <Property Name="idRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TipoUbicacion">
+    <Key>
+      <PropertyRef Name="idTUbicacion" />
+    </Key>
+    <Property Name="idTUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoUbicacion" Type="varchar" MaxLength="200" />
+    <Property Name="idlocal" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="idTipoUsuario" />
+    </Key>
+    <Property Name="idTipoUsuario" Type="int" Nullable="false" />
+    <Property Name="descripcionTipoUsuario" Type="varchar" MaxLength="300" />
+    <Property Name="link" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Ubicacion">
+    <Key>
+      <PropertyRef Name="idUbicacion" />
+    </Key>
+    <Property Name="idUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionUbicacion" Type="varchar" MaxLength="200" />
+    <Property Name="rangoBajo" Type="int" />
+    <Property Name="rangoAlto" Type="int" />
+    <Property Name="area" Type="varchar" MaxLength="100" />
+    <Property Name="dpto" Type="varchar" MaxLength="100" />
+    <Property Name="lineal" Type="varchar" MaxLength="100" />
+    <Property Name="metro" Type="varchar" MaxLength="100" />
+    <Property Name="pasillo" Type="varchar" MaxLength="100" />
+    <Property Name="idlocal" Type="int" />
+  </EntityType>
+  <EntityType Name="User_TipoUsuario">
+    <Key>
+      <PropertyRef Name="idUser" />
+      <PropertyRef Name="idTipoUsuario" />
+    </Key>
+    <Property Name="idUser" Type="int" Nullable="false" />
+    <Property Name="idTipoUsuario" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="300" />
+    <Property Name="fechaCreation" Type="datetime" />
+    <Property Name="fechaUpdate" Type="datetime" />
+    <Property Name="fechaDelete" Type="datetime" />
+    <Property Name="isEstado" Type="bit" />
+  </EntityType>
+  <Association Name="Comuna_Direccion">
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comuna">
+        <PropertyRef Name="idComuna" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="idComuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Direccion_DireccionLocales">
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="1" />
+    <End Role="Direccion_Locales" Type="Self.Direccion_Locales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Direccion">
+        <PropertyRef Name="idDireccion" />
+      </Principal>
+      <Dependent Role="Direccion_Locales">
+        <PropertyRef Name="idDireccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Empresa_EmpresaLocales">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Empresa_Local" Type="Self.Empresa_Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa_Local">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Empresa_Productos">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Empresa_UserTipoUsuario">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="User_TipoUsuario" Type="Self.User_TipoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="User_TipoUsuario">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmpresaLocales_Locales">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="1" />
+    <End Role="Empresa_Local" Type="Self.Empresa_Local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="Empresa_Local">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Giro_Empresa">
+    <End Role="Giro" Type="Self.Giro" Multiplicity="1" />
+    <End Role="Empresa_Giro" Type="Self.Empresa_Giro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Giro">
+        <PropertyRef Name="idGiro" />
+      </Principal>
+      <Dependent Role="Empresa_Giro">
+        <PropertyRef Name="idGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Locales_Captura">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="Captura" Type="Self.Captura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="Captura">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Locales_Direccion">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="1" />
+    <End Role="Direccion_Locales" Type="Self.Direccion_Locales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="Direccion_Locales">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Locales_Kardex">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Locales_TipoUbicacion">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="TipoUbicacion" Type="Self.TipoUbicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="TipoUbicacion">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Locales_Ubicacion">
+    <End Role="Locales" Type="Self.Locales" Multiplicity="0..1" />
+    <End Role="Ubicacion" Type="Self.Ubicacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locales">
+        <PropertyRef Name="idlocal" />
+      </Principal>
+      <Dependent Role="Ubicacion">
+        <PropertyRef Name="idlocal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Region_Comuna">
+    <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Comuna" Type="Self.Comuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="idRegion" />
+      </Principal>
+      <Dependent Role="Comuna">
+        <PropertyRef Name="idRegion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TypeUser_UserTypeUser">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="User_TipoUsuario" Type="Self.User_TipoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Principal>
+      <Dependent Role="User_TipoUsuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="User_UserTypeUser">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="User_TipoUsuario" Type="Self.User_TipoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="User_TipoUsuario">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InventarioNvoModelStoreContainer">
+    <EntitySet Name="Captura" EntityType="Self.Captura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comuna" EntityType="Self.Comuna" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Direccion" EntityType="Self.Direccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Direccion_Locales" EntityType="Self.Direccion_Locales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa_Giro" EntityType="Self.Empresa_Giro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa_Local" EntityType="Self.Empresa_Local" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Giro" EntityType="Self.Giro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kardex" EntityType="Self.Kardex" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locales" EntityType="Self.Locales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUbicacion" EntityType="Self.TipoUbicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubicacion" EntityType="Self.Ubicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_TipoUsuario" EntityType="Self.User_TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Comuna_Direccion" Association="Self.Comuna_Direccion">
+      <End Role="Comuna" EntitySet="Comuna" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Direccion_DireccionLocales" Association="Self.Direccion_DireccionLocales">
+      <End Role="Direccion" EntitySet="Direccion" />
+      <End Role="Direccion_Locales" EntitySet="Direccion_Locales" />
+    </AssociationSet>
+    <AssociationSet Name="Empresa_EmpresaLocales" Association="Self.Empresa_EmpresaLocales">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empresa_Local" EntitySet="Empresa_Local" />
+    </AssociationSet>
+    <AssociationSet Name="Empresa_Productos" Association="Self.Empresa_Productos">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="Empresa_UserTipoUsuario" Association="Self.Empresa_UserTipoUsuario">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="User_TipoUsuario" EntitySet="User_TipoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="EmpresaLocales_Locales" Association="Self.EmpresaLocales_Locales">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Empresa_Local" EntitySet="Empresa_Local" />
+    </AssociationSet>
+    <AssociationSet Name="Giro_Empresa" Association="Self.Giro_Empresa">
+      <End Role="Giro" EntitySet="Giro" />
+      <End Role="Empresa_Giro" EntitySet="Empresa_Giro" />
+    </AssociationSet>
+    <AssociationSet Name="Locales_Captura" Association="Self.Locales_Captura">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Captura" EntitySet="Captura" />
+    </AssociationSet>
+    <AssociationSet Name="Locales_Direccion" Association="Self.Locales_Direccion">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Direccion_Locales" EntitySet="Direccion_Locales" />
+    </AssociationSet>
+    <AssociationSet Name="Locales_Kardex" Association="Self.Locales_Kardex">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="Locales_TipoUbicacion" Association="Self.Locales_TipoUbicacion">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="TipoUbicacion" EntitySet="TipoUbicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Locales_Ubicacion" Association="Self.Locales_Ubicacion">
+      <End Role="Locales" EntitySet="Locales" />
+      <End Role="Ubicacion" EntitySet="Ubicacion" />
+    </AssociationSet>
+    <AssociationSet Name="Region_Comuna" Association="Self.Region_Comuna">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Comuna" EntitySet="Comuna" />
+    </AssociationSet>
+    <AssociationSet Name="TypeUser_UserTypeUser" Association="Self.TypeUser_UserTypeUser">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="User_TipoUsuario" EntitySet="User_TipoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="User_UserTypeUser" Association="Self.User_UserTypeUser">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="User_TipoUsuario" EntitySet="User_TipoUsuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

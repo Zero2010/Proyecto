@@ -14,10 +14,14 @@ namespace InventarioPro.Models
     public partial class SP_ListadoUbicaciones_Result
     {
         public int IdUbicacion { get; set; }
+        public string Area { get; set; }
+        public string Dpto { get; set; }
+        public string Lineal { get; set; }
+        public string Metro { get; set; }
+        public string Pasillo { get; set; }
         public string Descripcion { get; set; }
         public Nullable<int> RangoBajo { get; set; }
         public Nullable<int> RangoAlto { get; set; }
-        public Nullable<int> Rango { get; set; }
         public string TipoUbicacion1 { get; set; }
         public string NombreLocal { get; set; }
     }

@@ -14,23 +14,17 @@ namespace InventarioPro.Models
     
     public partial class Ubicacion
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Ubicacion()
-        {
-            this.AvanceCaptura = new HashSet<AvanceCaptura>();
-            this.Locales_Ubicacion = new HashSet<Locales_Ubicacion>();
-        }
+        public int idUbicacion { get; set; }
+        public string descripcionUbicacion { get; set; }
+        public Nullable<int> rangoBajo { get; set; }
+        public Nullable<int> rangoAlto { get; set; }
+        public string area { get; set; }
+        public string dpto { get; set; }
+        public string lineal { get; set; }
+        public string metro { get; set; }
+        public string pasillo { get; set; }
+        public Nullable<int> idlocal { get; set; }
     
-        public int IdUbicacion { get; set; }
-        public string Descripcion { get; set; }
-        public Nullable<int> RangoBajo { get; set; }
-        public Nullable<int> RangoAlto { get; set; }
-        public Nullable<int> Total { get; set; }
-        public Nullable<int> IdLocal { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AvanceCaptura> AvanceCaptura { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Locales_Ubicacion> Locales_Ubicacion { get; set; }
+        public virtual Locales Locales { get; set; }
     }
 }

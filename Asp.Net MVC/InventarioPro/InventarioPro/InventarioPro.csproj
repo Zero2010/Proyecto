@@ -141,15 +141,25 @@
     <Content Include="Content\images\user.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Modelo.Context.tt">
+    <Content Include="Models\InventarioNew.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo.edmx</DependentUpon>
-      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
+      <DependentUpon>InventarioNew.edmx</DependentUpon>
+      <LastGenOutput>InventarioNew.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Modelo.tt">
+    <Content Include="Models\InventarioNew.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelo.edmx</DependentUpon>
-      <LastGenOutput>Modelo.cs</LastGenOutput>
+      <DependentUpon>InventarioNew.edmx</DependentUpon>
+      <LastGenOutput>InventarioNew.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\InventarioPro.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventarioPro.edmx</DependentUpon>
+      <LastGenOutput>InventarioPro.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\InventarioPro.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventarioPro.edmx</DependentUpon>
+      <LastGenOutput>InventarioPro.cs</LastGenOutput>
     </Content>
     <Content Include="Vendors\animate.css\animate.css" />
     <Content Include="Vendors\animate.css\animate.min.css" />
@@ -3824,6 +3834,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Clases\AESEncryption.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\CapturaController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
@@ -3835,95 +3846,128 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Avance.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AvanceCaptura.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Captura.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Captura_Local_Producto.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CargaDatosViewModel.cs" />
+    <Compile Include="Models\Comuna.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Direccion.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Empresa.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empresa_Giro.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Giro.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioNew.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioNew.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioNew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioNew.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioPro.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioPro.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioPro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioPro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioPro.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Kardex.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Locales.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Locales_Ubicacion.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Modelo.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Modelo.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Modelo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelo.edmx</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModificacionCaptura.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Productos.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Region.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SP_ListadoDiferenciaNegativa_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SP_ListadoDiferenciaPositiva_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SP_ListadoDiferencia_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SP_ListadoProductos_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SP_ListadoUbicaciones_Result.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoUbicacion.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TipoUsuario.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ubicacion.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_TipoUsuario.cs">
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioNew.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_CantDiferenciaNegativa.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_CantDiferenciaPositiva.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_Locales.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_SkuCapturados.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_TipoUbicacion.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View_Ubicacion.cs">
-      <DependentUpon>Modelo.tt</DependentUpon>
+      <DependentUpon>InventarioPro.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -3933,12 +3977,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="Models\Modelo.edmx">
+    <EntityDeploy Include="Models\InventarioPro.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelo.Designer.cs</LastGenOutput>
+      <LastGenOutput>InventarioPro.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Modelo.edmx.diagram">
-      <DependentUpon>Modelo.edmx</DependentUpon>
+    <Content Include="Models\InventarioPro.edmx.diagram">
+      <DependentUpon>InventarioPro.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\InventarioNew.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>InventarioNew.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\InventarioNew.edmx.diagram">
+      <DependentUpon>InventarioNew.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Vendors\bootstrap-daterangepicker\.bower.json" />
@@ -5016,6 +5067,7 @@
     <Content Include="Views\Producto\CreacionProducto.cshtml" />
     <Content Include="Views\Producto\DesactivarProducto.cshtml" />
     <Content Include="Views\Ubicacion\Index.cshtml" />
+    <Content Include="Views\Captura\CapturaInventario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

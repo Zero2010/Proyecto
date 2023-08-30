@@ -14,28 +14,11 @@ namespace InventarioPro.Models
     
     public partial class Captura
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Captura()
-        {
-            this.Captura_Local_Producto = new HashSet<Captura_Local_Producto>();
-            this.ModificacionCaptura = new HashSet<ModificacionCaptura>();
-        }
+        public int idCaptura { get; set; }
+        public Nullable<System.DateTime> fechaCaptura { get; set; }
+        public Nullable<decimal> cantidadCaptura { get; set; }
+        public Nullable<int> idlocal { get; set; }
     
-        public int IdCaptura { get; set; }
-        public string Sku { get; set; }
-        public Nullable<System.DateTime> FechaCaptura { get; set; }
-        public Nullable<decimal> CantidadCaptura { get; set; }
-        public string Lote { get; set; }
-        public Nullable<System.DateTime> FechaLote { get; set; }
-        public Nullable<int> IdProducto { get; set; }
-        public Nullable<int> IdUsuario { get; set; }
-        public Nullable<bool> IsEstado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Captura_Local_Producto> Captura_Local_Producto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ModificacionCaptura> ModificacionCaptura { get; set; }
-        public virtual Productos Productos { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Locales Locales { get; set; }
     }
 }

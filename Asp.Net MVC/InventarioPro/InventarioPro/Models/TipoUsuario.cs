@@ -17,14 +17,14 @@ namespace InventarioPro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TipoUsuario()
         {
-            this.Usuario = new HashSet<Usuario>();
+            this.User_TipoUsuario = new HashSet<User_TipoUsuario>();
         }
     
-        public int IdTUsuario { get; set; }
-        public string TipoUsuario1 { get; set; }
-        public string Link { get; set; }
+        public int idTipoUsuario { get; set; }
+        public string descripcionTipoUsuario { get; set; }
+        public string link { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<User_TipoUsuario> User_TipoUsuario { get; set; }
     }
 }

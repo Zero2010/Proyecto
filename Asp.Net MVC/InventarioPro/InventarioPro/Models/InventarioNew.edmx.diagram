@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="307e7d7986c945c8b60c55c2bb35a5d2" Name="Diagram1">
+        <EntityTypeShape EntityType="InventarioNvoModel.Captura" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Comuna" Width="1.5" PointX="1.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Direccion" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Empresa" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Empresa_Giro" Width="1.5" PointX="8" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Giro" Width="1.5" PointX="5.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Kardex" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Locales" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Productos" Width="1.5" PointX="3" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Region" Width="1.5" PointX="1.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.TipoUbicacion" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.TipoUsuario" Width="1.5" PointX="3.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Ubicacion" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.User_TipoUsuario" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioNvoModel.Usuario" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="InventarioNvoModel.Locales_Captura" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Comuna_Direccion" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Region_Comuna" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Empresa_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Empresa_UserTipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Giro_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Locales_Kardex" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Locales_TipoUbicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Locales_Ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.TypeUser_UserTypeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.User_UserTypeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Direccion_Locales" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioNvoModel.Empresa_Local" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -17,12 +17,19 @@ namespace InventarioPro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Empresa()
         {
+            this.Productos = new HashSet<Productos>();
+            this.User_TipoUsuario = new HashSet<User_TipoUsuario>();
             this.Locales = new HashSet<Locales>();
         }
     
-        public int IdEmpresa { get; set; }
-        public string Empresa1 { get; set; }
+        public int idEmpresa { get; set; }
+        public string nombreEmpresa { get; set; }
+        public string rutEmpresa { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Productos> Productos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User_TipoUsuario> User_TipoUsuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Locales> Locales { get; set; }
     }

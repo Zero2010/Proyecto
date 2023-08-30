@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using InventarioPro.Models;
+using InventarioPro.Clases;
 
 namespace InventarioPro.Controllers
 {
     public class HomeController : Controller
     {
-
         private string _linkPag;
         // GET: Home
         public ActionResult Index()
@@ -38,20 +38,33 @@ namespace InventarioPro.Controllers
         public ActionResult Login(string User, string Pass)
         {
             List<Usuario> usuario = new List<Usuario>();
-            //string _linkPag;
 
-            using (InventarioProEntities db = new InventarioProEntities())
+            string originalText = "YetAnotherSecretMessage789";
+
+            var (key, iv) = AESEncryption.GenerateKeyAndIV();
+
+            string encryptedText = AESEncryption.Encrypt(originalText, key, iv);
+            Console.WriteLine($"Encrypted: {encryptedText}");
+
+            string decryptedText = AESEncryption.Decrypt(encryptedText, key, iv);
+            Console.WriteLine($"Decrypted: {decryptedText}");
+
+
+            using (InventarioNvoEntities db = new InventarioNvoEntities())
             {
-                usuario = (from usu in db.Usuario where usu.Usuario1 == User && usu.Clave.Contains(Pass) select usu).ToList();
+                var     _pass            = (from _usu in db.Usuario select _usu).ToString();
+
+
+                usuario = (from _user in db.Usuario select _user).ToList();
 
                 if (usuario.Count() > 0)
                 {
-                    var TUsuario        = usuario[0].TipoUsuario.ToList();
-                    var IdTUsuario      = TUsuario[0].IdTUsuario;
-                    var _link           = (from link in db.TipoUsuario where link.IdTUsuario == IdTUsuario select link.Link).ToList();
+                    var TUsuario        = usuario[0].User_TipoUsuario.ToList();
+                    var IdTUsuario      = TUsuario[0].idTipoUsuario;
+                    var _link           = (from link in db.TipoUsuario where link.idTipoUsuario == IdTUsuario select link.link).ToList();
                     _linkPag            = _link[0].ToString();
 
-                    TempData["Usuario"] = usuario[0].Usuario1.ToString();
+                    TempData["Usuario"] = usuario[0].User.ToString();
                     return RedirectToAction(_linkPag);
                 }
                 else {

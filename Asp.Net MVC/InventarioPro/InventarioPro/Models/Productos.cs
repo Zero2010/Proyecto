@@ -14,35 +14,17 @@ namespace InventarioPro.Models
     
     public partial class Productos
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Productos()
-        {
-            this.Captura = new HashSet<Captura>();
-            this.Captura_Local_Producto = new HashSet<Captura_Local_Producto>();
-            this.Kardex = new HashSet<Kardex>();
-        }
+        public int idProductos { get; set; }
+        public string descripcionProductos { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public string moneda { get; set; }
+        public string clase { get; set; }
+        public string descripcionClase { get; set; }
+        public string subClase { get; set; }
+        public string descripcionSubClase { get; set; }
+        public Nullable<bool> isEstado { get; set; }
+        public Nullable<int> idEmpresa { get; set; }
     
-        public int IdProducto { get; set; }
-        public string Sku { get; set; }
-        public string Descripcion { get; set; }
-        public Nullable<decimal> Precio { get; set; }
-        public string Moneda { get; set; }
-        public string Ean { get; set; }
-        public Nullable<bool> IsEstado { get; set; }
-        public string Clase { get; set; }
-        public string DescripcionClase { get; set; }
-        public string SubClase { get; set; }
-        public string DescripcionSubClase { get; set; }
-        public Nullable<int> IdLocal { get; set; }
-        public Nullable<int> IdUbicacion { get; set; }
-        public Nullable<int> IdTUbicacion { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Captura> Captura { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Captura_Local_Producto> Captura_Local_Producto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Kardex> Kardex { get; set; }
-        public virtual Locales_Ubicacion Locales_Ubicacion { get; set; }
+        public virtual Empresa Empresa { get; set; }
     }
 }

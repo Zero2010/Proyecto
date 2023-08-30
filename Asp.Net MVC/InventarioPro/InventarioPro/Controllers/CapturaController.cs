@@ -24,74 +24,77 @@ namespace InventarioPro.Controllers
         [HttpPost]
         public ActionResult Index(string codigo)
         {
-            if (codigo == null || codigo == "")
-            {
-                return View();
-            }
-            else
-            {
-                List<Productos> productos   = (from p in db.Productos where p.Ean == codigo || p.Sku == codigo select p).ToList();
-                TempData["Descripcion"]     = productos[0].Descripcion;
-                ViewBag.Descripcion         = productos[0].Descripcion;
-                TempData["IsCaptura"]       = -1;
-                return View(productos);
-            }
+            //if (codigo == null || codigo == "")
+            //{
+            //    return View();
+            //}
+            //else
+            //{
+            //    List<Productos> productos   = (from p in db.Productos where p.Ean == codigo || p.Sku == codigo select p).ToList();
+            //    TempData["Descripcion"]     = productos[0].Descripcion;
+            //    ViewBag.Descripcion         = productos[0].Descripcion;
+            //    TempData["IsCaptura"]       = -1;
+            //    return View(productos);
+            //}
+            return View();
         }
 
 
         [HttpPost]
-        public ActionResult CapturaInventario(string descripcion, DateTime fecha, int cantidad, string lote)
+        public ActionResult CapturaInventario(string codigo, string descripcion, decimal cantidad, int idlocal, int idUbicacion, int idtipoUbicacion, string lote)
         {
 
-            using (InventarioProEntities db = new InventarioProEntities())
-            {
-                if (cantidad != 0 || cantidad > 0)
-                {
-                    capturaP = (from pro in db.Productos where pro.Descripcion.Contains(descripcion) select pro).ToList();
+            //using (InventarioProEntities db = new InventarioProEntities())
+            //{
+            //    if (cantidad != 0 || cantidad > 0)
+            //    {
+            //        capturaP = (from pro in db.Productos where pro.Descripcion.Contains(descripcion) select pro).ToList();
 
-                    if (capturaP.Count() > 0)
-                    {
-                        Captura captura             = new Captura();
-                        captura.CantidadCaptura     = cantidad;
-                        captura.FechaCaptura        = DateTime.Now;
-                        captura.IdProducto          = capturaP[0].IdProducto;
-                        captura.FechaLote           = fecha;
-                        captura.Lote                = lote;
-                        captura.Sku                 = capturaP[0].Sku ;
-
-
-                        var Cant = (from cap in db.Captura select cap).ToList();
-                        if (Cant.Count > 20)
-                        {
-                            TempData["LimiteCaptura"] = "Usted a alcanzado el limite de registros capturados, contacte al administrador";
-                        }
-                        else {
-                            db.Captura.Add(captura);
-                            db.SaveChanges();
-                        }
-
-                        TempData["IsCaptura"]   = 1;
-                        ViewBag.IsCaptura       = 1;
-                    }
-                    else
-                    {
-                        TempData["IsCaptura"]   = 0;
-                        ViewBag.IsCaptura       = 0;
-                    }
-                }
-                else
-                {
-                    TempData["IsCaptura"]   = 0;
-                    ViewBag.IsCaptura       = 0;
-                }
-
-                ViewBag._Locales        = (from local in db.View_Locales select local).ToList();
-                ViewBag._TipoUbicacion  = (from TipoUbicacion in db.View_TipoUbicacion select TipoUbicacion).ToList();
-                ViewBag._Ubicacion      = (from Ubicacion in db.View_Ubicacion select Ubicacion).ToList();
+            //        if (capturaP.Count() > 0)
+            //        {
+            //            Captura captura             = new Captura();
+            //            captura.CantidadCaptura     = cantidad;
+            //            captura.FechaCaptura        = DateTime.Now;
+            //            captura.IdProducto          = capturaP[0].IdProducto;
+            //            captura.FechaLote           = DateTime.Now;
+            //            captura.Lote                = lote;
+            //            captura.Sku                 = capturaP[0].Sku ;
 
 
-                return RedirectToAction("IngresoDescripcion", "Captura");
-            }
+            //            var Cant = (from cap in db.Captura select cap).ToList();
+            //            if (Cant.Count > 20)
+            //            {
+            //                TempData["LimiteCaptura"] = "Usted a alcanzado el limite de registros capturados, contacte al administrador";
+            //            }
+            //            else {
+            //                db.Captura.Add(captura);
+            //                db.SaveChanges();
+            //            }
+
+            //            TempData["IsCaptura"]   = 1;
+            //            ViewBag.IsCaptura       = 1;
+            //        }
+            //        else
+            //        {
+            //            TempData["IsCaptura"]   = 0;
+            //            ViewBag.IsCaptura       = 0;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        TempData["IsCaptura"]   = 0;
+            //        ViewBag.IsCaptura       = 0;
+            //    }
+
+            //    ViewBag._Locales        = (from local in db.View_Locales select local).ToList();
+            //    ViewBag._TipoUbicacion  = (from TipoUbicacion in db.View_TipoUbicacion select TipoUbicacion).ToList();
+            //    ViewBag._Ubicacion      = (from Ubicacion in db.View_Ubicacion select Ubicacion).ToList();
+
+
+            //    return RedirectToAction("IngresoDescripcion", "Captura");
+            //}
+
+            return View();
         }
 
         public ActionResult IngresoDescripcion()

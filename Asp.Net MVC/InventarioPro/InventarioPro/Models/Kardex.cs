@@ -14,12 +14,12 @@ namespace InventarioPro.Models
     
     public partial class Kardex
     {
-        public int IdKardex { get; set; }
-        public string Sku { get; set; }
-        public Nullable<System.DateTime> FechaKardex { get; set; }
-        public Nullable<decimal> CantidadKardex { get; set; }
-        public Nullable<int> IdProducto { get; set; }
+        public int idKardex { get; set; }
+        public string sku { get; set; }
+        public Nullable<System.DateTime> fechaKardex { get; set; }
+        public Nullable<decimal> cantidadKardex { get; set; }
+        public Nullable<int> idlocal { get; set; }
     
-        public virtual Productos Productos { get; set; }
+        public virtual Locales Locales { get; set; }
     }
 }
